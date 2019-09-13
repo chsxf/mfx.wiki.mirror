@@ -6,15 +6,20 @@ php-micro-framework (MFX in short) is a full-stack PHP framework originally desi
 
 It can be used as the core of any regular websites as well as APIs.
 
-# License
+## License
 
 MFX is release under the MIT license as found [here](../blob/master/LICENSE).
+
+# System Requirements
+
+* PHP
+* MySQL/MariaDB (if you plan to use database storage)
+
+# Getting Started
+
+Go to [this page](GettingStarted.md) to start using MFX.
 
 # Planned Improvements
 
 * Making it compatible with Composer
 * Adding a setup script
-
-# Getting Started
-
-Go to [this page](GettingStarted.md) to start using MFX.
