@@ -1,0 +1,804 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sourceCon",
+				"sourceContentBackup"
+			],
+			[
+				"newV",
+				"newVersionValue"
+			],
+			[
+				"source",
+				"sourceValue"
+			],
+			[
+				"sourceVer",
+				"sourceVersionURL"
+			],
+			[
+				"sourceV",
+				"sourceVersionURL"
+			],
+			[
+				"new",
+				"newVersionJson"
+			],
+			[
+				"array_key",
+				"array_keys"
+			],
+			[
+				"MACH",
+				"MAXCHARS_MIN_VALUE"
+			],
+			[
+				"MAXC",
+				"MAXCHARS_RATIO"
+			],
+			[
+				"missin",
+				"missingCount"
+			],
+			[
+				"tempalte",
+				"templateSheetId"
+			],
+			[
+				"spre",
+				"spreadsheetId"
+			],
+			[
+				"batchu",
+				"batchUpdateRequest"
+			],
+			[
+				"exist",
+				"existingSheetNames"
+			],
+			[
+				"spres",
+				"spreadsheetId"
+			],
+			[
+				"sheet",
+				"sheetsToCreate"
+			],
+			[
+				"VERSIONS",
+				"VERSIONS_FILENAME"
+			],
+			[
+				"head",
+				"header_langs"
+			],
+			[
+				"admin",
+				"adminRoleId"
+			],
+			[
+				"paylin",
+				"paylineIndex"
+			],
+			[
+				"earn",
+				"earningByLine"
+			],
+			[
+				"PCG_API",
+				"PCG_API_URL"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"curl_",
+				"curl_init"
+			],
+			[
+				"sq",
+				"sqlParams"
+			],
+			[
+				"APIGOLD",
+				"APIGOLD_PRESTA_SECRET"
+			],
+			[
+				"APIGOLD_PRE",
+				"APIGOLD_PRESTA_KEY"
+			],
+			[
+				"current",
+				"currentPercentage"
+			],
+			[
+				"al",
+				"alreadyConsumedCoins"
+			],
+			[
+				"unc",
+				"unaccountedXp"
+			],
+			[
+				"produ",
+				"producedLoyaltyPoints"
+			],
+			[
+				"lo",
+				"loyaltyPoints"
+			],
+			[
+				"xp",
+				"xpPerCoin"
+			],
+			[
+				"coins",
+				"coinsUntilNextLoyaltyPoints"
+			],
+			[
+				"produc",
+				"producedLoyaltyPoints"
+			],
+			[
+				"gameCo",
+				"gameConfigResult"
+			],
+			[
+				"payout",
+				"payoutRate"
+			],
+			[
+				"gameC",
+				"gameConfig"
+			],
+			[
+				"gameCOnf",
+				"gameConfigResult"
+			],
+			[
+				"last",
+				"lastTimeGotDailyBonus"
+			],
+			[
+				"Diam",
+				"Diamonds_8"
+			],
+			[
+				"VIRUT",
+				"VIRTUALFS_KEY_TUTORIAL"
+			],
+			[
+				"unloc",
+				"unlocked"
+			],
+			[
+				"unlock",
+				"unlocks"
+			],
+			[
+				"free",
+				"freespinFrequency"
+			],
+			[
+				"freespin",
+				"freespinFrequency"
+			],
+			[
+				"freesp",
+				"freespinFrequence"
+			],
+			[
+				"partouch",
+				"partoucheBalance"
+			],
+			[
+				"final",
+				"finalGrid"
+			],
+			[
+				"micro",
+				"microGameSymbol"
+			],
+			[
+				"finalGr",
+				"finalGridSymbolsID"
+			],
+			[
+				"freeSp",
+				"freeSpinsWon"
+			],
+			[
+				"Le",
+				"length"
+			],
+			[
+				"remain",
+				"remainingCoinsToConsume"
+			],
+			[
+				"PHP",
+				"PHP_AUTH_USER"
+			],
+			[
+				"PHP_A",
+				"PHP_AUTH_PW"
+			],
+			[
+				"an",
+				"analytics_timed_events"
+			],
+			[
+				"default",
+				"defaultRejectedHandler"
+			],
+			[
+				"epShop",
+				"epShopConfig"
+			],
+			[
+				"balan",
+				"balanceEP"
+			],
+			[
+				"http_bui",
+				"http_build_query"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"getw",
+				"getcwd"
+			],
+			[
+				"partoucheRe",
+				"partoucheResultProd"
+			],
+			[
+				"partou",
+				"partoucheResultProd"
+			],
+			[
+				"Api",
+				"ApiPartoucheProd"
+			],
+			[
+				"error",
+				"error_reporting"
+			],
+			[
+				"simple",
+				"simplexml_load_file"
+			],
+			[
+				"trans",
+				"transactionResult"
+			],
+			[
+				"tra",
+				"transactionResult"
+			],
+			[
+				"result",
+				"resultData"
+			],
+			[
+				"oflin",
+				"offlineCoins"
+			],
+			[
+				"properties",
+				"propertiesToUpdate"
+			],
+			[
+				"gifts",
+				"giftsData"
+			],
+			[
+				"gift",
+				"giftsData"
+			],
+			[
+				"transa",
+				"transaction"
+			],
+			[
+				"gener",
+				"generateOfflineCoinsInitPromise"
+			],
+			[
+				"Get",
+				"getPrivateDomain"
+			],
+			[
+				"tras",
+				"transactionData"
+			],
+			[
+				"properteis",
+				"propertiesToUpdate"
+			],
+			[
+				"offline",
+				"offlineCoins"
+			],
+			[
+				"houyr",
+				"lastTimeGotHourlyBonus"
+			],
+			[
+				"prop",
+				"propertyResult1"
+			],
+			[
+				"pro",
+				"properties"
+			],
+			[
+				"dail",
+				"dailyBonusConsecutiveDays"
+			],
+			[
+				"d",
+				"dailyBonusConsecutiveDays"
+			],
+			[
+				"avat",
+				"avatarUrl"
+			],
+			[
+				"profile",
+				"profileUpdateFields"
+			],
+			[
+				"migrate",
+				"migratedUser"
+			],
+			[
+				"read",
+				"readMultiResult"
+			],
+			[
+				"is",
+				"isUndefined"
+			],
+			[
+				"push",
+				"pushIfDefined"
+			],
+			[
+				"pickC",
+				"pickCardIfNeeded"
+			],
+			[
+				"getCar",
+				"getCardFace"
+			],
+			[
+				"cur",
+				"currentGame"
+			],
+			[
+				"de",
+				"dealerSum"
+			],
+			[
+				"dea",
+				"dealerCards"
+			],
+			[
+				"virtu",
+				"virtualfsResult"
+			],
+			[
+				"insu",
+				"insurance"
+			],
+			[
+				"use",
+				"user_id"
+			],
+			[
+				"insur",
+				"insuranceAmount"
+			],
+			[
+				"hand",
+				"handData"
+			],
+			[
+				"split",
+				"splitted"
+			],
+			[
+				"comp",
+				"computeHandSum"
+			],
+			[
+				"pick",
+				"pickCard"
+			],
+			[
+				"curr",
+				"currentHand"
+			],
+			[
+				"curren",
+				"currentGame"
+			],
+			[
+				"cu",
+				"currentHand"
+			],
+			[
+				"curre",
+				"currentGame"
+			],
+			[
+				"get",
+				"getPrivateDomain"
+			],
+			[
+				"hands",
+				"hands"
+			],
+			[
+				"han",
+				"hands"
+			],
+			[
+				"PL",
+				"PLAYING_CARDS"
+			],
+			[
+				"balance",
+				"balanceResult"
+			],
+			[
+				"virtual",
+				"virtualfs"
+			],
+			[
+				"vir",
+				"virtualfsResult"
+			],
+			[
+				"PLAY",
+				"PLAYING_CARD_REGEX"
+			],
+			[
+				"Play",
+				"PLAYING_CARDS"
+			],
+			[
+				"pickRa",
+				"pickRandomUniqueCard"
+			],
+			[
+				"viru",
+				"virtualfs"
+			],
+			[
+				"table",
+				"tableCards"
+			],
+			[
+				"MAX",
+				"MAX_FAIL_COUNT"
+			],
+			[
+				"debug",
+				"debugCurrentGameStatus"
+			],
+			[
+				"L",
+				"length"
+			],
+			[
+				"card",
+				"cardByCount"
+			],
+			[
+				"tab",
+				"tableCards"
+			],
+			[
+				"gamevfs",
+				"gamevfsResult"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 27.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 174.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/christophe/Downloads/cl1-sql16.chsxf7.jour1.sql",
+		"/Users/christophe/Developer/Circuits-Decompiled/Assembly-CSharp/Assembly-CSharp.decompiled.cs",
+		"/Users/christophe/Developer/macOS/VisualStory/VisualStory/Test.sks",
+		"/Users/christophe/Developer/Unity/Legends of Learning/LoL-201905-5_MD_C_3_a/DialogImporter/l10n_compare.php",
+		"/Users/christophe/Developer/Unity/Legends of Learning/LoL-201905-5_MD_C_3_a/DialogImporter/l10n_conform.php",
+		"/Users/christophe/Developer/Unity/Legends of Learning/LoL-201905-5_MD_C_3_a/DialogImporter/l10n_conform.json",
+		"/Users/christophe/Developer/Unity/Legends of Learning/LoL-201905-5_MD_C_3_a/Assets/3rd Party/DOTween/Modules/DOTween.Modules.asmdef",
+		"/Users/christophe/Developer/Unity/Legends of Learning/LoL-201905-5_MD_C_3_a/DialogImporter/google-api-php-client-2.2.3/vendor/google/apiclient-services/src/Google/Service/Sheets/DuplicateSheetRequest.php",
+		"/Users/christophe/Developer/Unity/Legends of Learning/LoL-201905-5_MD_C_3_a/DialogImporter/google-api-php-client-2.2.3/vendor/google/apiclient-services/src/Google/Service/Sheets/BatchUpdateValuesRequest.php",
+		"/Users/christophe/Developer/Unity/Legends of Learning/LoL-201905-5_MD_C_3_a/DialogImporter/google-api-php-client-2.2.3/vendor/google/apiclient-services/src/Google/Service/Sheets/BatchUpdateSpreadsheetRequest.php",
+		"/Users/christophe/Developer/Unity/Legends of Learning/LoL-201905-5_MD_C_3_a/DialogImporter/google-api-php-client-2.2.3/vendor/google/apiclient-services/src/Google/Service/Sheets/Resource/Spreadsheets.php",
+		"/Users/christophe/Developer/Unity/Legends of Learning/LoL-201905-5_MD_C_3_a/DialogImporter/importer.php",
+		"/Users/christophe/Developer/Unity/Legends of Learning/LoL-201905-5_MD_C_3_a/DialogImporter/google-api-php-client-2.2.3/src/Google/Model.php",
+		"/Users/christophe/Developer/Unity/Legends of Learning/LoL-201905-5_MD_C_3_a/DialogImporter/google-api-php-client-2.2.3/vendor/google/apiclient-services/src/Google/Service/Sheets/DuplicateSheetResponse.php",
+		"/Users/christophe/Developer/Unity/Legends of Learning/LoL-201905-5_MD_C_3_a/DialogImporter/google-api-php-client-2.2.3/vendor/google/apiclient-services/src/Google/Service/Sheets.php",
+		"/Users/christophe/Developer/Unity/Legends of Learning/LoL-201905-5_MD_C_3_a/DialogImporter/google-api-php-client-2.2.3/vendor/google/apiclient-services/src/Google/Service/Sheets/Sheet.php",
+		"/Users/christophe/Developer/Unity/Legends of Learning/LoL-201905-5_MD_C_3_a/DialogImporter/google-api-php-client-2.2.3/vendor/google/apiclient-services/src/Google/Service/Sheets/SheetProperties.php",
+		"/Users/christophe/Developer/Unity/Legends of Learning/LoL-201905-5_MD_C_3_a/DialogImporter/google-api-php-client-2.2.3/vendor/google/apiclient-services/src/Google/Service/Sheets/CopySheetToAnotherSpreadsheetRequest.php",
+		"/Users/christophe/Developer/Unity/Legends of Learning/LoL-201905-5_MD_C_3_a/DialogImporter/google-api-php-client-2.2.3/src/Google/Service/Resource.php",
+		"/Users/christophe/Developer/Unity/Legends of Learning/LoL-201905-5_MD_C_3_a/DialogImporter/google-api-php-client-2.2.3/vendor/google/apiclient-services/src/Google/Service/Sheets/Resource/SpreadsheetsSheets.php",
+		"/Users/christophe/Developer/WebRoot/Partouche-Backoffice/app-api/config/api.sql",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Scripts/Space/Ambiance/AmbiancePostProcessing.cs",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/CommandCenter/StellarSystem/AmbiancePostProcessing.shader",
+		"/Users/christophe/Developer/Unity/Legends of Learning/LoL-201905-5_MD_C_3_a/Library/PackageCache/com.unity.postprocessing@2.1.7/PostProcessing/Runtime/PostProcessLayer.cs",
+		"/Users/christophe/Developer/Unity/Legends of Learning/LoL-201905-5_MD_C_3_a/Library/PackageCache/com.unity.postprocessing@2.1.7/PostProcessing/Shaders/Builtins/FinalPass.shader",
+		"/Users/christophe/Downloads/lessram-master/bench2.php",
+		"/Users/christophe/Developer/Unity/unity-builtin_shaders/Shaders/DefaultResources/Font.shader",
+		"/Users/christophe/Developer/Unity/unity-builtin_shaders/Shaders/DefaultResourcesExtra/UI/UI-Unlit-Text.shader",
+		"/Users/christophe/Library/Application Support/UnityHub/hubInfo.json",
+		"/Users/christophe/Library/Application Support/UnityHub/releases.json",
+		"/Users/christophe/Library/Application Support/UnityHub/downloads.json",
+		"/Users/christophe/Library/Application Support/UnityHub/editors.json",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Scenes/_root.unity",
+		"/Users/christophe/Developer/Unity/unity-builtin_shaders/README.md",
+		"/Users/christophe/Downloads/output_log (5).txt",
+		"/Users/christophe/Developer/WebRoot/test.php",
+		"/Users/christophe/Downloads/builtin_shaders-2017.4.22f1/CGIncludes/UnityCG.cginc",
+		"/Users/christophe/Downloads/builtin_shaders-2017.4.22f1/CGIncludes/AutoLight.cginc",
+		"/Users/christophe/Downloads/builtin_shaders-2017.4.22f1/DefaultResourcesExtra/Mobile/Mobile-VertexLit.shader",
+		"/Users/christophe/Developer/Unity/Alt Shift/TestDictionnary/Assets/Scenes/SampleScene.unity",
+		"/Users/christophe/Downloads/PlayerData.txt",
+		"/Users/christophe/Desktop/daniel.txt",
+		"/Users/christophe/Downloads/saved_data_2019-01-16T153826.txt",
+		"/Users/christophe/Downloads/backup_2019-03-21T134217_runstate_errors.txt",
+		"/Users/christophe/Downloads/runstate_data_unobfuscated.txt",
+		"/Users/christophe/Downloads/runstate_errors.txt",
+		"/Users/christophe/Library/Application Support/Alt Shift/Crying Suns/saves/save0/runstate_data_unobfuscated",
+		"/Users/christophe/Developer/Unity/Partouche-xtralife/private/__PostLogin.js",
+		"/Users/christophe/Developer/Unity/Partouche/Assets/Partouche/PartoucheScene.unity",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Definitions/Events/_DialogsForEvent/ImporterDialogs/beacon-scrapper-trap-1_EN.asset.meta",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Definitions/Events/_DialogsForEvent/ImporterDialogs/beacon-scrapper-trap-1_localizer.asset",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/OfficersAndBosses/_officer_scrapper_theWeasel/_officer_scrapper_theWeasel.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/Dialog/DialogBubble Boss/BossBubbles.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/Dialog/DialogBubble Boss/Mother Losing.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/Dialog/DialogBubble Boss/Mother.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/Dialog/DialogBubble Boss/Mr. Tetsuo Losing.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/Dialog/DialogBubble Boss/Mr. Tetsuo.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/Dialog/DialogBubble Boss/Mr. Vivar Losing.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/Dialog/DialogBubble Boss/Mr. Vivar.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/Dialog/DialogBubble Boss/Okonkwo Losing.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/Dialog/DialogBubble Boss/Okonkwo.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/Dialog/DialogBubble Boss/Pope Zenon Losing.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/Dialog/DialogBubble Boss/Pope Zenon.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/OfficersAndBosses/_officer_ak_theImpersonator/_officer_ak_theImpersonator.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/OfficersAndBosses/_officer_ak_theKid/_officer_ak_theKid.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/OfficersAndBosses/_officer_church_evangelist/_officer_church_evangelist.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/OfficersAndBosses/_officer_church_inquisitor/_officer_church_inquisitor.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/OfficersAndBosses/_officer_empire_techSpecialist/_officer_empire_techSpecialist.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/OfficersAndBosses/_officer_empire_theAcePilot/_officer_empire_theAcePilot.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/OfficersAndBosses/_officer_generic/_officer_generic_Canvas.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/OfficersAndBosses/_officer_generic/_officer_generic_Prefab.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/OfficersAndBosses/_officer_kb_techMed/_officer_kb_techMed.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/OfficersAndBosses/_officer_kb_theMechSoldier/_officer_kb_theMechSoldier.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/OfficersAndBosses/_officer_pirate_theAnonymous/_officer_pirate_theAnonymous.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/OfficersAndBosses/_officer_pirate_theSmuggler/_officer_pirate_theSmuggler.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Entities/OfficersAndBosses/_officer_scrapper_crazyMacGiver/_officer_scrapper_crazyMacGiver.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Definitions/Prefabs/StellarForegroundItems/foreground-battleship-any.prefab",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Scripts/CommandCenter/StellarSystem/GameObjectContentRandomizer.cs.meta",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/shared-assets/Scripts/CommandCenter/CharacterBehaviour.randomizedContent.cs.meta",
+		"/Users/christophe/Developer/iOS/Nihongo no Kana/iPad/en.lproj/MainStoryboard-ipad.strings",
+		"/Users/christophe/Downloads/test export tp/text export tp.json",
+		"/Users/christophe/Downloads/test export tp/test export tp.json",
+		"/private/var/folders/ky/twjgkswj2pzcb12y5vz1fhfc0000gn/T/72e905af-ba0c-4494-84c4-04987870fca6/www/cheeseburgames/backoffice/.htaccess",
+		"/private/var/folders/ky/twjgkswj2pzcb12y5vz1fhfc0000gn/T/72e905af-ba0c-4494-84c4-04987870fca6/www/cheeseburgames/.htaccess",
+		"/private/var/folders/ky/twjgkswj2pzcb12y5vz1fhfc0000gn/T/72e905af-ba0c-4494-84c4-04987870fca6/www/old-xhaleera/.htaccess",
+		"/private/var/folders/ky/twjgkswj2pzcb12y5vz1fhfc0000gn/T/72e905af-ba0c-4494-84c4-04987870fca6/www/iphone/index.html",
+		"/private/var/folders/ky/twjgkswj2pzcb12y5vz1fhfc0000gn/T/72e905af-ba0c-4494-84c4-04987870fca6/www/iphone/htaccess.fi",
+		"/Users/christophe/Developer/WebRoot/Partouche-Backoffice/app-analytics/config/analytics.sql",
+		"/Users/christophe/Downloads/aws/aws-autoloader.php",
+		"/Users/christophe/Developer/WebRoot/Partouche-Backoffice/app-backoffice/config/backoffice.sql",
+		"/Users/christophe/texturepacker_rgba4444.sh",
+		"/Users/christophe/Developer/Unity/Partouche-xtralife/private/__SlotsEngineV2.js",
+		"/Users/christophe/Developer/Unity/Partouche-xtralife/private/__SlotsEngineV2Debug.js",
+		"/Users/christophe/Developer/Unity/Partouche/Assets/Game_SlotsV2/MAS5-SummerSlot/Animations/Idle.anim",
+		"/Users/christophe/Developer/Unity/Partouche-xtralife/com.partouche.gfkqjj6xbp/__HourlyBonus.js",
+		"/Users/christophe/Developer/Unity/Partouche-xtralife/private/__SlotsEngine.js",
+		"/Users/christophe/mergespecfile.txt",
+		"/Users/christophe/Developer/WebRoot/test-reflect.php",
+		"/Users/christophe/Downloads/builtin_shaders-2017.4.11f1/DefaultResourcesExtra/UI/UI-Default.shader",
+		"/Users/christophe/Downloads/builtin_shaders-2017.4.11f1/DefaultResourcesExtra/UI/UI-DefaultFont.shader",
+		"/Users/christophe/Downloads/builtin_shaders-2017.4.11f1/DefaultResourcesExtra/UI/UI-Unlit-Text.shader",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/Resources/LanguagePacks/EN_TranslationPack.asset",
+		"/Users/christophe/Developer/Unity/Alt Shift/Crying Suns Prod/Assets/Resources/LanguagePacks/FR_TranslationPack.asset",
+		"/Users/christophe/Developer/WebRoot/php-xtralife-gateway/readme.MD",
+		"/Users/christophe/Developer/WebRoot/pdo-database-manager/README.md",
+		"/Users/christophe/Downloads/transfonter.org-20180908-041632/stylesheet.css",
+		"/Users/christophe/Developer/Unity/Partouche/Assets/Partouche/Scripts/Screens/Implementations/Menu/Initializing/InitializingScreen.cs",
+		"/Users/christophe/Developer/Unity/Partouche/Assets/Game_SlotsV2/LuckyPot/Textures/LuckyPot-MiniModule/32 bits/out.plist",
+		"/Users/christophe/Developer/Unity/Partouche/Assets/Game_Slots/Common/TransitionLuckyPot.cs.meta",
+		"/Users/christophe/Developer/Unity/Partouche/Assets/Game_Slots/Common/TransitionLuckyPot.prefab",
+		"/Users/christophe/Developer/WebRoot/Partouche-Backoffice/app-backoffice/config/config.php",
+		"/Users/christophe/Developer/WebRoot/Partouche-Backoffice/app-api/config/config.php",
+		"/Users/christophe/Developer/WebRoot/Partouche-Backoffice/mfx/framework/php-micro-framework.sql",
+		"/Users/christophe/Downloads/com.partouche.json(1)",
+		"/Users/christophe/Downloads/com.partouche.json",
+		"/Users/christophe/Developer/WebRoot/test_export_xtralife.php",
+		"/Applications/MAMP/conf/my.cnf",
+		"/Applications/Hearthstone/Hearthstone.app/Contents/Info.plist",
+		"/Users/christophe/Developer/WebRoot/Partouche Extracts/2018-07-06/index.php",
+		"/Applications/MAMP/bin/php/php7.0.15/conf/php.ini",
+		"/Users/christophe/Developer/WebRoot/Partouche Extracts/2018-07-06/data/Archive/balance.json",
+		"/Users/christophe/Developer/WebRoot/Partouche Extracts/2018-07-06/composer.json",
+		"/Users/christophe/Developer/WebRoot/LoL-201711-ESS2_D1/Build/UnityLoader.js",
+		"/Users/christophe/Desktop/UnityLoader.js",
+		"/Applications/Unity 2017.4.5f1/PlaybackEngines/AndroidPlayer/Tools/GradleTemplates/mainTemplate.gradle",
+		"/Users/christophe/Developer/Unity/Partouche (Android)/Assets/Plugins/Android/mainTemplate.gradle",
+		"/Users/christophe/Desktop/TagFilterPatch.diff",
+		"/Users/christophe/Library/Android/sdk/extras/google/m2repository/source.properties"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 259.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 118.0
+	},
+	"pinned_build_system": "",
+	"project": "php-micro-framework.wiki.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
