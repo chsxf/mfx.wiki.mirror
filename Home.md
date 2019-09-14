@@ -17,7 +17,7 @@ MFX is released under the MIT license as found [here](../blob/master/LICENSE).
 
 # Getting Started
 
-Go to [this page](GettingStarted) to start using MFX.
+Go to [this page](Getting-Started) to start using MFX.
 
 # Planned Improvements
 
