@@ -23,16 +23,18 @@ We recommend adding the submodule under the name `mfx` and the documentation has
 
 ### Alternative Method - Cloning the Repository
 
+We recommend adding the submodule under the name `mfx` and the documentation has been written with this in mind. However, the folder name and location can be changed as you see fit.
+
 You can clone the repository's master branch through HTTPS:
 
 ```
-git clone https://github.com/cheeseburgames/php-micro-framework.git
+git clone https://github.com/cheeseburgames/php-micro-framework.git mfx
 ```
 
 or through SSH:
 
 ```
-git clone git@github.com:cheeseburgames/php-micro-framework.git
+git clone git@github.com:cheeseburgames/php-micro-framework.git mfx
 ```
 
 ##### Updating Submodules
@@ -47,7 +49,9 @@ git submodule update --init --recursive
 
 ### Alternative Method - Source Code Archive
 
-Additionally, you can download the repository as a .zip file from github. However, we do not recommend this method as you won't get any submodule source code through the download.
+Additionally, you can download the repository as a .zip file from github.
+
+However, **we do not recommend this method** as you won't get any submodule source code through the download.
 
 ## Next Step
 
