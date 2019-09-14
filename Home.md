@@ -19,6 +19,10 @@ MFX is released under the MIT license as found [here](../blob/master/LICENSE).
 
 Go to [this page](Getting-Started) to start using MFX.
 
+# Complete documentation
+
+To access a deeper and more complete documentation on the design and usage of MFX, go to the [[Framework Reference]] page.
+
 # Planned Improvements
 
 * Making it compatible with Composer
