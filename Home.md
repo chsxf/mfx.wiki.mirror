@@ -2,13 +2,13 @@ Welcome to the php-micro-framework wiki!
 
 # What is php-micro-framework?
 
-php-micro-framework (MFX in short) is a full-stack PHP framework originally designed to serve as a project basis for Cheese Burgames, a french independant video game studio. The first version has been introduced in 2013 and matured in 2016. With time, MFX has evolved into a complete framework for external developments.
+php-micro-framework (MFX in short) is a full-stack PHP framework originally designed to serve as a project basis for Cheese Burgames, a french independant video game studio. The first version has been introduced in 2013 and matured in 2016. With time, <abbr title="php-micro-framework in short">MFX</abbr> has evolved into a complete framework for external developments.
 
 It can be used as the core of any regular website or API.
 
 ## License
 
-MFX is released under the MIT license as found [here](../blob/master/LICENSE).
+<abbr title="php-micro-framework in short">MFX</abbr> is released under the MIT license as found [here](../blob/master/LICENSE).
 
 # System Requirements
 
@@ -17,13 +17,13 @@ MFX is released under the MIT license as found [here](../blob/master/LICENSE).
 
 # Getting Started
 
-Go to [this page](Getting-Started) to start using MFX.
+Go to [this page](Getting-Started) to start using <abbr title="php-micro-framework in short">MFX</abbr>.
 
 # Complete documentation
 
-To access a deeper and more complete documentation on the design and usage of MFX, go to the [[Framework Reference]] page.
+To access a deeper and more complete documentation on the design and usage of <abbr title="php-micro-framework in short">MFX</abbr>, go to the [[Framework Reference]] page.
 
 # Planned Improvements
 
-* Making it compatible with Composer
-* Adding a setup script
+* [ ] Making it compatible with Composer
+* [ ] Adding a setup script

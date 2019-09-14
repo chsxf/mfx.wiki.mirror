@@ -2,7 +2,7 @@
 
 ### Composer Support
 
-At this time, MFX does not support Composer.\
+At this time, <abbr title="php-micro-framework in short">MFX</abbr> does not support Composer.\
 It is a planned improvement and work has already began to port dependencies and the core module.
 
 ### Recommended method - Framework as Submodule
@@ -37,9 +37,9 @@ git clone git@github.com:cheeseburgames/php-micro-framework.git
 
 ##### Updating Submodules
 
-MFX relies on several submodules you'll need to update and initialize to be able to run the framework.
+<abbr title="php-micro-framework in short">MFX</abbr> relies on several submodules you'll need to update and initialize to be able to run the framework.
 
-Go to the MFX repository's folder and run this command-line:
+Go to the <abbr title="php-micro-framework in short">MFX</abbr> repository's folder and run this command-line:
 
 ```
 git submodule update --init --recursive
