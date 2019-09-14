@@ -1,4 +1,4 @@
-## Fetching Framework Source Code
+## 1. Fetching Framework Source Code
 
 ### Composer Support
 
@@ -48,3 +48,7 @@ git submodule update --init --recursive
 ### Alternative Method - Source Code Archive
 
 Additionally, you can download the repository as a .zip file from github. However, we do not recommend this method as you won't get any submodule source code through the download.
+
+## Next Step
+
+[Setting Up Your First App](Setting-Up-Your-First-App)
