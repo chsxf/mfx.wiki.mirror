@@ -8,16 +8,16 @@ It can be used as the core of any regular websites as well as APIs.
 
 ## License
 
-MFX is release under the MIT license as found [here](../blob/master/LICENSE).
+MFX is released under the MIT license as found [here](../blob/master/LICENSE).
 
 # System Requirements
 
-* PHP
+* PHP 7.0.2+
 * MySQL/MariaDB (if you plan to use database storage)
 
 # Getting Started
 
-Go to [this page](GettingStarted.md) to start using MFX.
+Go to [this page](GettingStarted) to start using MFX.
 
 # Planned Improvements
 
