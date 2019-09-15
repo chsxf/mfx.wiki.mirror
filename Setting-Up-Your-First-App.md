@@ -1,6 +1,4 @@
-## 2. Setting Up Your First App
-
-### Folder Structure
+## Folder Structure
 
 At this point, your repository, if empty prior to the addition of the framework, should look like this:
 
@@ -10,7 +8,7 @@ At this point, your repository, if empty prior to the addition of the framework,
 📁 mfx
 ```
 
-### Adding the App Folder
+## Adding the App Folder
 
 Apps, constituting the "application layer" of any website based of mfx, are located in their own folder. Add a folder named `app` at the root level and a `config` folder in it.
 
@@ -27,7 +25,7 @@ You should end up with this folder structure:
 **Note:**\
 The `app` name for the folder can be changed to fit your needs.
 
-### Adding Starter Files
+## Adding Starter Files
 
 You will need three files to be able to start working on your website:
 
@@ -36,7 +34,7 @@ You will need three files to be able to start working on your website:
 * A `.htaccess` file to setup URL rewriting with Apache
 
 
-#### Configuration File
+### Configuration File
 
 Create a `config.php` file inside the `app/config` folder and paste these lines in it:
 
@@ -47,7 +45,7 @@ Create a `config.php` file inside the `app/config` folder and paste these lines 
 ));
 ```
 
-#### Entry Point File
+### Entry Point File
 
 Usually, PHP entry point file are named `index.php`. In order to obfuscate things and make it more difficult to hackers to break the framework, the default entry point file is called `entrypoint.php` with <abbr title="php-micro-framework in short">MFX</abbr>.
 
@@ -60,7 +58,7 @@ define('MFX_CONFIG_FILE_PATH', 'app/config/config.php');
 require_once('mfx/framework/framework.php');
 ```
 
-#### Apache's `.htaccess` File
+### Apache's `.htaccess` File
 
 As stated earlier, <abbr title="php-micro-framework in short">MFX</abbr> relies a lot on URL rewriting. So we have to setup Apache accordingly.
 
@@ -90,7 +88,7 @@ DirectoryIndex entrypoint.php
 > * Replace `RewriteBase /`  with `RewriteBase /path/to/your/website/subfolder`
 > * Replace `RewriteRule . /entrypoint.php [L]` with `RewriteRule . /path/to/your/website/subfolder/entrypoint.php [L]`
 
-### Resulting Folder Structure
+## Resulting Folder Structure
 
 At this point, your repository should look like this:
 

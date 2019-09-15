@@ -1,4 +1,4 @@
-## 1. Fetching Framework Source Code
+## Fetching Framework Source Code
 
 ### Composer Support
 
