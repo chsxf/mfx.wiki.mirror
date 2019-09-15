@@ -55,4 +55,4 @@ However, **we do not recommend this method** as you won't get any submodule sour
 
 ## Next Step
 
-[Setting Up Your First App](Setting-Up-Your-First-App)
+[[Setting Up Your First App]]

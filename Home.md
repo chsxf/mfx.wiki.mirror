@@ -29,3 +29,4 @@ To access a deeper and more complete documentation on the design and usage of <a
 * [ ] Making it compatible with Composer
 * [ ] Adding a setup script
 * [ ] Testing and improving nginx compatibility
+* [ ] Making it possible to replace the default route with a custom one
