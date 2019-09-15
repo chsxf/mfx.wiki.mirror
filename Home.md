@@ -26,7 +26,10 @@ To access a deeper and more complete documentation on the design and usage of <a
 
 # Planned Improvements
 
+*(This list is not prioritized)*
+
 * [ ] Making it compatible with Composer
 * [ ] Adding a setup script
 * [ ] Testing and improving nginx compatibility
 * [ ] Making it possible to replace the default router with a custom one
+* [ ] Improving `DatabaseUpdater` reliability and error resilience
