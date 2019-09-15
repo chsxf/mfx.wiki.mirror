@@ -13,7 +13,8 @@ It can be used as the core of any regular website or API.
 # System Requirements
 
 * PHP 7.0.2+
-* MySQL/MariaDB (if you plan to use database storage)
+* Apache with `mod_rewrite` module enabled
+* Any database management system compatible with PDO (MySQL, MariaDB, PostgreSQL, ...) if you plan to use database storage (see [PDO documentation](https://www.php.net/manual/en/book.pdo.php) for more information)
 
 # Getting Started
 
@@ -27,3 +28,4 @@ To access a deeper and more complete documentation on the design and usage of <a
 
 * [ ] Making it compatible with Composer
 * [ ] Adding a setup script
+* [ ] Testing and improving nginx compatibility
