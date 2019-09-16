@@ -16,13 +16,31 @@ It can be used as the core of any regular website or API.
 * Apache with `mod_rewrite` module enabled
 * Any database management system compatible with PDO (MySQL, MariaDB, PostgreSQL, ...) if you plan to use database storage (see [PDO documentation](https://www.php.net/manual/en/book.pdo.php) for more information)
 
+# Dependencies
+
+Dependencies are currently added directly into the repository or as submodules.
+
+There are four dependencies:
+
+* **php-gettext**\
+  Replacement wrapper for handling MO files where the native gettext extension is not available
+* **Twig** (1.x - <abbr title="php-micro-framework in short">MFX</abbr> is not compatible with version 2.x at the moment)\
+  Template engine\
+  https://twig.symfony.com/
+* **PDO database manager**\
+  PDO extended with some nice utility functions\
+  https://packagist.org/packages/cheese-burgames/pdo-database-manager
+* **Xhaleera Twig Tools**\
+  Set of useful extensions for Twig (switch blocks, lazy blocks, support for gettext inside the templates)\
+  https://packagist.org/packages/xhaleera/twig-tools
+
 # Getting Started
 
 Go to [this page](Getting-Started) to start using <abbr title="php-micro-framework in short">MFX</abbr>.
 
 # Complete documentation
 
-To access a deeper and more complete documentation on the design and usage of <abbr title="php-micro-framework in short">MFX</abbr>, go to the [[Framework Reference]] page.
+To access a deeper and more complete documentation on the design and usage of <abbr title="php-micro-framework in short">MFX</abbr>, go to the [[Framework Reference]].
 
 # Planned Improvements
 
@@ -33,3 +51,5 @@ To access a deeper and more complete documentation on the design and usage of <a
 * [ ] Testing and improving nginx compatibility
 * [ ] Making it possible to replace the default router with a custom one
 * [ ] Improving `DatabaseUpdater` reliability and error resilience
+* [ ] Removing php-gettext library dependency (making gettext extension mandatory)
+* [ ] Updating Twig to version 2.x
