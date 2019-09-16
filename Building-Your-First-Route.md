@@ -39,6 +39,8 @@ For more detailed information on configuration options, go to the [[Framework Re
 
 ## Creating the Route's Class
 
+Let's say we want to create a route called `TestRoute.hello`.
+
 Create a folder named `routes` inside the `app` folder and a file named `TestRoute.php` in it.
 
 **Don't forget to put the `T` and the `R` in uppercase.** <abbr title="php-micro-framework in short">MFX</abbr>'s router is case sensitive.
@@ -77,6 +79,19 @@ class TestRoute implements IRouteProvider {
 }
 ```
 
+This code includes three mandatory steps:
+
+1. **The `TestRoute` class implements the `IRouteProvider` interface.** This is mandatory for classes to be eligible as main routes.
+1. As stated earlier, **sub routes must be public static functions**. So is `hello`.
+1. But all public static functions are not suitable for routing. You have to **opt-in functions as sub routes through the `@mfx_subroute` annotation in the doccomment block**.\
+   For a deeper explaination of this design concept, you can read [this article on Medium](https://medium.com/@chsxf/php-leveraging-the-reflection-api-to-build-a-simple-request-router-e3efa6fdfb10).
+
+## Final Test
+
+Now go to `http://your.complete.website.url/Test.hello` through your web browser and it should display `Hello, world!`.
+
+Congratulations! You have just completed your very first route.
+
 ## Next Step
 
-[[Bla bla]]
+[[Using Templates]]
