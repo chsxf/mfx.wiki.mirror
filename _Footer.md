@@ -1,1 +1,5 @@
+[[Getting Started]]
+|
+[[Framework Reference]]
+|
 <abbr title="php-micro-framework in short">MFX</abbr> is released under the [MIT license](../blob/master/LICENSE)
