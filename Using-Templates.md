@@ -51,17 +51,17 @@ Open the `app/config/config.php` file and replace the whole content with what fo
 ```php
 <?php
 \CheeseBurgames\MFX\Config::load(array(
-		'autoload' => array(
-				'precedence' => array(
-						'app/routes'
-				)
-		),
-
-		'twig' => array(
-				'templates' => array(
-						'app/templates'
-				)
+	'autoload' => array(
+		'precedence' => array(
+			'app/routes'
 		)
+	),
+
+	'twig' => array(
+		'templates' => array(
+			'app/templates'
+		)
+	)
 ));
 ```
 
@@ -87,6 +87,24 @@ After that, we have to create a `hello.twig` file and paste these lines in it:
 
 	<p>Hello, {{ username }}!</p>
 {% endblock %}
+```
+
+At this point, your repository should look like this:
+
+```
+📁 .git
+📄 .gitmodules
+📄 .htaccess
+📁 app
+  📁 config
+    📄 config.php
+  📁 routes
+    📄 TestRoute.php
+  📁 templates
+    📁 TestRoute
+      📄 hello.twig
+📄 entrypoint.php
+📁 mfx
 ```
 
 ## Adaptating the Route

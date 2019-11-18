@@ -25,11 +25,11 @@ Open the `app/config/config.php` file and replace the whole content with what fo
 ```php
 <?php
 \CheeseBurgames\MFX\Config::load(array(
-		'autoload' => array(
-				'precedence' => array(
-						'app/routes'
-				)
+	'autoload' => array(
+		'precedence' => array(
+			'app/routes'
 		)
+	)
 ));
 ```
 
