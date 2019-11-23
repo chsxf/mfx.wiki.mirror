@@ -141,6 +141,6 @@ First, we create an array containing the template variables to feed the template
 
 For more information on the `RequestResult` class, go to the [[Framework Reference]].
 
-## Conclusion
+## Next Step
 
-You are now ready to continue your journey the framework. Go to the [[Framework Reference]] to get a deeper look into <abbr title="php-micro-framework in short">MFX</abbr>.
+[[Using Databases]]
