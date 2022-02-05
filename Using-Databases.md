@@ -1,8 +1,8 @@
 ## Introduction to Databases With MFX
 
-Database management with <abbr title="php-micro-framework in short">MFX</abbr> is fairly simple. <abbr title="php-micro-framework in short">MFX</abbr> uses [PDO](https://www.php.net/manual/en/book.pdo.php) through an extended class provided by the [pdo-database-manager package](https://packagist.org/packages/cheese-burgames/pdo-database-manager).
+Database management with MFX is fairly simple. MFX uses [PDO](https://www.php.net/manual/en/book.pdo.php) through an extended class provided by the [pdo-database-manager package](https://packagist.org/packages/cheese-burgames/pdo-database-manager).
 
-By using PDO, we ensure <abbr title="php-micro-framework in short">MFX</abbr> to be compatible pretty much out-of-the-box with every database management system supported by this abstraction layer.
+By using PDO, we ensure MFX to be compatible pretty much out-of-the-box with every database management system supported by this abstraction layer.
 
 ## Creating a Database
 
@@ -101,4 +101,4 @@ Hello, mickey_mouse!
 
 ## Conclusion
 
-You are now ready to continue your journey the framework. Go to the [[Framework Reference]] to get a deeper look into <abbr title="php-micro-framework in short">MFX</abbr>.
+You are now ready to continue your journey the framework. Go to the [[Framework Reference]] to get a deeper look into MFX.

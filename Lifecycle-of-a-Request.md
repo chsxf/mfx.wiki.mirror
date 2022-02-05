@@ -4,7 +4,7 @@ A request is usually a call to your web server. A remote device issues a request
 
 ## MFX Request Lifecycle
 
-Requests in <abbr title="php-micro-framework in short">MFX</abbr> goes through several stages before a response is provided. Those steps are mostly handled by the [[Core Manager]].
+Requests in MFX goes through several stages before a response is provided. Those steps are mostly handled by the [[Core Manager]].
 
 1. Route path info extraction from the request URI  
 1. Route path info validation

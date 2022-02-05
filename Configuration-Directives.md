@@ -18,7 +18,7 @@ Directive | Description | -
 
 Directive | Description | -
 --------- | ----------- | -
-`autoload.precedence` | An array of folders into which the autoloader will look for. The autoloaded elements will be looked in order of precedence in that list. That list is however always prepend with <abbr title="php-micro-framework in short">MFX</abbr>'s own folders. Thus, it is not possible to override one of the framework's classes with a custom one. | *Optional*
+`autoload.precedence` | An array of folders into which the autoloader will look for. The autoloaded elements will be looked in order of precedence in that list. That list is however always prepend with MFX's own folders. Thus, it is not possible to override one of the framework's classes with a custom one. | *Optional*
 
 #### Example
 
@@ -81,7 +81,7 @@ Directive | Description | -
 
 #### Database Server Specific Directives
 
-<abbr title="php-micro-framework in short">MFX</abbr> uses PDO as a database abstraction layer. See [PDO documentation](https://www.php.net/manual/en/book.pdo.php) for more information on those directives.
+MFX uses PDO as a database abstraction layer. See [PDO documentation](https://www.php.net/manual/en/book.pdo.php) for more information on those directives.
 
 Directive | Description | -
 --------- | ----------- | -

@@ -47,7 +47,7 @@ Create a `config.php` file inside the `app/config` folder and paste these lines 
 
 ### Entry Point File
 
-Usually, PHP entry point file are named `index.php`. In order to obfuscate things and make it more difficult to hackers to break the framework, the default entry point file is called `entrypoint.php` with <abbr title="php-micro-framework in short">MFX</abbr>.
+Usually, PHP entry point file are named `index.php`. In order to obfuscate things and make it more difficult to hackers to break the framework, the default entry point file is called `entrypoint.php` with MFX.
 
 Create an `entrypoint.php` file at the root level of your website and paste these lines in it:
 
@@ -60,7 +60,7 @@ require_once('mfx/framework/framework.php');
 
 ### Apache's `.htaccess` File
 
-As stated earlier, <abbr title="php-micro-framework in short">MFX</abbr> relies a lot on URL rewriting. So we have to setup Apache accordingly.
+As stated earlier, MFX relies a lot on URL rewriting. So we have to setup Apache accordingly.
 
 Create a `.htaccess` file at the root level of your website and paste these lines in it:
 

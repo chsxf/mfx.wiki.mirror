@@ -2,7 +2,7 @@
 
 ### Composer Support
 
-At this time, <abbr title="php-micro-framework in short">MFX</abbr> does not support Composer.\
+At this time, MFX does not support Composer.\
 It is a planned improvement and work has already began to port dependencies and the core module.
 
 ### Recommended method - Framework as Submodule
@@ -16,9 +16,9 @@ We recommend adding the submodule under the name `mfx` and the documentation has
 * Go to your project's repository folder
 * Run the following command line to add the framework as a submodule:
   * through HTTPS:\
-  	`git submodule add https://github.com/cheeseburgames/php-micro-framework.git mfx`
+  	`git submodule add https://github.com/chsxf/mfx.git mfx`
   * through SSH:\
-  	`git submodule add git@github.com:cheeseburgames/php-micro-framework.git mfx`
+  	`git submodule add git@github.com:chsxf/mfx.git mfx`
 * Update the submodules recursively: `git submodule update --init --recursive`
 
 ### Alternative Method - Cloning the Repository
@@ -28,20 +28,20 @@ We recommend adding the submodule under the name `mfx` and the documentation has
 You can clone the repository's master branch through HTTPS:
 
 ```
-git clone https://github.com/cheeseburgames/php-micro-framework.git mfx
+git clone https://github.com/chsxf/mfx.git mfx
 ```
 
 or through SSH:
 
 ```
-git clone git@github.com:cheeseburgames/php-micro-framework.git mfx
+git clone git@github.com:chsxf/mfx.git mfx
 ```
 
 ##### Updating Submodules
 
-<abbr title="php-micro-framework in short">MFX</abbr> relies on several submodules you'll need to update and initialize to be able to run the framework.
+MFX relies on several submodules you'll need to update and initialize to be able to run the framework.
 
-Go to the <abbr title="php-micro-framework in short">MFX</abbr> repository's folder and run this command-line:
+Go to the MFX repository's folder and run this command-line:
 
 ```
 git submodule update --init --recursive

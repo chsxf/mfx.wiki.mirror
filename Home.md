@@ -1,14 +1,14 @@
-Welcome to the php-micro-framework wiki!
+Welcome to the MFX wiki!
 
-# What is php-micro-framework?
+# What is MFX?
 
-php-micro-framework (MFX in short) is a full-stack PHP framework originally designed to serve as a project basis for Cheese Burgames, a french independant video game studio. The first version has been introduced in 2013 and matured in 2016. With time, <abbr title="php-micro-framework in short">MFX</abbr> has evolved into a complete framework for external developments.
+MFX is a full-stack PHP framework originally designed to serve as a project basis for Cheese Burgames, a french independant video game studio. The first version has been introduced in 2013 and matured in 2016. With time, MFX has evolved into a complete framework for external developments.
 
 It can be used as the core of any regular website or API.
 
 ## License
 
-<abbr title="php-micro-framework in short">MFX</abbr> is released under the MIT license as found [here](../blob/master/LICENSE).
+MFX is released under the MIT license as found [here](../blob/master/LICENSE).
 
 # System Requirements
 
@@ -24,7 +24,7 @@ There are four dependencies:
 
 * **php-gettext**\
   Replacement wrapper for handling MO files where the native gettext extension is not available
-* **Twig** (1.x - <abbr title="php-micro-framework in short">MFX</abbr> is not compatible with version 2.x at the moment)\
+* **Twig** (1.x - MFX is not compatible with version 2.x at the moment)\
   Template engine\
   https://twig.symfony.com/
 * **PDO database manager**\
@@ -36,11 +36,11 @@ There are four dependencies:
 
 # Getting Started
 
-Go to [this page](Getting-Started) to start using <abbr title="php-micro-framework in short">MFX</abbr>.
+Go to [this page](Getting-Started) to start using MFX.
 
 # Complete documentation
 
-To access a deeper and more complete documentation on the design and usage of <abbr title="php-micro-framework in short">MFX</abbr>, go to the [[Framework Reference]].
+To access a deeper and more complete documentation on the design and usage of MFX, go to the [[Framework Reference]].
 
 # Planned Improvements
 

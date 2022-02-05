@@ -37,14 +37,14 @@ class TestRoute implements IRouteProvider {
 
 Templates allow you to separate your logic from your presentation. This way, the routes handle logic and feed the templates with what they want to present to the user.
 
-<abbr title="php-micro-framework in short">MFX</abbr> uses Twig as its template engine.
+MFX uses Twig as its template engine.
 
 For more information on Twig, go to the [official documentation](https://twig.symfony.com/doc/1.x/).\
-*(Be sure to use Twig 1.x docs as <abbr title="php-micro-framework in short">MFX</abbr> is not compatible with Twig 2.x yet)*
+*(Be sure to use Twig 1.x docs as MFX is not compatible with Twig 2.x yet)*
 
 ## Setting Templates Root Directory
 
-First, we need to tell <abbr title="php-micro-framework in short">MFX</abbr> where the template files are located. To do that, we will add the `twig.templates` option to the configuration file. For this example, we choose to store our templates files in the `app/templates` folder, but you can change it to any value you like.
+First, we need to tell MFX where the template files are located. To do that, we will add the `twig.templates` option to the configuration file. For this example, we choose to store our templates files in the `app/templates` folder, but you can change it to any value you like.
 
 Open the `app/config/config.php` file and replace the whole content with what follows:
 
@@ -69,7 +69,7 @@ Open the `app/config/config.php` file and replace the whole content with what fo
 
 We want to provide a template file for the `TestRoute.hello` route.
 
-<abbr title="php-micro-framework in short">MFX</abbr>'s default behaviour when mapping routes to templates is to complete the templates root folder path with the class name as a sub folder and the method name as the file name.
+MFX's default behaviour when mapping routes to templates is to complete the templates root folder path with the class name as a sub folder and the method name as the file name.
 
 For `TestRoute.hello`, the resulting path will be `app/templates/TestRoute/hello.twig` (with respect of the route's case).
 
@@ -111,7 +111,7 @@ At this point, your repository should look like this:
 
 Now we have created the template file, we have to adapt the route to the new behaviour.
 
-Until now, the route was producing the output directly. In most cases, it is not suitable. Routes should only handle the logic and let <abbr title="php-micro-framework in short">MFX</abbr> and the template engine handle the formatting.
+Until now, the route was producing the output directly. In most cases, it is not suitable. Routes should only handle the logic and let MFX and the template engine handle the formatting.
 
 To that extent, routes return instances of the specialized class `RequestResult`. Those objects hold a certain amount of data that can be used by the framework to customize the output.
 
@@ -137,7 +137,7 @@ class TestRoute implements IRouteProvider {
 }
 ```
 
-First, we create an array containing the template variables to feed the template with. In our case, the `username` variable needs to be provided. Then, the route function returns a `RequestResult` object with `NULL` and the template variables array. `NULL` is passed as the first argument to tell <abbr title="php-micro-framework in short">MFX</abbr> to generate automatically the template file path from the route name.
+First, we create an array containing the template variables to feed the template with. In our case, the `username` variable needs to be provided. Then, the route function returns a `RequestResult` object with `NULL` and the template variables array. `NULL` is passed as the first argument to tell MFX to generate automatically the template file path from the route name.
 
 For more information on the `RequestResult` class, go to the [[Framework Reference]].
 
