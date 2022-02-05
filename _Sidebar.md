@@ -10,7 +10,7 @@
 
 # Reference
 
-[Summary](Framework-Reference)
+[Table of Contents](Framework-Reference)
 
 * [[Lifecycle of a Request]]
 * [[Configuration Directives]]
