@@ -8,7 +8,7 @@ It can be used as the core of any regular website or API.
 
 ## License
 
-MFX is released under the MIT license as found [here](../blob/master/LICENSE).
+MFX is released under the MIT license as found [here](../blob/main/LICENSE).
 
 # System Requirements
 
