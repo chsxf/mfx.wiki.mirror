@@ -1,6 +1,6 @@
 ## Install With Composer
 
-Install MFX using composer:
+Install MFX using [Composer](https://getcomposer.org):
 
 ```
 composer require chsxf/mfx
