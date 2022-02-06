@@ -17,17 +17,16 @@ class TestRoute implements IRouteProvider
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Hello, world!</title>
-</head>
-<body>
-	<p>Hello, world!</p>
-</body>
+    <head>
+        <title>Hello, world!</title>
+    </head>
+    <body>
+        <p>Hello, world!</p>
+    </body>
 </html>
 <?php
-		exit();
-	}
-
+        exit();
+    }
 }
 ```
 
@@ -84,9 +83,9 @@ After that, we have to create a `hello.twig` file and paste these lines in it:
 {% extends "@mfx/HTML.twig" %}
 
 {% block body %}
-	{{ parent() }}
+    {{ parent() }}
 
-	<p>Hello, {{ username }}!</p>
+    <p>Hello, {{ username }}!</p>
 {% endblock %}
 ```
 
@@ -131,11 +130,11 @@ class TestRoute implements IRouteProvider
 {
     #[SubRoute]
     public static function hello(): RequestResult {
-		$templateVars = array(
-				'username' => 'stranger'
-		);
-		return new RequestResult(data: $templateVars);
-	}
+        $templateVars = array(
+            'username' => 'stranger'
+        );
+        return new RequestResult(data: $templateVars);
+    }
 }
 ```
 

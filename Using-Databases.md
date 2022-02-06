@@ -10,16 +10,16 @@ Launch your database server and create a database called `test_mfx`, then execut
 
 ```sql
 CREATE TABLE `users` (
-	`id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-	`username` VARCHAR(255) NOT NULL,
-	PRIMARY KEY (`id`)
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `username` VARCHAR(255) NOT NULL,
+    PRIMARY KEY (`id`)
 );
 
 INSERT INTO `users` (`id`, `username`) VALUES
-	(NULL, 'sponge_bob'),
-	(NULL, 'aragorn'),
-	(NULL, 'bart_simpson'),
-	(NULL, 'mickey_mouse');
+    (NULL, 'sponge_bob'),
+    (NULL, 'aragorn'),
+    (NULL, 'bart_simpson'),
+    (NULL, 'mickey_mouse');
 ```
 
 ## Updating the Configuration
@@ -45,15 +45,15 @@ Config::load([
         ]
     ],
 
-	'database' => array(
-		'servers' => array(
-			'__default' => array(
-				'dsn' => 'mysql:dbname=test_mfx;host=localhost',
-				'username' => 'your_db_username',
-				'password' => 'your_db_password'
-			)
-		)
-	)
+    'database' => [
+        'servers' => [
+            '__default' => [
+                'dsn' => 'mysql:dbname=test_mfx;host=localhost',
+                'username' => 'your_db_username',
+                'password' => 'your_db_password'
+            ]
+        ]
+    ]
 ]);
 ```
 
@@ -75,14 +75,14 @@ class TestRoute implements IRouteProvider
 {
     #[SubRoute]
     public static function hello(): RequestResult {
-		$dbm = DatabaseManager::open();
-		
-		$sql = "SELECT * FROM `users` ORDER BY RAND() LIMIT 1";
-		$row = $dbm->getRow($sql, \PDO::FETCH_ASSOC);
-		
-		$templateVars = $row;
-		return new RequestResult(data: $templateVars);
-	}
+        $dbm = DatabaseManager::open();
+
+        $sql = "SELECT * FROM `users` ORDER BY RAND() LIMIT 1";
+        $row = $dbm->getRow($sql, \PDO::FETCH_ASSOC);
+
+        $templateVars = $row;
+        return new RequestResult(data: $templateVars);
+    }
 }
 ```
 

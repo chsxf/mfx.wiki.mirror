@@ -26,11 +26,11 @@ Open the `application/config/config.php` file and replace the whole content with
 use chsxf\MFX\Config;
 
 Config::load([
-	'autoload' => array(
-		'precedence' => array(
-			'application/routes'
-		)
-	)
+    'autoload' => array(
+        'precedence' => array(
+            'application/routes'
+        )
+    )
 ]);
 ```
 
@@ -77,7 +77,7 @@ class TestRoute implements IRouteProvider
     #[SubRoute]
     public static function hello(): RequestResult {
         echo 'Hello, world!';
-		exit();
+        exit();
     }
 }
 ```
