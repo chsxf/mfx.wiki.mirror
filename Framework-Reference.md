@@ -1,5 +1,5 @@
 * Request Management
-	* [[Annotation-Based Routing]]
+	* [[Attribute-Based Routing]]
 	* [[Lifecycle of a Request]]
 	* [[Request Results]]
 	* [[Sub Route Types]]
@@ -13,7 +13,7 @@
 	* [[Data Validator]]
 	* [[Database Manager]]
 	* [[Database Updater]]
-	* [[Documentation Comment Parser]]
+	* [[Route Attributes Parser]]
 	* [[Error Manager]]
 	* [[Localization Manager]]
 	* [[Pagination Manager]]
@@ -23,7 +23,6 @@
 	* [[Stylesheet Manager]]
 * Helper Tools
 	* [[Array Tools]]
-	* [[Enums]]
 	* [[File Tools]]
 	* [[JSON Tools]]
 	* [[Math Tools]]
