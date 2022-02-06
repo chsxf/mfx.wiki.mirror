@@ -1,6 +1,6 @@
 ## Introduction to Databases With MFX
 
-Database management with MFX is fairly simple. MFX uses [PDO](https://www.php.net/manual/en/book.pdo.php) through an extended class provided by the [pdo-database-manager package](https://packagist.org/packages/cheese-burgames/pdo-database-manager).
+Database management with MFX is fairly simple. MFX uses [PDO](https://www.php.net/manual/en/book.pdo.php) through an extended class provided by the [pdo-database-manager](https://packagist.org/packages/chsxf/pdo-database-manager) package.
 
 By using PDO, we ensure MFX to be compatible pretty much out-of-the-box with every database management system supported by this abstraction layer.
 
@@ -26,22 +26,24 @@ INSERT INTO `users` (`id`, `username`) VALUES
 
 The first step to bring database support into your app is to update your configuration file.
 
-Open the `app/config/config.php` file and replace the whole content with what follows. Be sure to replace `your_db_username` and `your_db_password` with the credentials for your database. You may also need to adjust the `dsn` option to fit your needs.
+Open the `application/config/config.php` file and replace the whole content with what follows. Be sure to replace `your_db_username` and `your_db_password` with the credentials for your database. You may also need to adjust the `dsn` option to fit your needs.
 
 ```php
 <?php
-\CheeseBurgames\MFX\Config::load(array(
-	'autoload' => array(
-		'precedence' => array(
-			'app/routes'
-		)
-	),
+use chsxf\MFX\Config;
 
-	'twig' => array(
-		'templates' => array(
-			'app/templates'
-		)
-	),
+Config::load([
+    'autoload' => [
+        'precedence' => [
+            'application/routes',
+        ]
+    ],
+
+    'twig' => [
+        'templates' => [
+            'application/views'
+        ]
+    ],
 
 	'database' => array(
 		'servers' => array(
@@ -52,7 +54,7 @@ Open the `app/config/config.php` file and replace the whole content with what fo
 			)
 		)
 	)
-));
+]);
 ```
 
 ## Updating the Route
@@ -61,36 +63,33 @@ Now, we are all set up, we will be able to use the database and the table we cre
 
 In this example, we will pick a random user from the database and display its username with the template we wrote in the previous step.
 
-Open the `app/classes/TestRoute.php` file replace the whole content with what follows:
+Open the `application/routes/TestRoute.php` file replace the whole content with what follows:
 
 ```php
 <?php
-use CheeseBurgames\MFX\IRouteProvider;
-use CheeseBurgames\MFX\RequestResult;
-use CheeseBurgames\MFX\DatabaseManager;
+use chsxf\MFX\Attributes\SubRoute;
+use chsxf\MFX\IRouteProvider;
+use chsxf\MFX\RequestResult;
 
-class TestRoute implements IRouteProvider {
-	
-	/**
-	 * @mfx_subroute
-	 */
-	public static function hello() {
+class TestRoute implements IRouteProvider
+{
+    #[SubRoute]
+    public static function hello(): RequestResult {
 		$dbm = DatabaseManager::open();
 		
 		$sql = "SELECT * FROM `users` ORDER BY RAND() LIMIT 1";
-		$row = $dbm->getRow($sql, PDO::FETCH_ASSOC);
+		$row = $dbm->getRow($sql, \PDO::FETCH_ASSOC);
 		
 		$templateVars = $row;
-		return new RequestResult(NULL, $templateVars);
+		return new RequestResult(data: $templateVars);
 	}
-	
 }
 ```
 
 ### Details
 
 * First, we open a connection to the database server with the `DatabaseManager::open()` function. It uses the `__default` server configuration options as no server name is provided,
-* Then, we execute our query with the `getRow()` method and ask the result to be provided as an associative array (the `getRow()` method is an extension method provided by the [pdo-database-manager package](https://packagist.org/packages/cheese-burgames/pdo-database-manager)),
+* Then, we execute our query with the `getRow()` method and ask the result to be provided as an associative array (the `getRow()` method is an extension method provided by the [pdo-database-manager](https://packagist.org/packages/chsxf/pdo-database-manager) package),
 * Finally, we pass the result as the template variables to display the selected user's name.
 
 If everything works fine, you should get this kind of result on screen:
@@ -101,4 +100,4 @@ Hello, mickey_mouse!
 
 ## Conclusion
 
-You are now ready to continue your journey the framework. Go to the [[Framework Reference]] to get a deeper look into MFX.
+You are now ready to continue your journey with the framework. Go to the [[Framework Reference]] to get a deeper look into MFX.
