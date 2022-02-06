@@ -18,22 +18,23 @@ For more detailed information on routes, go to the [[Framework Reference]].
 
 Now we know routes represent a function in a class, we have to tell MFX where to find those classes. To do that, we add options to the configuration file for MFX's autoloader.
 
-For more information on PHP class autoloading, go to the [official documentation](https://www.php.net/manual/en/language.oop5.autoload.php).
+For more information on PHP and Composer class autoloading, go to the [official PHP documentation](https://www.php.net/manual/en/language.oop5.autoload.php) and to the [Composer documentation](https://getcomposer.org/doc/01-basic-usage.md#autoloading).
 
-Open the `app/config/config.php` file and replace the whole content with what follows:
+Open the `application/config/config.php` file and replace the whole content with what follows:
 
 ```php
-<?php
-\CheeseBurgames\MFX\Config::load(array(
+use chsxf\MFX\Config;
+
+Config::load([
 	'autoload' => array(
 		'precedence' => array(
-			'app/routes'
+			'application/routes'
 		)
 	)
-));
+]);
 ```
 
-Those lines set the `autoload.precedence` configuration option to `app/routes`, telling MFX's autoloader to look into the `app/routes`folder for classes.
+Those lines set the `autoload.precedence` configuration option to `application/routes`, informing MFX's autoloader to look into the `application/routes`folder for classes.
 
 For more detailed information on configuration options, go to the [[Framework Reference]].
 
@@ -41,7 +42,7 @@ For more detailed information on configuration options, go to the [[Framework Re
 
 Let's say we want to create a route called `TestRoute.hello`.
 
-Create a folder named `routes` inside the `app` folder and a file named `TestRoute.php` in it.
+Create a folder named `routes` inside the `application` folder and a file named `TestRoute.php` in it.
 
 **Don't forget to put the `T` and the `R` in uppercase.** MFX's router is case sensitive.
 
@@ -49,33 +50,35 @@ At this point, your repository should look like this:
 
 ```
 📁 .git
-📄 .gitmodules
 📄 .htaccess
-📁 app
+📁 application
   📁 config
     📄 config.php
   📁 routes
     📄 TestRoute.php
 📄 entrypoint.php
-📁 mfx
+📁 vendor
+  📄 autoload.php
+  📁 chsxf
+  📁 composer
+  ... and other things
 ```
 
 Then, open the `TestRoute.php` file and paste these lines in it:
 
 ```php
 <?php
-use \CheeseBurgames\MFX\IRouteProvider;
+use chsxf\MFX\Attributes\SubRoute;
+use chsxf\MFX\IRouteProvider;
+use chsxf\MFX\RequestResult;
 
-class TestRoute implements IRouteProvider {
-
-	/**
-	 * @mfx_subroute
-	 */
-	public static function hello() {
-		echo 'Hello, world!';
+class TestRoute implements IRouteProvider
+{
+    #[SubRoute]
+    public static function hello(): RequestResult {
+        echo 'Hello, world!';
 		exit();
-	}
-
+    }
 }
 ```
 
@@ -83,8 +86,7 @@ This code includes three mandatory steps:
 
 1. **The `TestRoute` class implements the `IRouteProvider` interface.** This is mandatory for classes to be eligible as main routes.
 1. As stated earlier, **sub routes must be public static functions**. So is `hello`.
-1. But all public static functions are not suitable for routing. You have to **opt-in functions as sub routes through the `@mfx_subroute` annotation in the doccomment block**.\
-   For a deeper explaination of this design concept, you can read [this article on Medium](https://medium.com/@chsxf/php-leveraging-the-reflection-api-to-build-a-simple-request-router-e3efa6fdfb10).
+1. But all public static functions are not suitable for routing. You have to **opt-in functions as sub routes through the `#[SubRoute]` attribute**.
 
 ## Final Test
 
