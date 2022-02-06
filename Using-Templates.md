@@ -2,18 +2,18 @@
 
 In the previous section we created our first route. But that route only produced direct output without any formatting or a proper HTML page structure.
 
-To achieve that, we could do this:
+To achieve that, we could modify our `TestRoute.php` as follows:
 
 ```php
 <?php
-use \CheeseBurgames\MFX\IRouteProvider;
+use chsxf\MFX\Attributes\SubRoute;
+use chsxf\MFX\IRouteProvider;
+use chsxf\MFX\RequestResult;
 
-class TestRoute implements IRouteProvider {
-
-	/**
-	 * @mfx_subroute
-	 */
-	public static function hello() {
+class TestRoute implements IRouteProvider
+{
+    #[SubRoute]
+    public static function hello(): RequestResult {
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,43 +39,44 @@ Templates allow you to separate your logic from your presentation. This way, the
 
 MFX uses Twig as its template engine.
 
-For more information on Twig, go to the [official documentation](https://twig.symfony.com/doc/1.x/).\
-*(Be sure to use Twig 1.x docs as MFX is not compatible with Twig 2.x yet)*
+For more information on Twig, go to the [official documentation](https://twig.symfony.com/doc/).
 
 ## Setting Templates Root Directory
 
-First, we need to tell MFX where the template files are located. To do that, we will add the `twig.templates` option to the configuration file. For this example, we choose to store our templates files in the `app/templates` folder, but you can change it to any value you like.
+First, we need to tell MFX where the template files are located. To do that, we will add the `twig.templates` option to the configuration file. For this example, we choose to store our templates files in the `application/views` folder, but you can change it to any value you like.
 
-Open the `app/config/config.php` file and replace the whole content with what follows:
+Open the `application/config/config.php` file and replace the whole content with what follows:
 
 ```php
 <?php
-\CheeseBurgames\MFX\Config::load(array(
-	'autoload' => array(
-		'precedence' => array(
-			'app/routes'
-		)
-	),
+use chsxf\MFX\Config;
 
-	'twig' => array(
-		'templates' => array(
-			'app/templates'
-		)
-	)
-));
+Config::load([
+    'autoload' => [
+        'precedence' => [
+            'application/routes',
+        ]
+    ],
+
+    'twig' => [
+        'templates' => [
+            'application/views'
+        ]
+    ]
+]);
 ```
 
 ## Creating the Template File
 
 We want to provide a template file for the `TestRoute.hello` route.
 
-MFX's default behaviour when mapping routes to templates is to complete the templates root folder path with the class name as a sub folder and the method name as the file name.
+MFX's default behaviour when mapping routes to templates is to complete the templates root folder path with the main route name as a sub folder and the sub route name as the file name.
 
-For `TestRoute.hello`, the resulting path will be `app/templates/TestRoute/hello.twig` (with respect of the route's case).
+For the `TestRoute.hello` route, the resulting path will be `application/templates/TestRoute/hello.twig` (with respect of the route's case).
 
 ### Updating the Folder Structure
 
-Add a `templates` folder to the `app` folder, then a `TestRoute` folder in the new folder.
+Add a `views` folder to the `application` folder, then a `TestRoute` folder in it.
 
 After that, we have to create a `hello.twig` file and paste these lines in it:
 
@@ -93,18 +94,21 @@ At this point, your repository should look like this:
 
 ```
 📁 .git
-📄 .gitmodules
 📄 .htaccess
-📁 app
+📁 application
   📁 config
     📄 config.php
   📁 routes
     📄 TestRoute.php
-  📁 templates
+  📁 views
     📁 TestRoute
       📄 hello.twig
 📄 entrypoint.php
-📁 mfx
+📁 vendor
+  📄 autoload.php
+  📁 chsxf
+  📁 composer
+  ... and other things
 ```
 
 ## Adaptating the Route
@@ -115,31 +119,35 @@ Until now, the route was producing the output directly. In most cases, it is not
 
 To that extent, routes return instances of the specialized class `RequestResult`. Those objects hold a certain amount of data that can be used by the framework to customize the output.
 
-Open the `app/routes/TestRoute.php` file and replace its content with these lines:
+Open the `application/routes/TestRoute.php` file and replace its content with these lines:
 
 ```php
 <?php
-use CheeseBurgames\MFX\IRouteProvider;
-use CheeseBurgames\MFX\RequestResult;
+use chsxf\MFX\Attributes\SubRoute;
+use chsxf\MFX\IRouteProvider;
+use chsxf\MFX\RequestResult;
 
-class TestRoute implements IRouteProvider {
-
-	/**
-	 * @mfx_subroute
-	 */
-	public static function hello() {
+class TestRoute implements IRouteProvider
+{
+    #[SubRoute]
+    public static function hello(): RequestResult {
 		$templateVars = array(
 				'username' => 'stranger'
 		);
-		return new RequestResult(NULL, $templateVars);
+		return new RequestResult(data: $templateVars);
 	}
-
 }
 ```
 
-First, we create an array containing the template variables to feed the template with. In our case, the `username` variable needs to be provided. Then, the route function returns a `RequestResult` object with `NULL` and the template variables array. `NULL` is passed as the first argument to tell MFX to generate automatically the template file path from the route name.
+First, we create an array containing the template variables to feed the template with. In our case, the `username` variable needs to be provided. Then, the route function returns a `RequestResult` object with the template variables array.
 
 For more information on the `RequestResult` class, go to the [[Framework Reference]].
+
+## Final Test
+
+Now go to `http://your.complete.website.url/Test.hello` through your web browser and it should display `Hello, stranger!` in a properly structured HTML web page.
+
+Congratulations! You have just completed your very first template.
 
 ## Next Step
 
