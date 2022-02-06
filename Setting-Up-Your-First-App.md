@@ -4,26 +4,32 @@ At this point, your repository, if empty prior to the addition of the framework,
 
 ```
 📁 .git
-📄 .gitmodules
-📁 mfx
+📁 vendor
+  📄 autoload.php
+  📁 chsxf
+  📁 composer
+  ... and other things
 ```
 
 ## Adding the App Folder
 
-Apps, constituting the "application layer" of any website based of mfx, are located in their own folder. Add a folder named `app` at the root level and a `config` folder in it.
+Apps, constituting the "application layer" of any website based on MFX, are located in their own folder. Add a folder named `app` at the root level and a `config` folder in it.
 
 You should end up with this folder structure:
 
 ```
 📁 .git
-📄 .gitmodules
-📁 app
+📁 application
   📁 config
-📁 mfx
+📁 vendor
+  📄 autoload.php
+  📁 chsxf
+  📁 composer
+  ... and other things
 ```
 
 **Note:**\
-The `app` name for the folder can be changed to fit your needs.
+The `application` name for the folder can be changed to fit your needs.
 
 ## Adding Starter Files
 
@@ -33,29 +39,33 @@ You will need three files to be able to start working on your website:
 * A PHP entry point file
 * A `.htaccess` file to setup URL rewriting with Apache
 
-
 ### Configuration File
 
-Create a `config.php` file inside the `app/config` folder and paste these lines in it:
+Create a `config.php` file inside the `application/config` folder and paste these lines in it:
 
 ```php
 <?php
-\CheeseBurgames\MFX\Config::load(array(
+use chsxf\MFX\Config;
 
-));
+Config::load([
+
+]);
 ```
+
+For now, we will keep the configuration file empty and add options in the following steps.
 
 ### Entry Point File
 
-Usually, PHP entry point file are named `index.php`. In order to obfuscate things and make it more difficult to hackers to break the framework, the default entry point file is called `entrypoint.php` with MFX.
+Usually, PHP entry point file are named `index.php`. In order to obfuscate things, the default entry point file is called `entrypoint.php` with MFX.
 
 Create an `entrypoint.php` file at the root level of your website and paste these lines in it:
 
 ```php
 <?php
-chdir(dirname(__FILE__));
-define('MFX_CONFIG_FILE_PATH', 'app/config/config.php');
-require_once('mfx/framework/framework.php');
+use chsxf\MFX\Framework;
+
+require_once('vendor/autoload.php');
+Framework::init();
 ```
 
 ### Apache's `.htaccess` File
@@ -83,7 +93,7 @@ DirectoryIndex entrypoint.php
 ```
 
 > **IMPORTANT NOTE:**\  
-> The `.htaccess` file above is designed for setups with virtual hosts targetting the root folder directly. If your local development setup in placed in a sub-folder of your webserver (ie `http://localhost/my-website-subfolder/`), you have to adapt the file as follow:
+> The `.htaccess` file above is designed for setups with virtual hosts targetting the root folder directly. If your local development setup in placed in a sub-folder of your webserver (for example, `http://localhost/my-website-subfolder/`), you have to adapt the file as follow:
 > 
 > * Replace `RewriteBase /`  with `RewriteBase /path/to/your/website/subfolder`
 > * Replace `RewriteRule . /entrypoint.php [L]` with `RewriteRule . /path/to/your/website/subfolder/entrypoint.php [L]`
@@ -94,26 +104,29 @@ At this point, your repository should look like this:
 
 ```
 📁 .git
-📄 .gitmodules
 📄 .htaccess
-📁 app
+📁 application
   📁 config
     📄 config.php
 📄 entrypoint.php
-📁 mfx
+📁 vendor
+  📄 autoload.php
+  📁 chsxf
+  📁 composer
+  ... and other things
 ```
 
 However, we're not ready yet. If you try to access your website, you will get this error:
 
 ```
 400 Bad Request
-Uncaught ErrorException: '' is not a valid route.
-#0 /path/to/website/mfx/framework/framework.php(87): CheeseBurgames\MFX\CoreManager::handleRequest(Object(Twig_Environment), NULL)
-#1 /path/to/website/entrypoint.php(4): require_once('/path/to/webs...')
+Uncaught TypeError: chsxf\MFX\CoreManager::handleRequest(): Argument #2 ($defaultRoute) must be of type string, null given, called in /path/to/website/mfx.test/vendor/chsxf/mfx/src/chsxf/MFX/Framework.php on line 65
+#0 /path/to/website/mfx.test/vendor/chsxf/mfx/src/chsxf/MFX/Framework.php(65): chsxf\MFX\CoreManager::handleRequest(Object(Twig\Environment), NULL)
+#1 /path/to/website/mfx.test/entrypoint.php(5): chsxf\MFX\Framework::init()
 #2 {main}
 ```
 
-If you get it, you're good! If not, you've missed something.
+If you get it, you're good though! If not, you've missed something.
 
 ## Next Step
 
