@@ -8,9 +8,8 @@
 1. [[Using Templates]]
 1. [[Using Databases]]
 
-# Reference
+# [Reference](Framework-Reference)
 
-[Table of Contents](Framework-Reference)
-
-* [[Lifecycle of a Request]]
+* Request Management
+  * [[Lifecycle of a Request]]
 * [[Configuration Directives]]
