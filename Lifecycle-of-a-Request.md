@@ -37,22 +37,33 @@ Once the route path info has been extracted from the request URI, it is now time
 
 A valid route path info must conform to the regular expression: `/^[[:alnum:]_]+\.[[:alnum:]_]+?$/` and match existing class and method.
 
-If the route path info is invalid and is not a potential match for a missing file, an exception is thrown.
+If the route path info is invalid and is not a potential match for an actual existing file, an exception is thrown.
 
 ## 3. Calling Pre-processing Callbacks
 
-Before executing routes, two callbacks can be called: the global and the local pre-route callbacks.
+Before executing routes, three callbacks can be called: the global and the local pre-route callbacks. You can use those callbacks to implement custom validations outside of MFX's built-in lifecycle and end requests prematurely if needed.
 
 As states its name, the global pre-route callback can be defined globally in the config file and is called for every route.
 
-On the other hand, local pre-route callbacks can be defined locally to a route (through the class annotations) and is called only for any contained sub-route.
+```php
+Config::load([
+    // ...
+    'request' => [
+        // ...
+        'pre_route_callback' => 'MyRouteClass::myPreRouteCallbackMethod'
+    ],
+    // ...
+]);
+```
 
-In both cases, pre-route callbacks are defined as [callables](https://www.php.net/manual/en/language.types.callable.php).
+On the other hand, local pre-route callbacks can be defined locally to a route or a sub route (thanks to the `PreRouteCallback` attribute) and are called only for the corresponding route or sub-route.
+
+All three types of pre-route callbacks can be defined at the same time and are executed sequentially (global, then route, then subroute).
+
+In all cases, pre-route callbacks are defined as [callables](https://www.php.net/manual/en/language.types.callable.php).
 
 ```php
-/***
- * @mfx_pre_route_callback MyRouteClass::myPreRouteCallbackMethod
- */
+#[PreRouteCallback('MyRouteClass::myPreRouteCallbackMethod')]
 ```
 
 By default, no global or local callback is defined.
@@ -63,20 +74,20 @@ Pre-route callback methods must conform to this signature:
 
 ```php
 myPreRouteCallbackMethod(
-	string $_mainRoute,
-	string $_subRoute,
-	array $_validRouteProviderParameters,
-	array $_validSubRouteParameters,
-	array $_requestParameters
-): void { ... }
+    string $_mainRoute,
+    string $_subRoute,
+    RouteAttributesParser $_routeAttributeParser,
+    RouteAttributesParser $_subRouteAttributesParser,
+    array $_requestParameters
+): void { /* ... */ }
 ```
 
 Argument | Definition
 -------- | ----------
 $_mainRoute | Name of the called route<br />(`MyRouteClass` in our example)
 $_subRoute | Name of the called sub-route<br />(`routeMethod` in our example)
-$_validRouteProviderParameters | Route provider parameters based on the route's class annotations
-$_validSubRouteParameters | Sub-route parameters based on the route's method annotations
+$_routeAttributeParser | Route attributes parser based on the route's class attributes
+$_subRouteAttributesParser | Sub-route attributes parser based on the route's method attributes
 $_requestParameters | Parameters provided with the request<br />(`[ 'param1', 'param2' ]` in our example)
 
 ## 4. Pre-Conditions Validation
@@ -90,10 +101,8 @@ At this time, are only supported:
 Those pre-conditions requirements are defined in the route's method annotations. Only one request method and content type can be defined for a route's method.
 
 ```php
-/**
- * @mfx_requires_request_method POST
- * @mfx_requires_content_type application/json
- */
+#[RequiredRequestMethod('POST')]
+#[RequiredContentType('application/json')]
 ```
 
 If any of the pre-condition is not met, the request ends with an HTTP error code (`405 Method Not Allowed` for the request method or `415 Unsupported Media Type` for the content type).
@@ -117,11 +126,11 @@ The post-route callback method must conform to this signature:
 
 ```php
 myPostRouteCallbackMethod(
-	string $_mainRoute,
-	string $_subRoute,
-	array $_validRouteProviderParameters,
-	array $_validSubRouteParameters
-): void { ... }
+    string $_mainRoute,
+    string $_subRoute,
+    RouteAttributesParser $_routeAttributesParser,
+    RouteAttributesParser $_subRouteAttributesParser
+): void { /* ... */ }
 ```
 
 Please refer to the [pre-route callback argument list](#callback-method-signature) for further information.
