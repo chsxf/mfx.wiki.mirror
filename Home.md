@@ -33,22 +33,3 @@ Go to [this page](Getting-Started) to start using MFX.
 ## 📝 Complete documentation
 
 To access a deeper and more complete documentation on the design and usage of MFX, go to the [[Framework Reference]].
-
-## 🗓 Planned Improvements
-
-*(This list is not prioritized)*
-
-* [x] Making it compatible with Composer
-* [ ] Adding a setup script
-* [ ] Making it compatible with nginx
-* [ ] Making it possible to replace the default router with a custom one
-* [ ] Improving `DatabaseUpdater` reliability and error resilience
-* [x] Removing php-gettext library dependency (making gettext extension mandatory)
-* [x] Updating Twig to version 2.x
-
-## 💥 Known Issues
-
-*(This list is not prioritized)*
-
-* [ ] The post-route callback may not be called with some request results
-* [ ] Pre-conditions should be validated before calling pre-route callbacks
