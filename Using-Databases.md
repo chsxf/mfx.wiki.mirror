@@ -33,12 +33,6 @@ Open the `application/config/config.php` file and replace the whole content with
 use chsxf\MFX\Config;
 
 Config::load([
-    'autoload' => [
-        'precedence' => [
-            'application/routes',
-        ]
-    ],
-
     'twig' => [
         'templates' => [
             'application/views'
@@ -67,13 +61,13 @@ Open the `application/routes/TestRoute.php` file replace the whole content with 
 
 ```php
 <?php
-use chsxf\MFX\Attributes\SubRoute;
-use chsxf\MFX\IRouteProvider;
+use chsxf\MFX\Attributes\Route;
+use chsxf\MFX\Routers\IRouteProvider;
 use chsxf\MFX\RequestResult;
 
 class TestRoute implements IRouteProvider
 {
-    #[SubRoute]
+    #[Route]
     public static function hello(): RequestResult {
         $dbm = DatabaseManager::open();
 
