@@ -3,7 +3,6 @@
 At this point, your repository, if empty prior to the addition of the framework, should look like this:
 
 ```
-📁 .git
 📁 vendor
   📄 autoload.php
   📁 chsxf
@@ -13,12 +12,11 @@ At this point, your repository, if empty prior to the addition of the framework,
 
 ## Adding the App Folder
 
-Apps, constituting the "application layer" of any website based on MFX, are located in their own folder. Add a folder named `app` at the root level and a `config` folder in it.
+Apps, constituting the "application layer" of any website based on MFX, are located in their own folder. Add a folder named `application` at the root level and a `config` folder in it.
 
 You should end up with this folder structure:
 
 ```
-📁 .git
 📁 application
   📁 config
 📁 vendor
@@ -29,7 +27,7 @@ You should end up with this folder structure:
 ```
 
 **Note:**\
-The `application` name for the folder can be changed to fit your needs.
+The `application` folder can be renamed to suit your needs as you see fit.
 
 ## Adding Starter Files
 
@@ -56,7 +54,7 @@ For now, we will keep the configuration file empty and add options in the follow
 
 ### Entry Point File
 
-Usually, PHP entry point file are named `index.php`. In order to obfuscate things, the default entry point file is called `entrypoint.php` with MFX.
+Usually, PHP entry point files are named `index.php`. In order to obfuscate things, the default entry point file is called `entrypoint.php` with MFX.
 
 Create an `entrypoint.php` file at the root level of your website and paste these lines in it:
 
@@ -65,7 +63,7 @@ Create an `entrypoint.php` file at the root level of your website and paste thes
 use chsxf\MFX\Framework;
 
 require_once('vendor/autoload.php');
-Framework::init();
+Framework::init('application/config/config.php');
 ```
 
 ### Apache's `.htaccess` File
@@ -103,7 +101,6 @@ DirectoryIndex entrypoint.php
 At this point, your repository should look like this:
 
 ```
-📁 .git
 📄 .htaccess
 📁 application
   📁 config
@@ -116,17 +113,13 @@ At this point, your repository should look like this:
   ... and other things
 ```
 
-However, we're not ready yet. If you try to access your website, you will get this error:
+Now try to access your website, you should get this result:
 
 ```
-400 Bad Request
-Uncaught TypeError: chsxf\MFX\CoreManager::handleRequest(): Argument #2 ($defaultRoute) must be of type string, null given, called in /path/to/website/mfx.test/vendor/chsxf/mfx/src/chsxf/MFX/Framework.php on line 65
-#0 /path/to/website/mfx.test/vendor/chsxf/mfx/src/chsxf/MFX/Framework.php(65): chsxf\MFX\CoreManager::handleRequest(Object(Twig\Environment), NULL)
-#1 /path/to/website/mfx.test/entrypoint.php(5): chsxf\MFX\Framework::init()
-#2 {main}
+200 OK
 ```
 
-If you get it, you're good though! If not, you've missed something.
+If not, you've missed something.
 
 ## Next Step
 
