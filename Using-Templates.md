@@ -6,13 +6,13 @@ To achieve that, we could modify our `TestRoute.php` as follows:
 
 ```php
 <?php
-use chsxf\MFX\Attributes\SubRoute;
-use chsxf\MFX\IRouteProvider;
+use chsxf\MFX\Attributes\Route;
+use chsxf\MFX\Routers\IRouteProvider;
 use chsxf\MFX\RequestResult;
 
 class TestRoute implements IRouteProvider
 {
-    #[SubRoute]
+    #[Route]
     public static function hello(): RequestResult {
 ?>
 <!DOCTYPE html>
@@ -36,13 +36,11 @@ class TestRoute implements IRouteProvider
 
 Templates allow you to separate your logic from your presentation. This way, the routes handle logic and feed the templates with what they want to present to the user.
 
-MFX uses Twig as its template engine.
-
-For more information on Twig, go to the [official documentation](https://twig.symfony.com/doc/).
+MFX uses [Twig](https://twig.symfony.com/doc/) as its template engine.
 
 ## Setting Templates Root Directory
 
-First, we need to tell MFX where the template files are located. To do that, we will add the `twig.templates` option to the configuration file. For this example, we choose to store our templates files in the `application/views` folder, but you can change it to any value you like.
+First, we need to tell MFX where the template files are located. To do that, we will add the `twig.templates` option to the configuration file. For this example, we chose to store our templates files in the `application/views` folder, but you can change it to any value you like.
 
 Open the `application/config/config.php` file and replace the whole content with what follows:
 
@@ -51,12 +49,6 @@ Open the `application/config/config.php` file and replace the whole content with
 use chsxf\MFX\Config;
 
 Config::load([
-    'autoload' => [
-        'precedence' => [
-            'application/routes',
-        ]
-    ],
-
     'twig' => [
         'templates' => [
             'application/views'
@@ -69,9 +61,9 @@ Config::load([
 
 We want to provide a template file for the `TestRoute.hello` route.
 
-MFX's default behaviour when mapping routes to templates is to complete the templates root folder path with the main route name as a sub folder and the sub route name as the file name.
+MFX default router's behaviour when mapping routes to templates is to complete the templates root folder path with the route provider name as a sub folder and the route name as the file name.
 
-For the `TestRoute.hello` route, the resulting path will be `application/templates/TestRoute/hello.twig` (with respect of the route's case).
+For the `TestRoute.hello` route, the resulting path would be `application/templates/TestRoute/hello.twig` (with respect of the case).
 
 ### Updating the Folder Structure
 
@@ -92,7 +84,6 @@ After that, we have to create a `hello.twig` file and paste these lines in it:
 At this point, your repository should look like this:
 
 ```
-📁 .git
 📄 .htaccess
 📁 application
   📁 config
@@ -122,13 +113,13 @@ Open the `application/routes/TestRoute.php` file and replace its content with th
 
 ```php
 <?php
-use chsxf\MFX\Attributes\SubRoute;
-use chsxf\MFX\IRouteProvider;
+use chsxf\MFX\Attributes\Route;
+use chsxf\MFX\Routers\IRouteProvider;
 use chsxf\MFX\RequestResult;
 
 class TestRoute implements IRouteProvider
 {
-    #[SubRoute]
+    #[Route]
     public static function hello(): RequestResult {
         $templateVars = array(
             'username' => 'stranger'
