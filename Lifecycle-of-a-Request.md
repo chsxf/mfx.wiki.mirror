@@ -7,7 +7,7 @@ A request is usually a call to your web server. A remote device issues a request
 Requests in MFX goes through several stages before a response is provided. These steps are mostly handled by the [[Core Manager]].
 
 1. Route path info extraction from the request URI
-1. Route path info validation
+1. Route path info parsing and validation
 1. Calling pre-processing callbacks
 1. Pre-conditions validation
 1. Processing the route
@@ -17,17 +17,23 @@ We go into further details in the following sections.
 
 ## 1. Route Path Info Extraction From the Request URI
 
-For example, with the URI being `https://my.web.server/MyRouteClass.routeMethod`, route path info is `MyRouteClass.routeMethod`.
+For example, with the URI being `https://my.web.server/MyRouteClass.routeMethod`, the route path info is `MyRouteClass.routeMethod`.
 
 If route path info is empty, the default route is used instead. In case the default route has been set to `none`, MFX immediately ends the process with a `HTTP 200 OK` status code.
 
-## 2. Route Path Info Validation
+## 2. Route Path Info Parsing and Validation
 
-Once the route path info has been extracted from the request URI, it is now time to validate it.
+Once the route path info has been extracted from the request URI, it is now time to parse and validate it.
 
-Depending in the router you are using, the form of your route path info may differ. For example, with the `MainSubRouter`, a valid route path info must conform to the regular expression: `/^[[:alnum:]_]+\.[[:alnum:]_]+?$/` and match existing class and method.
+Depending on the router you are using, the form of your route path info may differ. For example, with the `MainSubRouter`, a valid route path info must conform to the regular expression: `/^[[:alnum:]_]+\.[[:alnum:]_]+?$/` and match existing class and method.
 
 If the route path info is invalid and is not a potential match for an actual existing file, an exception is thrown.
+
+### Arguments
+
+Depending on the router your are using, the route path info may contain additional parameters that you can pass to the route, in complement of regular global arrays like `$_GET` or `$_POST`.
+
+For example, with the `MainSubRouter` and the URI `https://my.web.server/MyRouteClass.routeMethod/param1/param2`, route arguments will be `['param1', 'param2']`.
 
 ## 3. Calling Pre-processing Callbacks
 
