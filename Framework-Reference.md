@@ -1,10 +1,10 @@
+- [[Auto-loading]]
 - Request Management
   - [[Routes and Providers]]
   - [[Lifecycle of a Request]]
   - [[Request Results]]
-  - [[Sub Route Types]]
+  - [[Customizing the Behavior of a Route]]
   - [[Core Manager]]
-- [[Auto-loading]]
 - [[User Management]]
 - Modules
   - [[Command-Line Manager]]

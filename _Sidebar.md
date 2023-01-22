@@ -13,4 +13,5 @@
 - Request Management
   - [[Routes and Providers]]
   - [[Lifecycle of a Request]]
+  - [[Request Results]]
 - [[Configuration Directives]]
