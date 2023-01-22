@@ -1,3 +1,6 @@
 {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "markdown.extension.toc.omittedFromToc": {
+        "Configuration-Directives.md": ["### Example"]
+    }
 }
