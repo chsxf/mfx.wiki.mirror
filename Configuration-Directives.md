@@ -29,8 +29,8 @@
 
 | Directive     | Description                                                                                                            |            |
 | ------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------- |
-| `scripts`     | An array of Javascript file URIs to be loaded automatically on every page. This directive supports [[Fake Protocols]]. | _Optional_ |
-| `stylesheets` | An array of stylesheet file URIs to be loaded automatically on every page. This directive support [[Fake Protocols]].  | _Optional_ |
+| `scripts`     | An array of Javascript file URLs to be loaded automatically on every page. This directive supports [[Fake Protocols]]. | _Optional_ |
+| `stylesheets` | An array of stylesheet file URLs to be loaded automatically on every page. This directive support [[Fake Protocols]].  | _Optional_ |
 
 ### Example
 
@@ -46,7 +46,7 @@
 | Directive                | Description                                                                            |            |
 | ------------------------ | -------------------------------------------------------------------------------------- | ---------- |
 | `mfx_relative_base_href` | Relative path to MFX root folder (defaults to `vendor/chsxf/mfx/static`)               | _Optional_ |
-| `base_href`              | Set this directive to override the URI used in the base HTML tag (defaults to `false`) | _Optional_ |
+| `base_href`              | Set this directive to override the URL used in the base HTML tag (defaults to `false`) | _Optional_ |
 
 ### Requests
 

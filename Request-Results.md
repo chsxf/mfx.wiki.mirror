@@ -13,7 +13,7 @@ public function __construct(
     ?RequestResultType $type = NULL,
     mixed $data = NULL,
     ?string $template = NULL,
-    ?string $redirectURI = NULL,
+    ?string $redirectURL = NULL,
     int $statusCode = 200,
     bool $preformatted = false
 )
@@ -24,7 +24,7 @@ public function __construct(
 | `type`         | Type of the request result. If `NULL`, the type becomes `VIEW`.                                                                                                                                                                                               |
 | `data`         | For `VIEW` results, it is the data provided to the view template. For `JSON` or `XML` results, it is the data to be serialized. For `STATUS` results, this is the custom message that will override the default message associated with the HTTP status code. |
 | `template`     | Name of the Twig template to use. If `NULL`, the template is provided by the route.                                                                                                                                                                           |
-| `redirectURI`  | Redirect URI for `REDIRECT` results. If `NULL`, the redirect URI is provided by the route. Ignored for others.                                                                                                                                                |
+| `redirectURL`  | Redirect URL for `REDIRECT` results. If `NULL`, the redirect URL is provided by the route. Ignored for others.                                                                                                                                                |
 | `statusCode`   | HTTP status code of the result. For `VIEW` results, if the status code is not equal to 200, the [[Core Manager]] kills the request prematurely. Ignored for `REDIRECT` results.                                                                               |
 | `preformatted` | This parameter is ignored for all results but `JSON` and `XML`. If `true`, `data` has already been serialized and will be passed as-is.                                                                                                                       |
 
@@ -36,17 +36,17 @@ You create a `VIEW` instance of `RequestResult` thanks to the main constructor. 
 
 ### `REDIRECT` Results
 
-The `REDIRECT` result type instructs the [[Core Manager]] to redirect the end-user to a specific URI.
+The `REDIRECT` result type instructs the [[Core Manager]] to redirect the end-user to a specific URL.
 
 You can create an instance thanks to this helper:
 
 ```php
-public static function buildRedirectRequestResult(?string $redirectURI = NULL): RequestResult
+public static function buildRedirectRequestResult(?string $redirectURL = NULL): RequestResult
 ```
 
 | Argument      | Description                                                                                |
 | ------------- | ------------------------------------------------------------------------------------------ |
-| `redirectURI` | Redirect URI for `REDIRECT` results. If `NULL`, the redirect URI is provided by the route. |
+| `redirectURL` | Redirect URL for `REDIRECT` results. If `NULL`, the redirect URL is provided by the route. |
 
 ### `JSON` or `XML` Results
 
