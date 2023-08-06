@@ -33,9 +33,9 @@ The `application` folder can be renamed to suit your needs as you see fit.
 
 You will need three files to be able to start working on your website:
 
-* A configuration file
-* A PHP entry point file
-* A `.htaccess` file to setup URL rewriting with Apache
+- A configuration file
+- A PHP entry point file
+- A `.htaccess` file to setup URL rewriting with Apache
 
 ### Configuration File
 
@@ -88,13 +88,24 @@ RewriteRule . /entrypoint.php [L]
 </IfModule>
 
 DirectoryIndex entrypoint.php
+Options -Indexes
+
+<Files "composer.*">
+    Require all denied
+</Files>
+
+<Files "README.md">
+    Require all denied
+</Files>
 ```
+
+This file will also prevent potential acccess to resources like your Composer files or your potential README file for the website, all of which could potentially be used as important information by attackers.
 
 > **IMPORTANT NOTE:**\  
 > The `.htaccess` file above is designed for setups with virtual hosts targetting the root folder directly. If your local development setup in placed in a sub-folder of your webserver (for example, `http://localhost/my-website-subfolder/`), you have to adapt the file as follow:
-> 
-> * Replace `RewriteBase /`  with `RewriteBase /path/to/your/website/subfolder`
-> * Replace `RewriteRule . /entrypoint.php [L]` with `RewriteRule . /path/to/your/website/subfolder/entrypoint.php [L]`
+>
+> - Replace `RewriteBase /` with `RewriteBase /path/to/your/website/subfolder`
+> - Replace `RewriteRule . /entrypoint.php [L]` with `RewriteRule . /path/to/your/website/subfolder/entrypoint.php [L]`
 
 ## Resulting Folder Structure
 
