@@ -10,6 +10,7 @@
 
 # [Reference](Framework-Reference)
 
+- [[Auto-loading]]
 - Request Management
   - [[Routes and Providers]]
   - [[Lifecycle of a Request]]
