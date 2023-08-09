@@ -15,4 +15,12 @@
   - [[Routes and Providers]]
   - [[Lifecycle of a Request]]
   - [[Request Results]]
+- Helper Tools
+  - [[Array Tools]]
+  - [[File Tools]]
+  - [[JSON Tools]]
+  - [[Math Tools]]
+  - [[Network Tools]]
+  - [[String Tools]]
+  - [[XML Tools]]
 - [[Configuration Directives]]
