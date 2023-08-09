@@ -10,7 +10,7 @@ String management helper class
 
 ## generateRandomString
 
-`public static function generateRandomString(int $length, string $charset = self::CHARSET_ALPHANUMERIC_LC): string|false`
+`public static function generateRandomString(int $length, string $charset = 'self::CHARSET_ALPHANUMERIC_LC'): string|false`
 
 Generates a random string based on the specified character set
 
@@ -62,7 +62,7 @@ Checks if the specified string contains an integer
 
 ## isNegativeInteger
 
-`public static function isNegativeInteger(string $str, bool $canBeZero = ): bool`
+`public static function isNegativeInteger(string $str, bool $canBeZero = false): bool`
 
 Checks if the specified string contains a negative integer, optionnaly equals to zero
 
@@ -79,7 +79,7 @@ Checks if the specified string contains a negative integer, optionnaly equals to
 
 ## isPositiveInteger
 
-`public static function isPositiveInteger(string $str, bool $canBeZero = ): bool`
+`public static function isPositiveInteger(string $str, bool $canBeZero = false): bool`
 
 Checks if the specified string contains a positive integer, optionnaly equals to zero
 
@@ -128,7 +128,7 @@ Removes accents from accented characters
 
 ## sanitize
 
-`public static function sanitize(string $string, string $placeholder = -): string`
+`public static function sanitize(string $string, string $placeholder = '-'): string`
 
 Sanitizes a string by removing accents, then transforming to lower case,
 then replacing non-alphabetic and non-numeric characters by a place holder,
@@ -181,7 +181,7 @@ Converts a string in snake case to the same string in Pascal case
 
 ## toSnakeCase
 
-`public static function toSnakeCase(string $_str, bool $_upperCase = ): string`
+`public static function toSnakeCase(string $_str, bool $_upperCase = false): string`
 
 Converts a string in snake case
 
@@ -195,4 +195,3 @@ Converts a string in snake case
 ### Returns
 
 `string` Resulting string in snake case
-
