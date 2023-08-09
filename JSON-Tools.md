@@ -10,7 +10,7 @@ Class containing utility functions for encoding data in JSON
 
 ## filterAndEncode
 
-`public static function filterAndEncode(?mixed $var): string`
+`public static function filterAndEncode(mixed $var): string`
 
 Filter the specified value and encode it in JSON
 
