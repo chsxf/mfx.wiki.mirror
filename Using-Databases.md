@@ -1,6 +1,6 @@
 ## Introduction to Databases With MFX
 
-Database management with MFX is fairly simple. MFX uses [PDO](https://www.php.net/manual/en/book.pdo.php) through an extended class provided by the [pdo-database-manager](https://packagist.org/packages/chsxf/pdo-database-manager) package.
+Database management with MFX is fairly simple. MFX uses [PDO](https://www.php.net/manual/en/book.pdo.php) through an extended class provided by the [pdo-database-manager](https://github.com/chsxf/pdo-database-manager) package.
 
 By using PDO, we ensure MFX to be compatible pretty much out-of-the-box with every database management system supported by this abstraction layer.
 
@@ -82,9 +82,9 @@ class TestRoute implements IRouteProvider
 
 ### Details
 
-* First, we open a connection to the database server with the `DatabaseManager::open()` function. It uses the `__default` server configuration options as no server name is provided,
-* Then, we execute our query with the `getRow()` method and ask the result to be provided as an associative array (the `getRow()` method is an extension method provided by the [pdo-database-manager](https://packagist.org/packages/chsxf/pdo-database-manager) package),
-* Finally, we pass the result as the template variables to display the selected user's name.
+- First, we open a connection to the database server with the `DatabaseManager::open()` function. It uses the `__default` server configuration options as no server name is provided,
+- Then, we execute our query with the `getRow()` method and ask the result to be provided as an associative array (the `getRow()` method is an extension method provided by the [pdo-database-manager](https://packagist.org/packages/chsxf/pdo-database-manager) package),
+- Finally, we pass the result as the template variables to display the selected user's name.
 
 If everything works fine, you should get this kind of result on screen:
 
