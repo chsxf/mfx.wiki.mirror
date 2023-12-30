@@ -10,21 +10,21 @@ MFX is released under the [MIT license](https://github.com/chsxf/mfx/LICENSE).
 
 ## ⚙️ System Requirements
 
-* PHP 8.1+ with enabled [gettext](https://www.php.net/manual/fr/book.gettext.php) extension
-* Apache with `mod_rewrite` module enabled
-* Any database management system compatible with PDO (MySQL, MariaDB, PostgreSQL, ...) if you plan to use database storage (see [PDO documentation](https://www.php.net/manual/en/book.pdo.php) for more information)
+- PHP 8.1+ with enabled [gettext](https://www.php.net/manual/fr/book.gettext.php) extension
+- Apache with `mod_rewrite` module enabled
+- Any database management system compatible with PDO (MySQL, MariaDB, PostgreSQL, ...) if you plan to use database storage (see [PDO documentation](https://www.php.net/manual/en/book.pdo.php) for more information)
 
 ## ⛓ Dependencies
 
-* **Twig**\
+- **Twig**\
   Template engine\
   https://twig.symfony.com/
-* **PDO database manager**\
+- **PDO database manager**\
   PDO extended with some nice utility functions\
-  https://packagist.org/packages/chsxf/pdo-database-manager
-* **Twig Tools**\
+  https://github.com/chsxf/pdo-database-manager
+- **Twig Tools**\
   Set of useful extensions for Twig (switch blocks, lazy blocks, support for gettext inside the templates)\
-  https://packagist.org/packages/chsxf/twig-tools
+  https://github.com/chsxf/TwigTools
 
 ## 🚀 Getting Started
 
