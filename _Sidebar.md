@@ -15,6 +15,8 @@
   - [[Routes and Providers]]
   - [[Lifecycle of a Request]]
   - [[Request Results]]
+- Modules
+  - [[Command-Line Manager]]
 - Helper Tools
   - [[Array Tools]]
   - [[File Tools]]
