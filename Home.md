@@ -1,20 +1,20 @@
-## ❓ What is MFX?
+## What is MFX?
 
 MFX is a full-stack PHP framework originally designed to serve as a project basis for Cheese Burgames, a now-defunct french independant video game studio. The first version, originally called php-micro-framework has been introduced in 2013 and matured in 2016. With time, MFX has evolved into a complete framework for external developments.
 
 It can be used as the core of any regular website or API.
 
-## 📄 License
+## License
 
 MFX is released under the [MIT license](https://github.com/chsxf/mfx/LICENSE).
 
-## ⚙️ System Requirements
+## System Requirements
 
 - PHP 8.1+ with enabled [gettext](https://www.php.net/manual/fr/book.gettext.php) extension
 - Apache with `mod_rewrite` module enabled
 - Any database management system compatible with PDO (MySQL, MariaDB, PostgreSQL, ...) if you plan to use database storage (see [PDO documentation](https://www.php.net/manual/en/book.pdo.php) for more information)
 
-## ⛓ Dependencies
+## Dependencies
 
 - **Twig**\
   Template engine\
@@ -26,10 +26,10 @@ MFX is released under the [MIT license](https://github.com/chsxf/mfx/LICENSE).
   Set of useful extensions for Twig (switch blocks, lazy blocks, support for gettext inside the templates)\
   https://github.com/chsxf/TwigTools
 
-## 🚀 Getting Started
+## Getting Started
 
 Go to [this page](Getting-Started) to start using MFX.
 
-## 📝 Complete documentation
+## Complete documentation
 
 To access a deeper and more complete documentation on the design and usage of MFX, go to the [[Framework Reference]].
