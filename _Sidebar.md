@@ -17,7 +17,9 @@
   - [[Request Results]]
 - Modules
   - [[Command-Line Manager]]
+  - [[Script Manager]]
   - [[Session Manager]]
+  - [[Stylesheet Manager]]
 - Helper Tools
   - [[Array Tools]]
   - [[File Tools]]
