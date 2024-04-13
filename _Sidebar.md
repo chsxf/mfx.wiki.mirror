@@ -17,6 +17,7 @@
   - [[Request Results]]
 - Modules
   - [[Command-Line Manager]]
+  - [[Session Manager]]
 - Helper Tools
   - [[Array Tools]]
   - [[File Tools]]
