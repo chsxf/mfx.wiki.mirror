@@ -1,6 +1,8 @@
 {
-    "editor.formatOnSave": true,
-    "markdown.extension.toc.omittedFromToc": {
-        "Configuration-Directives.md": ["### Example"]
-    }
+  "editor.formatOnSave": true,
+  "markdown.extension.toc.omittedFromToc": {
+    "Configuration-Directives.md": ["### Example"]
+  },
+  "markdown-preview-enhanced.previewTheme": "github-dark.css",
+  "markdown-preview-enhanced.wikiLinkTargetFileNameChangeCase": "trainCase"
 }
