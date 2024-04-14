@@ -10,7 +10,9 @@ File management helper class
 
 ## mimeTypeFromExtension
 
-`public static function mimeTypeFromExtension(string $ext): string`
+```php
+public static function mimeTypeFromExtension(string $ext): string
+```
 
 Get file MIME type
 
@@ -23,3 +25,4 @@ Get file MIME type
 ### Returns
 
 `string` 
+

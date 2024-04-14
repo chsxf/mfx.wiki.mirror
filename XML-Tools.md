@@ -10,7 +10,9 @@ Class containing utility functions for encoding data in XML
 
 ## build
 
-`public static function build(mixed $var, string $encoding = UTF-8): string`
+```php
+public static function build(mixed $var, string $encoding = 'UTF-8'): string
+```
 
 Build XML tree from a variable
 
@@ -24,3 +26,4 @@ Build XML tree from a variable
 ### Returns
 
 `string` the XML tree string
+

@@ -10,7 +10,9 @@ Class containing utility functions for encoding data in JSON
 
 ## filterAndEncode
 
-`public static function filterAndEncode(mixed $var): string`
+```php
+public static function filterAndEncode(mixed $var): string
+```
 
 Filter the specified value and encode it in JSON
 
@@ -23,3 +25,4 @@ Filter the specified value and encode it in JSON
 ### Returns
 
 `string` A JSON-encoded string representing the specified value
+

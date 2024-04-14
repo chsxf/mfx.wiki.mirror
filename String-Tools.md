@@ -10,7 +10,9 @@ String management helper class
 
 ## generateRandomString
 
-`public static function generateRandomString(int $length, string $charset = 'self::CHARSET_ALPHANUMERIC_LC'): string|false`
+```php
+public static function generateRandomString(int $length, string $charset = 'self::CHARSET_ALPHANUMERIC_LC'): string|false
+```
 
 Generates a random string based on the specified character set
 
@@ -27,7 +29,9 @@ Generates a random string based on the specified character set
 
 ## implode
 
-`public static function implode(string $separator, array $elements, ?string $lastSeparator = null, ?string $firstSeparator = null): string`
+```php
+public static function implode(string $separator, array $elements, ?string $lastSeparator = null, ?string $firstSeparator = null): string
+```
 
 Joins array elements with a separator string, eventually replacing the first and last separators with specific ones.
 
@@ -46,7 +50,9 @@ Joins array elements with a separator string, eventually replacing the first and
 
 ## isInteger
 
-`public static function isInteger(string $str): bool`
+```php
+public static function isInteger(string $str): bool
+```
 
 Checks if the specified string contains an integer
 
@@ -62,7 +68,9 @@ Checks if the specified string contains an integer
 
 ## isNegativeInteger
 
-`public static function isNegativeInteger(string $str, bool $canBeZero = false): bool`
+```php
+public static function isNegativeInteger(string $str, bool $canBeZero = false): bool
+```
 
 Checks if the specified string contains a negative integer, optionnaly equals to zero
 
@@ -79,7 +87,9 @@ Checks if the specified string contains a negative integer, optionnaly equals to
 
 ## isPositiveInteger
 
-`public static function isPositiveInteger(string $str, bool $canBeZero = false): bool`
+```php
+public static function isPositiveInteger(string $str, bool $canBeZero = false): bool
+```
 
 Checks if the specified string contains a positive integer, optionnaly equals to zero
 
@@ -96,7 +106,9 @@ Checks if the specified string contains a positive integer, optionnaly equals to
 
 ## isValidEmailAddress
 
-`public static function isValidEmailAddress(string $address): bool`
+```php
+public static function isValidEmailAddress(string $address): bool
+```
 
 Checks if the specified address is a valid email address
 
@@ -112,7 +124,9 @@ Checks if the specified address is a valid email address
 
 ## removeAccents
 
-`public static function removeAccents(string $string): string`
+```php
+public static function removeAccents(string $string): string
+```
 
 Removes accents from accented characters
 
@@ -128,7 +142,9 @@ Removes accents from accented characters
 
 ## sanitize
 
-`public static function sanitize(string $string, string $placeholder = '-'): string`
+```php
+public static function sanitize(string $string, string $placeholder = '-'): string
+```
 
 Sanitizes a string by removing accents, then transforming to lower case,
 then replacing non-alphabetic and non-numeric characters by a place holder,
@@ -149,7 +165,9 @@ Result string may start or end with the place holder.
 
 ## snakeToCamelCase
 
-`public static function snakeToCamelCase(string $_str): string`
+```php
+public static function snakeToCamelCase(string $_str): string
+```
 
 Converts a string in snake case to the same string in camel case
 
@@ -165,7 +183,9 @@ Converts a string in snake case to the same string in camel case
 
 ## snakeToPascalCase
 
-`public static function snakeToPascalCase(string $_str): string`
+```php
+public static function snakeToPascalCase(string $_str): string
+```
 
 Converts a string in snake case to the same string in Pascal case
 
@@ -181,7 +201,9 @@ Converts a string in snake case to the same string in Pascal case
 
 ## toSnakeCase
 
-`public static function toSnakeCase(string $_str, bool $_upperCase = false): string`
+```php
+public static function toSnakeCase(string $_str, bool $_upperCase = false): string
+```
 
 Converts a string in snake case
 
@@ -195,3 +217,4 @@ Converts a string in snake case
 ### Returns
 
 `string` Resulting string in snake case
+

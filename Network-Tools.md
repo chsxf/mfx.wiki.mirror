@@ -10,10 +10,13 @@ Network management helper class
 
 ## getRemoteIP
 
-`public static function getRemoteIP(): string`
+```php
+public static function getRemoteIP(): string
+```
 
 Retrieves the remote IP address based on the environment variables
 
 ### Returns
 
 `string` the remote IP address or IPv6 localhost if not found
+

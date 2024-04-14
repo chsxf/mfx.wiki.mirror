@@ -10,7 +10,9 @@ Array management helper class
 
 ## concatArrays
 
-`public static function concatArrays(mixed ...$arguments): array`
+```php
+public static function concatArrays(mixed ...$arguments): array
+```
 
 Concatenate values together into a new array without considering keys or types.
 
@@ -23,7 +25,9 @@ However, if a single array argument is passed, it is used as an array of argumen
 
 ## isParameterArray
 
-`public static function isParameterArray(ReflectionParameter $parameter): bool`
+```php
+public static function isParameterArray(ReflectionParameter $parameter): bool
+```
 
 Checks if the parameter is an array or a union type accepting an array
 
@@ -31,7 +35,7 @@ Checks if the parameter is an array or a union type accepting an array
 
 | Name         | Type                   | Description                  |
 | ------------ | ---------------------- | ---------------------------- |
-| `$parameter` | `\RefelctionParameter` | The parameter to investigate |
+| `$parameter` | `\ReflectionParameter` | The parameter to investigate |
 
 ### Returns
 
@@ -39,7 +43,9 @@ Checks if the parameter is an array or a union type accepting an array
 
 ## reverseArrays
 
-`public static function reverseArrays(array $store): array`
+```php
+public static function reverseArrays(array $store): array
+```
 
 Reverses dimensions of the source array.
 
@@ -63,7 +69,9 @@ It is assumed that all contained arrays use the same keys.
 
 ## shuffle
 
-`public static function shuffle(array &$arr)`
+```php
+public static function shuffle(array &$arr)
+```
 
 Shuffles the content of an array
 
@@ -72,3 +80,4 @@ Shuffles the content of an array
 | Name   | Type    | Description |
 | ------ | ------- | ----------- |
 | `$arr` | `array` |             |
+
