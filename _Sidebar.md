@@ -17,6 +17,7 @@
   - [[Request Results]]
 - Modules
   - [[Command-Line Manager]]
+  - [[Error and Notification Manager]]
   - [[Script Manager]]
   - [[Session Manager]]
   - [[Stylesheet Manager]]

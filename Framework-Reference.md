@@ -14,7 +14,7 @@
   - [[Database Manager]]
   - [[Database Updater]]
   - [[Route Attributes Parser]]
-  - [[Error Manager]]
+  - [[Error and Notification Manager]]
   - [[Localization Manager]]
   - [[Pagination Manager]]
   - [[Profiler]]
