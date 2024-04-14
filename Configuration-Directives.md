@@ -112,7 +112,7 @@ MFX uses PDO as a database abstraction layer. See [PDO documentation](https://ww
 
 ### Database Updater Specific Directives
 
-For more information, see the Database Updater documentation.
+For more information, see the [[Database Updater]] documentation.
 
 | Directive | Description                                                       |            |
 | --------- | ----------------------------------------------------------------- | ---------- |
