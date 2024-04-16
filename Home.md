@@ -33,3 +33,9 @@ Go to [this page](Getting-Started) to start using MFX.
 ## Complete documentation
 
 To access a deeper and more complete documentation on the design and usage of MFX, go to the [[Framework Reference]].
+
+## Support
+
+Development on MFX is still active. Even though the project is production-ready, new features and bugfixes will come eventually.
+
+However, support is not guaranteed in any way. Pull requests or issues are welcomed but you may wait for some time before getting any answer.
