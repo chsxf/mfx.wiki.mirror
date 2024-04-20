@@ -69,7 +69,7 @@ By default, no global or local callback is defined.
 Pre-route callback methods must conform to this signature:
 
 ```php
-myPreRouteCallbackMethod(RouterData $_routerData): void { /* ... */ }
+function myPreRouteCallbackMethod(RouterData $_routerData): void { /* ... */ }
 ```
 
 Look at the `RouterData` class documentation for more information.
@@ -110,7 +110,7 @@ After having executed the route, post-route callbacks, similar to the pre-route 
 As the pre-route callbacks, the post-route callback method must conform to this signature:
 
 ```php
-myPostRouteCallbackMethod(RouterData $_routerData): void { /* ... */ }
+function myPostRouteCallbackMethod(RouterData $_routerData): void { /* ... */ }
 ```
 
 Look at the `RouterData` class documentation for more information.
