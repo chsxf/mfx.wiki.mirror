@@ -4,23 +4,23 @@
   - [[Lifecycle of a Request]]
   - [[Request Results]]
   - [[Customizing the Behavior of a Route]]
-  - [[Core Manager]]
+  - [[Custom Routers]]
 - [[User Management]]
 - Modules
   - [[Command-Line Manager]]
   - [[Configuration Manager]]
-  - [[Core Profiler]]
+  - [[Core Manager]]
   - [[Data Validator]]
     - [Fields](Data-Validator-Fields)
     - [Filters](Data-Validator-Filters)
     - [Templating](Data-Validator-Templating)
   - [[Database Manager]]
   - [[Database Updater]] (Experimental)
-  - [[Route Attributes Parser]]
   - [[Error and Notification Manager]]
   - [[Localization Manager]]
   - [[Pagination Manager]]
   - [[Profiler]]
+  - [[Route Attributes Parser]]
   - [[Script Manager]]
   - [[Session Manager]]
   - [[Stylesheet Manager]]
