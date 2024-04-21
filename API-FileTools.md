@@ -1,14 +1,20 @@
-# Summary
+# FileTools Class
+
+[`chsxf\MFX`](API-Namespace-chsxf_MFX)
+
+```php
+class FileTools
+```
+
+## Summary
 
 File management helper class
 
-# Namespace
+Since `1.0`
 
-`chsxf\MFX`
+## Methods
 
-# Methods
-
-## mimeTypeFromExtension
+### mimeTypeFromExtension
 
 ```php
 public static function mimeTypeFromExtension(string $ext): string
@@ -16,13 +22,17 @@ public static function mimeTypeFromExtension(string $ext): string
 
 Get file MIME type
 
-### Parameters
+Since `1.0`
+
+#### Parameters
 
 | Name   | Type     | Description    |
 | ------ | -------- | -------------- |
 | `$ext` | `string` | File extension |
 
-### Returns
+#### Returns
 
 `string` 
+
+---
 

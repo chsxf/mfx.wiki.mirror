@@ -1,14 +1,64 @@
-# Summary
+# StringTools Class
+
+[`chsxf\MFX`](API-Namespace-chsxf_MFX)
+
+```php
+class StringTools
+```
+
+## Summary
 
 String management helper class
 
-# Namespace
+Since `1.0`
 
-`chsxf\MFX`
+## Constants
 
-# Methods
+```php
+public const CHARSET_ALPHA_LC = 'abcdefghijklmnopqrstuvwxyz';
+```
 
-## generateRandomString
+Since `1.0`
+
+```php
+public const CHARSET_ALPHA_UC = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+```
+
+Since `1.0`
+
+```php
+public const CHARSET_ALPHA_CI = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+```
+
+Since `1.0`
+
+```php
+public const CHARSET_NUMERIC = '0123456789';
+```
+
+Since `1.0`
+
+```php
+public const CHARSET_ALPHANUMERIC_LC = 'abcdefghijklmnopqrstuvwxyz0123456789';
+```
+
+Since `1.0`
+
+```php
+public const CHARSET_ALPHANUMERIC_UC = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+```
+
+Since `1.0`
+
+```php
+public const CHARSET_ALPHANUMERIC_CI = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+```
+
+Since `1.0`
+
+## Methods
+
+### generateRandomString
 
 ```php
 public static function generateRandomString(int $length, string $charset = 'self::CHARSET_ALPHANUMERIC_LC'): string|false
@@ -16,18 +66,22 @@ public static function generateRandomString(int $length, string $charset = 'self
 
 Generates a random string based on the specified character set
 
-### Parameters
+Since `1.0`
+
+#### Parameters
 
 | Name       | Type     | Description                                                    |
 | ---------- | -------- | -------------------------------------------------------------- |
 | `$length`  | `int`    | Length of the resulting string                                 |
 | `$charset` | `string` | Character set (Defaults to alphanumeric lower case characters) |
 
-### Returns
+#### Returns
 
 `boolean|string` Returns false if length is zero or negative or charset is not a non-empty string. Returns the generated string either.
 
-## implode
+---
+
+### implode
 
 ```php
 public static function implode(string $separator, array $elements, ?string $lastSeparator = null, ?string $firstSeparator = null): string
@@ -35,7 +89,9 @@ public static function implode(string $separator, array $elements, ?string $last
 
 Joins array elements with a separator string, eventually replacing the first and last separators with specific ones.
 
-### Parameters
+Since `1.0`
+
+#### Parameters
 
 | Name              | Type     | Description                                                                                                                                           |
 | ----------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -44,11 +100,13 @@ Joins array elements with a separator string, eventually replacing the first and
 | `$lastSeparator`  | `string` | Separator to use between the two last elements. If NULL, the general separator is used. (Defaults to NULL)                                            |
 | `$firstSeparator` | `string` | Separator to use between the two first elements. If NULL, the general separator is used. (Defaults to NULL)                                           |
 
-### Returns
+#### Returns
 
 `string` Note :
 
-## isInteger
+---
+
+### isInteger
 
 ```php
 public static function isInteger(string $str): bool
@@ -56,17 +114,21 @@ public static function isInteger(string $str): bool
 
 Checks if the specified string contains an integer
 
-### Parameters
+Since `1.0`
+
+#### Parameters
 
 | Name   | Type     | Description        |
 | ------ | -------- | ------------------ |
 | `$str` | `string` | String to evaluate |
 
-### Returns
+#### Returns
 
 `boolean` 
 
-## isNegativeInteger
+---
+
+### isNegativeInteger
 
 ```php
 public static function isNegativeInteger(string $str, bool $canBeZero = false): bool
@@ -74,18 +136,22 @@ public static function isNegativeInteger(string $str, bool $canBeZero = false): 
 
 Checks if the specified string contains a negative integer, optionnaly equals to zero
 
-### Parameters
+Since `1.0`
+
+#### Parameters
 
 | Name         | Type      | Description                                                                                            |
 | ------------ | --------- | ------------------------------------------------------------------------------------------------------ |
 | `$str`       | `string`  | String to evaluate                                                                                     |
 | `$canBeZero` | `boolean` | If set, the string can be evaluated to zero. If not, the integer must be negative. (Defaults to false) |
 
-### Returns
+#### Returns
 
 `boolean` 
 
-## isPositiveInteger
+---
+
+### isPositiveInteger
 
 ```php
 public static function isPositiveInteger(string $str, bool $canBeZero = false): bool
@@ -93,18 +159,22 @@ public static function isPositiveInteger(string $str, bool $canBeZero = false): 
 
 Checks if the specified string contains a positive integer, optionnaly equals to zero
 
-### Parameters
+Since `1.0`
+
+#### Parameters
 
 | Name         | Type      | Description                                                                                            |
 | ------------ | --------- | ------------------------------------------------------------------------------------------------------ |
 | `$str`       | `string`  | String to evaluate                                                                                     |
 | `$canBeZero` | `boolean` | If set, the string can be evaluated to zero. If not, the integer must be positive. (Defaults to false) |
 
-### Returns
+#### Returns
 
 `boolean` 
 
-## isValidEmailAddress
+---
+
+### isValidEmailAddress
 
 ```php
 public static function isValidEmailAddress(string $address): bool
@@ -112,17 +182,21 @@ public static function isValidEmailAddress(string $address): bool
 
 Checks if the specified address is a valid email address
 
-### Parameters
+Since `1.0`
+
+#### Parameters
 
 | Name       | Type     | Description                       |
 | ---------- | -------- | --------------------------------- |
 | `$address` | `string` | The email address string to check |
 
-### Returns
+#### Returns
 
 `boolean` true if the address is valid, false either
 
-## removeAccents
+---
+
+### removeAccents
 
 ```php
 public static function removeAccents(string $string): string
@@ -130,17 +204,21 @@ public static function removeAccents(string $string): string
 
 Removes accents from accented characters
 
-### Parameters
+Since `1.0`
+
+#### Parameters
 
 | Name      | Type     | Description   |
 | --------- | -------- | ------------- |
 | `$string` | `string` | Source string |
 
-### Returns
+#### Returns
 
 `string` 
 
-## sanitize
+---
+
+### sanitize
 
 ```php
 public static function sanitize(string $string, string $placeholder = '-'): string
@@ -152,18 +230,22 @@ then removing consecutive multiple place holders.
 Note:
 Result string may start or end with the place holder.
 
-### Parameters
+Since `1.0`
+
+#### Parameters
 
 | Name           | Type     | Description                        |
 | -------------- | -------- | ---------------------------------- |
 | `$string`      | `string` | Source string                      |
 | `$placeholder` | `string` | Placeholder text (Defaults to '-') |
 
-### Returns
+#### Returns
 
 `string` 
 
-## snakeToCamelCase
+---
+
+### snakeToCamelCase
 
 ```php
 public static function snakeToCamelCase(string $_str): string
@@ -171,17 +253,21 @@ public static function snakeToCamelCase(string $_str): string
 
 Converts a string in snake case to the same string in camel case
 
-### Parameters
+Since `1.0`
+
+#### Parameters
 
 | Name    | Type     | Description  |
 | ------- | -------- | ------------ |
 | `$_str` | `string` | Input string |
 
-### Returns
+#### Returns
 
 `string` Resulting string in camel case
 
-## snakeToPascalCase
+---
+
+### snakeToPascalCase
 
 ```php
 public static function snakeToPascalCase(string $_str): string
@@ -189,17 +275,21 @@ public static function snakeToPascalCase(string $_str): string
 
 Converts a string in snake case to the same string in Pascal case
 
-### Parameters
+Since `1.0`
+
+#### Parameters
 
 | Name    | Type     | Description  |
 | ------- | -------- | ------------ |
 | `$_str` | `string` | Input string |
 
-### Returns
+#### Returns
 
 `string` Resulting string in Pascal case
 
-## toSnakeCase
+---
+
+### toSnakeCase
 
 ```php
 public static function toSnakeCase(string $_str, bool $_upperCase = false): string
@@ -207,14 +297,18 @@ public static function toSnakeCase(string $_str, bool $_upperCase = false): stri
 
 Converts a string in snake case
 
-### Parameters
+Since `1.0`
+
+#### Parameters
 
 | Name          | Type     | Description                                     |
 | ------------- | -------- | ----------------------------------------------- |
 | `$_str`       | `string` | Input string                                    |
 | `$_upperCase` | `bool`   | If set, returns the string in upper snake case. |
 
-### Returns
+#### Returns
 
 `string` Resulting string in snake case
+
+---
 

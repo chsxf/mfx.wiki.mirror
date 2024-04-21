@@ -1,14 +1,20 @@
-# Summary
+# JSONTools Class
+
+[`chsxf\MFX`](API-Namespace-chsxf_MFX)
+
+```php
+class JSONTools
+```
+
+## Summary
 
 Class containing utility functions for encoding data in JSON
 
-# Namespace
+Since `1.0`
 
-`chsxf\MFX`
+## Methods
 
-# Methods
-
-## filterAndEncode
+### filterAndEncode
 
 ```php
 public static function filterAndEncode(mixed $var): string
@@ -16,13 +22,17 @@ public static function filterAndEncode(mixed $var): string
 
 Filter the specified value and encode it in JSON
 
-### Parameters
+Since `1.0`
+
+#### Parameters
 
 | Name   | Type    | Description                |
 | ------ | ------- | -------------------------- |
 | `$var` | `mixed` | Value to filter and encode |
 
-### Returns
+#### Returns
 
 `string` A JSON-encoded string representing the specified value
+
+---
 

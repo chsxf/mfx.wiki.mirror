@@ -36,14 +36,6 @@
   - [[Script Manager]]
   - [[Session Manager]]
   - [[Stylesheet Manager]]
-- Helper Tools
-  - [[Array Tools]]
-  - [[File Tools]]
-  - [[JSON Tools]]
-  - [[Math Tools]]
-  - [[Network Tools]]
-  - [[String Tools]]
-  - [[XML Tools]]
 - [[Configuration Directives]]
 - [[Fake Protocols]]
 
