@@ -94,14 +94,14 @@ If any of the pre-conditions is not met, the request ends with an HTTP error cod
 
 ## 5. Processing the Route
 
-Once everything has been validated, the route is called and a `RequestResult` object is obtained. Subsequent behaviour depends on the type of result for the request (among `VIEW`, `REDIRECT`, `JSON`, `XML`, `STATUS`).
+Once everything has been validated, the route is called and a [`RequestResult`](API-RequestResult) object is obtained. Subsequent behaviour depends on the type of result for the request (among `VIEW`, `REDIRECT`, `JSON`, `XML`, `STATUS`).
 
-| Type of Result | Behaviour                                                |
-| -------------- | -------------------------------------------------------- |
-| VIEW           | A view based on a Twig template is generated             |
-| REDIRECT       | A location header is generated to redirect the request   |
-| JSON or XML    | The request result is serialized as JSON or XML          |
-| STATUS         | A HTTP status code is generated without any other output |
+| Type of Result | Behaviour                                                          |
+| -------------- | ------------------------------------------------------------------ |
+| VIEW           | A view based on a Twig template is generated                       |
+| REDIRECT       | A location header is generated to redirect the request             |
+| JSON or XML    | The [request result](Request-Results) is serialized as JSON or XML |
+| STATUS         | A HTTP status code is generated without any other output           |
 
 ## 6. Calling Post-processing Callbacks
 
