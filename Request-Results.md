@@ -1,10 +1,10 @@
-Instances of the `RequestResult` class are produced by the routes, and inform the [[Core Manager]] on how it should handle the response to the request. Proceeding this way helps decoupling the business logic to the view offered to the end-user.
+Instances of the [`RequestResult`](API-RequestResult) class are produced by the routes, and inform the [[Core Manager]] on how it should handle the response to the request. Proceeding this way helps decoupling the business logic to the view offered to the end-user.
 
 ## Various Types of Request Results
 
 Request results can be of 5 different types: `VIEW`, `REDIRECT`, `JSON`, `XML`, or `STATUS`. Each type has a very defined use-case we will discuss below.
 
-All request result types can be instanciated with the constructor of the `RequestResult` class. However, dedicated helpers are provided for some as parameters of the full constructor are not always needed.
+All request result types can be instanciated with the constructor of the [`RequestResult`](API-RequestResult) class. However, dedicated helpers are provided for some as parameters of the full constructor are not always needed.
 
 Here is the signature of the constructor and a description for each argument:
 
@@ -32,7 +32,7 @@ public function __construct(
 
 The `VIEW` result type is the most common. This it the result type you use when you want to output some kind of formatted result to the end-user, to the exception of JSON or XML serialized data, which have dedicated result types.
 
-You create a `VIEW` instance of `RequestResult` thanks to the main constructor. Most of the time, only the `data` argument is filled as the template can be provided by the routes themselves.
+You create a `VIEW` instance of [`RequestResult`](API-RequestResult) thanks to the main constructor. Most of the time, only the `data` argument is filled as the template can be provided by the routes themselves.
 
 ### `REDIRECT` Results
 
@@ -92,4 +92,4 @@ public static function buildStatusRequestResult(
 | `statusCode` | HTTP status code of the result.                                                                                                                                      |
 | `message`    | Custom message that will replace the actual default message associated with HTTP status code. Internally, this is passed to the `data` parameter of the constructor. |
 
-By default, the helper produced a `400 Bad Request` HTTP status response. This has proven very useful to quickly discard invalid incoming requests.
+By default, the helper produces a `400 Bad Request` HTTP status response. This has proven very useful to quickly discard invalid incoming requests.
