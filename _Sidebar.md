@@ -32,7 +32,6 @@
   - [[Localization Manager]]
   - [[Pagination Manager]]
   - [[Profiler]]
-  - [[Route Attributes Parser]]
   - [[Script Manager]]
   - [[Session Manager]]
   - [[Stylesheet Manager]]
