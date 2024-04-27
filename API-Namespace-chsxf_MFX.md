@@ -17,7 +17,6 @@
  - [`JSONTools`](API-JSONTools)
  - [`MathTools`](API-MathTools)
  - [`NetworkTools`](API-NetworkTools)
- - [`PaginatedRoute`](API-PaginatedRoute)
  - [`PaginationManager`](API-PaginationManager)
  - [`RequestResult`](API-RequestResult)
  - [`ScriptException`](API-ScriptException)
