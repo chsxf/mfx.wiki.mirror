@@ -36,6 +36,6 @@ Development on MFX is still active. Even though the project is production-ready,
 
 However, support is not guaranteed in any way. [Pull requests](https://github.com/chsxf/mfx/pulls) or [issues](https://github.com/chsxf/mfx/issues) are welcomed but you may wait for some time before getting any answer.
 
-## Contribution to the Documentation
+## Contributing to the Documentation
 
 If you want to contribute to this documentation, please go to the [mirror repository](https://github.com/chsxf/mfx.wiki.mirror) and create issues or pull requests there.
