@@ -59,11 +59,11 @@ Config::load([
 
 ## Creating the Template File
 
-We want to provide a template file for the `TestRoute.hello` route.
+We want to provide a template file for the `testroute/hello` route.
 
 MFX default router's behaviour when mapping routes to templates is to complete the templates root folder path with the route provider name as a sub folder and the route name as the file name.
 
-For the `TestRoute.hello` route, the resulting path would be `application/templates/TestRoute/hello.twig` (with respect of the case).
+For the `testroute/hello` route, the resulting path would be `application/templates/TestRoute/hello.twig` (with respect of the case).
 
 ### Updating the Folder Structure
 
@@ -135,7 +135,7 @@ For more information on the `RequestResult` class, go to the [[Framework Referen
 
 ## Final Test
 
-Now go to `http://your.complete.website.url/Test.hello` through your web browser and it should display `Hello, stranger!` in a properly structured HTML web page.
+Now go to `http://your.complete.website.url/testroute/hello` through your web browser and it should display `Hello, stranger!` in a properly structured HTML web page.
 
 Congratulations! You have just completed your very first template.
 

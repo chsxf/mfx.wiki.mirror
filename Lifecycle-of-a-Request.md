@@ -25,7 +25,7 @@ If route path info is empty, the default route is used instead. In case the defa
 
 Once the route path info has been extracted from the request URL, it is now time to parse and validate it.
 
-Depending on the router you are using, the form of your route path info may differ. For example, with the `MainSubRouter`, a valid route path info must conform to the regular expression: `/^[[:alnum:]_]+\.[[:alnum:]_]+?$/` and match existing class and method.
+Depending on the router you are using, the form of your route path info may differ. For example, with the `MainSubRouter`, a valid route path info must conform to the regular expression: `/^[[:alnum:]_]+\.[[:alnum:]_]+?$/` and match existing class and method. But with the `PathRouter`, a valid route path info must conform to the regular expression: `#^[[:alnum:]_]+/[[:alnum:]_]+?$#`.
 
 If the route path info is invalid and is not a potential match for an actual existing file, an exception is thrown.
 

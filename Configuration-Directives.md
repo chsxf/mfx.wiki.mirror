@@ -59,10 +59,10 @@
 
 | Directive        | Description                                                                                                          |            |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------- | ---------- |
-| `router.class`   | Class implementing `\chsxf\MFX\Routers\IRouter` to use as the router. Defaults to `\chsxf\MFX\Routers\MainSubRouter` | _Optional_ |
-| `router.options` | An associative array describing the options for the specified router. See below the options for the default router   | _Optional_ |
+| `router.class`   | Class implementing `\chsxf\MFX\Routers\IRouter` to use as the router. Defaults to `\chsxf\MFX\Routers\PathRouter`    | _Optional_ |
+| `router.options` | An associative array describing the options for the specified router. See below the options for the built-in routers | _Optional_ |
 
-#### Default Router Options
+#### Built-in Routers Options
 
 | Directive                          | Description                                                                                                                                   |            |
 | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |

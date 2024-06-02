@@ -101,7 +101,7 @@ Options -Indexes
 
 This file will also prevent potential acccess to resources like your Composer files or your potential README file for the website, all of which could potentially be used as important information by attackers.
 
-> **IMPORTANT NOTE:**\  
+> [!WARNING]
 > The `.htaccess` file above is designed for setups with virtual hosts targetting the root folder directly. If your local development setup in placed in a sub-folder of your webserver (for example, `http://localhost/my-website-subfolder/`), you have to adapt the file as follow:
 >
 > - Replace `RewriteBase /` with `RewriteBase /path/to/your/website/subfolder`

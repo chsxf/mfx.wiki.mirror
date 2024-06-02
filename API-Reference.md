@@ -140,7 +140,9 @@
 ### Classes
 
  - [`MainSubRouter`](API-Routers-MainSubRouter)
+ - [`PathRouter`](API-Routers-PathRouter)
  - [`RouterData`](API-Routers-RouterData)
+ - [`RouterHelpers`](API-Routers-RouterHelpers)
 
 ### Interfaces
 
