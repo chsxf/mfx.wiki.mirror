@@ -59,7 +59,7 @@ These parameters are extracted from the route path info, are optional, and diffe
 
 The names of your provider and your route are important in regards of your codebase obviously, but also of the router you will use. Depending of the router you are using, the names may need to match what will exist in the various URLs used in your application.
 
-For example, with the `PathRouter`, a valid route path is simply the concatenation of both names of the provider and the route, with a forward slash in the middle. In our case here, that would end up being `TestRouteProvider/testRoute`. However, other routers may provide other strategies with independent naming.
+For example, with the [`PathRouter`](API-Routers-PathRouter), a valid route path is simply the concatenation of both names of the provider and the route, with a forward slash in the middle. In our case here, that would end up being `TestRouteProvider/testRoute`. However, other routers may provide other strategies with independent naming.
 
 ## Matching Routes With Requests
 

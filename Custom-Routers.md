@@ -1,6 +1,6 @@
 Routing in MFX is handled by router classes, that will identify a route provider and a route from the request URL, as explained in the [[Routes and Providers]] and [[Lifecycle of a Request]] pages.
 
-MFX provides two built-in router classes, the default `PathRouter` and the `MainSubRouter`. Both work similarly and the only difference resides in the syntax of the route. `PathRouter` except the route to be declared as `provider/route` whereas `MainSubRouter` expects it to be `provider.route`.
+MFX provides two built-in router classes, the default [`PathRouter`](API-Routers-PathRouter) and the [`MainSubRouter`](API-Routers-MainSubRouter). Both work similarly and the only difference resides in the syntax of the route. [`PathRouter`](API-Routers-PathRouter) except the route to be declared as `provider/route` whereas [`MainSubRouter`](API-Routers-MainSubRouter) expects it to be `provider.route`.
 
 However, these two routers may not address your specific needs. Then, you will have to create your own router.
 
@@ -26,7 +26,7 @@ Finally you will need to assign your custom router in the configuration file tha
 
 Routes can be called with parameters and these parameters will be passed through the RouterData object your router must return. It is up to you to decide how these parameters are composed.
 
-For both the `PathRouter` and the `MainSubRouter`, parameters are composed from the subsequent parts of the path info string. For example, if the request URL is `https://your.domain/testroute/hello/param1/param2/param3`, the `testroute/hello` route will receive an array of parameters equal to `['param1', 'param2', 'param3']`.
+For both the [`PathRouter`](API-Routers-PathRouter) and the [`MainSubRouter`](API-Routers-MainSubRouter), parameters are composed from the subsequent parts of the path info string. For example, if the request URL is `https://your.domain/testroute/hello/param1/param2/param3`, the `testroute/hello` route will receive an array of parameters equal to `['param1', 'param2', 'param3']`.
 
 ## Identifying the Route
 
