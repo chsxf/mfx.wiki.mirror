@@ -2,7 +2,7 @@
 
 ## Classes
 
- - [`DontExistsInDB`](API-DataValidator\Filters-DontExistsInDB)
+ - [`DoNotExistInDB`](API-DataValidator\Filters-DoNotExistInDB)
  - [`ExistsInDB`](API-DataValidator\Filters-ExistsInDB)
  - [`In`](API-DataValidator\Filters-In)
  - [`InFloatRange`](API-DataValidator\Filters-InFloatRange)

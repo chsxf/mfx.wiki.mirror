@@ -1,9 +1,9 @@
-# DontExistsInDB Class
+# DoNotExistInDB Class
 
 [`chsxf\MFX\DataValidator\Filters`](API-Namespace-DataValidator_Filters)
 
 ```php
-class DontExistsInDB extends ExistsInDB
+class DoNotExistInDB extends ExistsInDB
 ```
 
 ## Summary

@@ -13,7 +13,6 @@
   - [[Data Validator]]
     - [Fields](Data-Validator-Fields)
     - [Filters](Data-Validator-Filters)
-    - [Templating](Data-Validator-Templating)
   - [[Database Manager]]
   - [[Database Updater]] (Experimental)
   - [[Error and Notification Manager]]
