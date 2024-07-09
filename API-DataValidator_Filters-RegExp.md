@@ -98,7 +98,7 @@ Since `1.0`
 ### hexKey
 
 ```php
-public static function hexKey(int $_bitLength, bool $_ignoreCase = false, bool $_lowerCase = true): RegExp
+public static function hexKey(int $bitLength, bool $ignoreCase = false, bool $lowerCase = true): RegExp
 ```
 
 Helper function to build variable bit-length hexadecimal key validation filter
@@ -107,11 +107,11 @@ Since `1.0`
 
 #### Parameters
 
-| Name           | Type   | Description                                                                                                                                                                 |
-| -------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$_bitLength`  | `int`  | Bit-length of the key (must be a multiple of 8)                                                                                                                             |
-| `$_ignoreCase` | `bool` | If set, produces a case-insensitive validation filter                                                                                                                       |
-| `$_lowerCase`  | `bool` | If set and case is not ignored, the validation filter will constrain to lower case. If not set and case is not ignored, the validation filter will constrain to upper case. |
+| Name          | Type   | Description                                                                                                                                                                 |
+| ------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$bitLength`  | `int`  | Bit-length of the key (must be a multiple of 8)                                                                                                                             |
+| `$ignoreCase` | `bool` | If set, produces a case-insensitive validation filter                                                                                                                       |
+| `$lowerCase`  | `bool` | If set and case is not ignored, the validation filter will constrain to lower case. If not set and case is not ignored, the validation filter will constrain to upper case. |
 
 #### Returns
 

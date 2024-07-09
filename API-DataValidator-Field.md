@@ -97,7 +97,7 @@ Since `1.0`
 ### generate
 
 ```php
-public function generate(array $containingGroups = array(), ?FieldType $type_override = null): array
+public function generate(array $containingGroups = array(), ?FieldType $typeOverride = null): array
 ```
 
 Generates the HTML representation of this field
@@ -109,7 +109,7 @@ Since `1.0`
 | Name                | Type        | Description                                                                           |
 | ------------------- | ----------- | ------------------------------------------------------------------------------------- |
 | `$containingGroups` | `array`     | Containing groups                                                                     |
-| `$type_override`    | `FieldType` | Type to use to override original field type. If NULL, no override. (Defaults to NULL) |
+| `$typeOverride`     | `FieldType` | Type to use to override original field type. If NULL, no override. (Defaults to NULL) |
 
 #### Returns
 
@@ -136,7 +136,7 @@ Since `1.0`
 ### getHTMLType
 
 ```php
-public function getHTMLType(?FieldType $type_override = null): string
+public function getHTMLType(?FieldType $typeOverride = null): string
 ```
 
 Gets the HTML type of this field
@@ -145,9 +145,9 @@ Since `1.0`
 
 #### Parameters
 
-| Name             | Type        | Description                                                                           |
-| ---------------- | ----------- | ------------------------------------------------------------------------------------- |
-| `$type_override` | `FieldType` | Type to use to override original field type. If NULL, no override. (Defaults to NULL) |
+| Name            | Type        | Description                                                                           |
+| --------------- | ----------- | ------------------------------------------------------------------------------------- |
+| `$typeOverride` | `FieldType` | Type to use to override original field type. If NULL, no override. (Defaults to NULL) |
 
 #### Returns
 

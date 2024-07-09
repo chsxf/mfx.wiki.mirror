@@ -17,7 +17,7 @@ Since `1.0`
 ### __construct
 
 ```php
-public function __construct(int $_value1, int $_value2, bool $_includeMax = false, ?string $message = null)
+public function __construct(int $value1, int $value2, bool $includeMax = false, ?string $message = null)
 ```
 
 Constructor

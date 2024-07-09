@@ -93,7 +93,7 @@ Since `1.0`
 ### generate
 
 ```php
-public function generate(string $name, ?DataValidator\FieldType $type_override = null)
+public function generate(string $name, ?DataValidator\FieldType $typeOverride = null)
 ```
 
 Generates the HTML representation of a field
@@ -102,10 +102,10 @@ Since `1.0`
 
 #### Parameters
 
-| Name             | Type                                                     | Description                                                                           |
-| ---------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `$name`          | `string`                                                 | Field's name to generate                                                              |
-| `$type_override` | [`DataValidator\FieldType`](API-DataValidator-FieldType) | Type to use to override original field type. If NULL, no override. (Defaults to NULL) |
+| Name            | Type                                                     | Description                                                                           |
+| --------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `$name`         | `string`                                                 | Field's name to generate                                                              |
+| `$typeOverride` | [`DataValidator\FieldType`](API-DataValidator-FieldType) | Type to use to override original field type. If NULL, no override. (Defaults to NULL) |
 
 #### Throws
 
