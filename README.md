@@ -1,4 +1,4 @@
-This repository is a mirror for the wiki of MFX, a PHP micro-framework.
+This repository is a mirror for the wiki of [MFX](https://github.com/chsxf/mfx), a PHP micro-framework.
 
 The wiki, acting as the official documentation for MFX, can be viewed at:
 https://github.com/chsxf/mfx/wiki
