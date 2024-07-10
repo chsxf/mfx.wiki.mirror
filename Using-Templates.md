@@ -84,16 +84,16 @@ After that, we have to create a `hello.twig` file and paste these lines in it:
 At this point, your repository should look like this:
 
 ```
-📄 .htaccess
 📁 application
+  📄 .htaccess
   📁 config
     📄 config.php
+  📄 entrypoint.php
   📁 routes
     📄 TestRoute.php
   📁 views
     📁 TestRoute
       📄 hello.twig
-📄 entrypoint.php
 📁 vendor
   📄 autoload.php
   📁 chsxf

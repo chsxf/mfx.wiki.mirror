@@ -14,6 +14,9 @@ At this point, your repository, if empty prior to the addition of the framework,
 
 Apps, constituting the "application layer" of any website based on MFX, are located in their own folder. Add a folder named `application` at the root level and a `config` folder in it.
 
+> [!NOTE]
+> Your webserver should serve your website from the `application` folder directly. This will make other folders like `vendors` unreachable.
+
 You should end up with this folder structure:
 
 ```
@@ -56,11 +59,13 @@ For now, we will keep the configuration file empty and add options in the follow
 
 Usually, PHP entry point files are named `index.php`. In order to obfuscate things, the default entry point file is called `entrypoint.php` with MFX.
 
-Create an `entrypoint.php` file at the root level of your website and paste these lines in it:
+Create an `entrypoint.php` file inside the `application` folder and paste these lines in it:
 
 ```php
 <?php
 use chsxf\MFX\Framework;
+
+chdir('..');
 
 require_once('vendor/autoload.php');
 Framework::init('application/config/config.php');
@@ -70,7 +75,7 @@ Framework::init('application/config/config.php');
 
 As stated earlier, MFX relies a lot on URL rewriting. So we have to setup Apache accordingly.
 
-Create a `.htaccess` file at the root level of your website and paste these lines in it:
+Create a `.htaccess` file inside the `application` folder and paste these lines in it:
 
 ```
 <IfModule mod_rewrite.c>
@@ -94,12 +99,12 @@ Options -Indexes
     Require all denied
 </Files>
 
-<Files "README.md">
+<Files "\.(md|twig|sql)$">
     Require all denied
 </Files>
 ```
 
-This file will also prevent potential acccess to resources like your Composer files or your potential README file for the website, all of which could potentially be used as important information by attackers.
+This file will also prevent potential acccess to resources like your Composer files, your Twig files, or your potential README file for the website, all of which could potentially be used as important information by attackers.
 
 > [!WARNING]
 > The `.htaccess` file above is designed for setups with virtual hosts targetting the root folder directly. If your local development setup in placed in a sub-folder of your webserver (for example, `http://localhost/my-website-subfolder/`), you have to adapt the file as follow:
@@ -112,11 +117,11 @@ This file will also prevent potential acccess to resources like your Composer fi
 At this point, your repository should look like this:
 
 ```
-📄 .htaccess
 📁 application
+  📄 .htaccess
   📁 config
     📄 config.php
-📄 entrypoint.php
+  📄 entrypoint.php
 📁 vendor
   📄 autoload.php
   📁 chsxf

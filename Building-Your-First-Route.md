@@ -51,13 +51,13 @@ At this point, your repository should look like this:
 
 ```
 📁 .git
-📄 .htaccess
 📁 application
+  📄 .htaccess
   📁 config
     📄 config.php
+  📄 entrypoint.php
   📁 routes
     📄 TestRoute.php
-📄 entrypoint.php
 📁 vendor
   📄 autoload.php
   📁 chsxf
