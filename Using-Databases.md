@@ -26,7 +26,7 @@ INSERT INTO `users` (`id`, `username`) VALUES
 
 The first step to bring database support into your app is to update your configuration file.
 
-Open the `application/config/config.php` file and replace the whole content with what follows. Be sure to replace `your_db_username` and `your_db_password` with the credentials for your database. You may also need to adjust the `dsn` option to fit your needs.
+Open the `config/config.php` file and replace the whole content with what follows. Be sure to replace `your_db_username` and `your_db_password` with the credentials for your database. You may also need to adjust the `dsn` option to fit your needs.
 
 ```php
 <?php
@@ -35,7 +35,7 @@ use chsxf\MFX\Config;
 Config::load([
     'twig' => [
         'templates' => [
-            'views'
+            '../views'
         ]
     ],
 
@@ -57,7 +57,7 @@ Now, we are all set up, we will be able to use the database and the table we cre
 
 In this example, we will pick a random user from the database and display its username with the template we wrote in the previous step.
 
-Open the `application/routes/TestRoute.php` file replace the whole content with what follows:
+Open the `routes/TestRoute.php` file replace the whole content with what follows:
 
 ```php
 <?php

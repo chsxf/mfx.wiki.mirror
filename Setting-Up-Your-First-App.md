@@ -10,18 +10,18 @@ At this point, your repository, if empty prior to the addition of the framework,
   ... and other things
 ```
 
-## Adding the App Folder
+## Adding the App Folders
 
-Apps, constituting the "application layer" of any website based on MFX, are located in their own folder. Add a folder named `application` at the root level and a `config` folder in it.
+App files, constituting the "application layer" of any website based on MFX, are located in their own folders. Add two folders named `application` and `config` at the root level.
 
 > [!NOTE]
-> Your webserver should serve your website from the `application` folder directly. This will make other folders like `vendors` unreachable.
+> Your webserver should serve your website from the `application` folder directly. This will make other folders like `vendor` or `config` unreachable.
 
 You should end up with this folder structure:
 
 ```
 📁 application
-  📁 config
+📁 config
 📁 vendor
   📄 autoload.php
   📁 chsxf
@@ -29,8 +29,8 @@ You should end up with this folder structure:
   ... and other things
 ```
 
-**Note:**\
-The `application` folder can be renamed to suit your needs as you see fit.
+> [!NOTE]
+> The `application` folder can be renamed to suit your needs as you see fit.
 
 ## Adding Starter Files
 
@@ -42,7 +42,7 @@ You will need three files to be able to start working on your website:
 
 ### Configuration File
 
-Create a `config.php` file inside the `application/config` folder and paste these lines in it:
+Create a `config.php` file inside the `config` folder and paste these lines in it:
 
 ```php
 <?php
@@ -66,7 +66,7 @@ Create an `entrypoint.php` file inside the `application` folder and paste these 
 use chsxf\MFX\Framework;
 
 require_once('../vendor/autoload.php');
-Framework::init('config/config.php');
+Framework::init('../config/config.php');
 ```
 
 ### Apache's `.htaccess` File
@@ -92,14 +92,6 @@ RewriteRule . /entrypoint.php [L]
 
 DirectoryIndex entrypoint.php
 Options -Indexes
-
-<Files "composer.*">
-    Require all denied
-</Files>
-
-<Files "\.(md|twig|sql)$">
-    Require all denied
-</Files>
 ```
 
 This file will also prevent potential acccess to resources like your Composer files, your Twig files, or your potential README file for the website, all of which could potentially be used as important information by attackers.
@@ -117,9 +109,9 @@ At this point, your repository should look like this:
 ```
 📁 application
   📄 .htaccess
-  📁 config
-    📄 config.php
   📄 entrypoint.php
+📁 config
+  📄 config.php
 📁 vendor
   📄 autoload.php
   📁 chsxf

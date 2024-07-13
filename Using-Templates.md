@@ -40,9 +40,9 @@ MFX uses [Twig](https://twig.symfony.com/doc/) as its template engine.
 
 ## Setting Templates Root Directory
 
-First, we need to tell MFX where the template files are located. To do that, we will add the `twig.templates` option to the configuration file. For this example, we chose to store our templates files in the `application/views` folder, but you can change it to any value you like.
+First, we need to tell MFX where the template files are located. To do that, we will add the `twig.templates` option to the configuration file. For this example, we chose to store our templates files in the `views` folder, but you can change it to any value you like.
 
-Open the `application/config/config.php` file and replace the whole content with what follows:
+Open the `config/config.php` file and replace the whole content with what follows:
 
 ```php
 <?php
@@ -51,7 +51,7 @@ use chsxf\MFX\Config;
 Config::load([
     'twig' => [
         'templates' => [
-            'views'
+            '../views'
         ]
     ]
 ]);
@@ -63,11 +63,11 @@ We want to provide a template file for the `testroute/hello` route.
 
 MFX default router's behaviour when mapping routes to templates is to complete the templates root folder path with the route provider name as a sub folder and the route name as the file name.
 
-For the `testroute/hello` route, the resulting path would be `application/views/TestRoute/hello.twig` (with respect of the case).
+For the `testroute/hello` route, the resulting path would be `views/TestRoute/hello.twig` (with respect of the case).
 
 ### Updating the Folder Structure
 
-Add a `views` folder to the `application` folder, then a `TestRoute` folder in it.
+Add a `views` folder at the root level, then a `TestRoute` folder in it.
 
 After that, we have to create a `hello.twig` file and paste these lines in it:
 
@@ -86,19 +86,19 @@ At this point, your repository should look like this:
 ```
 📁 application
   📄 .htaccess
-  📁 config
-    📄 config.php
   📄 entrypoint.php
-  📁 routes
-    📄 TestRoute.php
-  📁 views
-    📁 TestRoute
-      📄 hello.twig
+📁 config
+  📄 config.php
+📁 routes
+  📄 TestRoute.php
 📁 vendor
   📄 autoload.php
   📁 chsxf
   📁 composer
   ... and other things
+📁 views
+  📁 TestRoute
+    📄 hello.twig
 ```
 
 ## Adaptating the Route
@@ -109,7 +109,7 @@ Until now, the route was producing the output directly. In most cases, it is not
 
 To that extent, routes return instances of the specialized class `RequestResult`. Those objects hold a certain amount of data that can be used by the framework to customize the output.
 
-Open the `application/routes/TestRoute.php` file and replace its content with these lines:
+Open the `routes/TestRoute.php` file and replace its content with these lines:
 
 ```php
 <?php

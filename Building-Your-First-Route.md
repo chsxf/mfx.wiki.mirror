@@ -25,12 +25,12 @@ Open the `composer.json` file and add the `autoload` directive as follows:
 ```json
 "autoload": {
   "psr-4": {
-    "": "application/routes"
+    "": "routes"
   }
 }
 ```
 
-Those lines add the `application/routes` folder to the autoload process, informing MFX to look into the `application/routes`folder for classes.
+Those lines add the `routes` folder to the autoload process, informing MFX to look into the `routes` folder for classes.
 
 Run the following command to update your website configuration:
 
@@ -42,7 +42,7 @@ composer update
 
 Let's say we want to create a route called `testroute/hello`.
 
-Create a folder named `routes` inside the `application` folder and a file named `TestRoute.php` in it.
+Create a folder named `routes` at the root level and a file named `TestRoute.php` in it.
 
 > [!TIP]
 > Your class name does not need to match the same case as the route name as PHP class resolver is case-insensitive.
@@ -53,11 +53,11 @@ At this point, your repository should look like this:
 📁 .git
 📁 application
   📄 .htaccess
-  📁 config
-    📄 config.php
   📄 entrypoint.php
-  📁 routes
-    📄 TestRoute.php
+📁 config
+  📄 config.php
+📁 routes
+  📄 TestRoute.php
 📁 vendor
   📄 autoload.php
   📁 chsxf
