@@ -51,7 +51,7 @@ use chsxf\MFX\Config;
 Config::load([
     'twig' => [
         'templates' => [
-            'application/views'
+            'views'
         ]
     ]
 ]);
@@ -63,7 +63,7 @@ We want to provide a template file for the `testroute/hello` route.
 
 MFX default router's behaviour when mapping routes to templates is to complete the templates root folder path with the route provider name as a sub folder and the route name as the file name.
 
-For the `testroute/hello` route, the resulting path would be `application/templates/TestRoute/hello.twig` (with respect of the case).
+For the `testroute/hello` route, the resulting path would be `application/views/TestRoute/hello.twig` (with respect of the case).
 
 ### Updating the Folder Structure
 

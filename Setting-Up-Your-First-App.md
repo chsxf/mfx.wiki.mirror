@@ -65,10 +65,8 @@ Create an `entrypoint.php` file inside the `application` folder and paste these 
 <?php
 use chsxf\MFX\Framework;
 
-chdir('..');
-
-require_once('vendor/autoload.php');
-Framework::init('application/config/config.php');
+require_once('../vendor/autoload.php');
+Framework::init('config/config.php');
 ```
 
 ### Apache's `.htaccess` File
