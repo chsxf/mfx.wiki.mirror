@@ -10,7 +10,7 @@ For example, if using the default router with the following URL:
 - `myfancywebsite.com` is the domain name
 - `contact/form` is the route path
 
-MFX's default router will then parse `contact/form` into the **route provider** `contact` and the **route** `form`. The route provider is then mapped to the `Contact` class and the route to the `form` public static function of this class.
+MFX's default router will then parse `contact/form` into the **route provider** `contact` and the **route** `form`. The route provider is then mapped to the `Contact` class and the route to the `form` public function of this class.
 
 For more detailed information on routes or routeurs, go to the [[Framework Reference]].
 
@@ -69,13 +69,14 @@ Then, open `TestRoute.php` and paste these lines in it:
 
 ```php
 <?php
+use chsxf\MFX\Attributes\AnonymousRoute;
 use chsxf\MFX\Attributes\Route;
 use chsxf\MFX\Routers\IRouteProvider;
 use chsxf\MFX\RequestResult;
 
 class TestRoute implements IRouteProvider
 {
-    #[Route]
+    #[Route, AnonymousRoute]
     public static function hello(): RequestResult {
         echo 'Hello, world!';
         exit();
@@ -86,8 +87,12 @@ class TestRoute implements IRouteProvider
 This code includes three mandatory steps:
 
 1. **The `TestRoute` class implements the `IRouteProvider` interface.** This is mandatory for classes to be eligible as route providers.
-2. As stated earlier, **routes must be public static functions**. So is `hello`.
-3. But all public static functions are not suitable for routing. You have to **opt-in functions as routes through the `#[Route]` attribute**.
+2. As stated earlier, **routes must be public functions**. So is `hello`.
+3. But all public functions are not suitable for routing. You have to **opt-in functions as routes through the `#[Route]` attribute**.
+4. The route is also marked with the `#[AnonymousRoute]` attribute to indicate it can be reached even if no user is currently signed in.
+
+> ![NOTE]
+> It is possible to disable user authentication completely if all routes can be reached anonymously. However, as it most likely won't be the case for many websites or APIs you will write, we recommend using the `#[AnonymousRoute]` attribute instead.
 
 ## Final Test
 

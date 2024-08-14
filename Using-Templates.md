@@ -6,13 +6,14 @@ To achieve that, we could modify our `TestRoute.php` as follows:
 
 ```php
 <?php
+use chsxf\MFX\Attributes\AnonymousRoute;
 use chsxf\MFX\Attributes\Route;
 use chsxf\MFX\Routers\IRouteProvider;
 use chsxf\MFX\RequestResult;
 
 class TestRoute implements IRouteProvider
 {
-    #[Route]
+    #[Route, AnonymousRoute]
     public static function hello(): RequestResult {
 ?>
 <!DOCTYPE html>
@@ -48,7 +49,7 @@ Open the `config/config.php` file and replace the whole content with what follow
 <?php
 use chsxf\MFX\Config;
 
-Config::load([
+return new Config([
     'twig' => [
         'templates' => [
             '../views'
@@ -113,13 +114,14 @@ Open the `routes/TestRoute.php` file and replace its content with these lines:
 
 ```php
 <?php
+use chsxf\MFX\Attributes\AnonymousRoute;
 use chsxf\MFX\Attributes\Route;
 use chsxf\MFX\Routers\IRouteProvider;
 use chsxf\MFX\RequestResult;
 
 class TestRoute implements IRouteProvider
 {
-    #[Route]
+    #[Route, AnonymousRoute]
     public static function hello(): RequestResult {
         $templateVars = array(
             'username' => 'stranger'

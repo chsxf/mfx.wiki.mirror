@@ -48,7 +48,7 @@ Create a `config.php` file inside the `config` folder and paste these lines in i
 <?php
 use chsxf\MFX\Config;
 
-Config::load([
+return new Config([
 
 ]);
 ```
@@ -122,7 +122,7 @@ At this point, your repository should look like this:
 Now try to access your website, you should get this result:
 
 ```
-200 OK
+404 Not Found
 ```
 
 If not, you've missed something.
