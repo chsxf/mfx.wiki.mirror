@@ -2,13 +2,13 @@ Even if MFX will most likely be run most of the time through a web server, MFX a
 
 ## Usage
 
+_**Important Note**: For now, you have to execute your MFX application from your `application`'s folder._
+
 Use the following command to execute your MFX application from the command-line:
 
 ```
 php path/to/mfx/entrypoint.php [options] [route]
 ```
-
-_**Important Note**: For now, you have to execute your MFX application from your application's root folder._
 
 ### Arguments
 
