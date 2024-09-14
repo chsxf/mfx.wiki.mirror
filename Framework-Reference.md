@@ -7,20 +7,23 @@
   - [[Customizing the Behavior of a Route]]
   - [[Custom Routers]]
 - [[Configuration Directives]]
+- Services
+  - [[Core Service Provider]]
+  - [[Authentication Service]]
+  - [[Configuration Service]]
+  - [[Database Service]]
+  - [[Error and Notification Service]]
+  - [[Localization Service]]
+  - [[Profiling Service]]
+  - [[Request Service]]
+  - [[Script Service]]
+  - [[Session Service]]
+  - [[Stylesheet Service]]
 - Modules
   - [[Command-Line Manager]]
-  - [[Configuration Manager]]
   - [[Data Validator]]
     - [Fields](Data-Validator-Fields)
     - [Filters](Data-Validator-Filters)
-  - [[Database Manager]]
   - [[Database Updater]] (Experimental)
-  - [[Error and Notification Manager]]
   - [[Fake Protocols]]
-  - [[Localization Manager]]
   - [[Pagination Manager]]
-  - [[Profiler]]
-  - [[Script Manager]]
-  - [[Session Manager]]
-  - [[Stylesheet Manager]]
-  - [[User Management]]
