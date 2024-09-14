@@ -42,6 +42,5 @@ MFX defines several fake protocols by default, allowing easy access to static fi
 
 | Key      | Default Path                  |
 | -------- | ----------------------------- |
-| `mfxjs`  | `vendor/chsxf/mfx/static/js`  |
 | `mfxcss` | `vendor/chsxf/mfx/static/css` |
-| `mfximg` | `vendor/chsxf/mfx/static/img` |
+| `mfxjs`  | `vendor/chsxf/mfx/static/js`  |
