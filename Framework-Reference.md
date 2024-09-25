@@ -7,7 +7,7 @@
   - [[Customizing the Behavior of a Route]]
   - [[Custom Routers]]
 - [[Configuration Directives]]
-- Services
+- [[Services]]
   - [[Core Service Provider]]
   - [[Authentication Service]]
   - [[Configuration Service]]
