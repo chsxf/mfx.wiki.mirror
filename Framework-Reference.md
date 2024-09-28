@@ -18,6 +18,7 @@
   - [[Script Service]]
   - [[Session Service]]
   - [[Stylesheet Service]]
+  - [[Template Service]]
 - Modules
   - [[Command-Line Manager]]
   - [[Data Validator]]

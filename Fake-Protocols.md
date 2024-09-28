@@ -30,8 +30,10 @@ To that purpose, use the `CoreManager::convertFakeProtocols(string $str)` method
 ### Example
 
 ```php
+// -- From a route
+$templateService = $this->serviceProvider->getTemplateService();
 $str = 'My translated URL is mfxjs://test.js';
-echo CoreManager::convertFakeProtocols($str);
+echo $templateService->convertFakeProtocols($str);
 // Will output:
 // My translated URL is vendor/chsxf/mfx/static/js/test.js
 ```
