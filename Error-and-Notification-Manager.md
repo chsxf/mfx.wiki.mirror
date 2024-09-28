@@ -32,21 +32,4 @@ Errors and notifications are cleared out as soon as the content of the Error Man
 
 In a normal workflow, MFX takes care of flushing out errors and notifications for all `VIEW`, `JSON` and `XML` requests (see [[Request Results]]). This is also true for `STATUS` requests that output JSON or XML content.
 
-However, for other content types, you would need to flush out errors and notifications yourself.
-
-You may want to either flush out to an array or object, to a Twig environment, or to nothing (effectively discarding raised errors and notifications). Use either of these functions:
-
-```php
-/**
- * Flushes error and notification messages to an array or an object
- * @param array|object $arrOrObject Array or object to modify
- */
-ErrorManager::flushToArrayOrObject(array|object &$arrOrObject)
-
-/**
- * Flushes error and notification messages for template display
- * @param \Twig_Environment $twig Twig environment. If NULL, the function flushes containers only and returns an empty string
- * @return string
- */
-ErrorManager::flush(?Environment $twig = NULL): string
-```
+However, for other content types, errors won't be flushed and will be reported on the next flush-compatible content produced by the server.

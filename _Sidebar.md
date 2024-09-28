@@ -24,7 +24,6 @@
   - [[Authentication Service]]
   - [[Configuration Service]]
   - [[Database Service]]
-  - [[Error and Notification Service]]
   - [[Localization Service]]
   - [[Profiling Service]]
   - [[Request Service]]
@@ -37,6 +36,7 @@
     - [Fields](Data-Validator-Fields)
     - [Filters](Data-Validator-Filters)
   - [[Database Updater]] (Experimental)
+  - [[Error and Notification Manager]]
   - [[Fake Protocols]]
   - [[Pagination Manager]]
 
