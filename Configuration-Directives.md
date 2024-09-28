@@ -173,9 +173,9 @@ For more information, see the [[Database Updater]] documentation.
 
 ## Profiler
 
-| Directive   | Description                                                           |            |
-| ----------- | --------------------------------------------------------------------- | ---------- |
-| `profiling` | If set to `true`, enables the built-in profiler (defaults to `false`) | _Optional_ |
+| Directive   | Description                                                                    |            |
+| ----------- | ------------------------------------------------------------------------------ | ---------- |
+| `profiling` | If set to `true`, enables the built-in Profiling Service (defaults to `false`) | _Optional_ |
 
 ### Example
 
