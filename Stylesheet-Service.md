@@ -1,4 +1,6 @@
-MFX provides with the Stylesheet Manager a convenient way to include stylesheets in your web pages. They can be registered for global use or selectively with each route.
+MFX provides with the Stylesheet Service a convenient way to include stylesheets in your web pages. They can be registered for global use or selectively with each route.
+
+The Stylesheet Service implements the `IStyleSheetService` interface.
 
 ## Using Stylesheets Globally
 
@@ -13,7 +15,7 @@ However, they will all appear as external resources. If for some reason, you nee
 Routes can register stylesheets manually thanks to the following function:
 
 ```php
-StyleSheets::add(string $url,
+function add(string $url,
                  string $media = 'screen',
                  bool $inline = false,
                  bool $prepend = false,

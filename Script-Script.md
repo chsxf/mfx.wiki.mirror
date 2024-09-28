@@ -1,4 +1,6 @@
-MFX provides with the Script Manager a convenient way to include scripts in your web pages. They can be registered for global use or selectively with each route.
+MFX provides with the Script Service a convenient way to include scripts in your web pages. They can be registered for global use or selectively with each route.
+
+The Script Service implements the `IScriptService` interface.
 
 ## Using Scripts Globally
 
@@ -13,7 +15,7 @@ However, they will all appear as external resources. If for some reason, you nee
 Routes can register scripts manually thanks to the following function:
 
 ```php
-Scripts::add(string $url,
+function add(string $url,
              bool $inline = false,
              bool $prepend = false,
              string $type = 'text/javascript')
