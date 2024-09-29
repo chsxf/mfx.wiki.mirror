@@ -3,17 +3,17 @@ Most features of MFX are available to routes through services:
 - [[Authentication Service]]
 - [[Configuration Service]]
 - [[Database Service]]
-- [[Error and Notification Service]]
 - [[Localization Service]]
 - [[Profiling Service]]
 - [[Request Service]]
 - [[Script Service]]
 - [[Session Service]]
 - [[Stylesheet Service]]
+- [[Template Service]]
 
 ## Accessing Services
 
-For your route to gain access to services, its provider must inherit from the `BaseRouteProvider` class (and not implement the `IRouteProvider` interface only).
+For your route to gain access to services, its provider must derive from the `BaseRouteProvider` class (and not implement the `IRouteProvider` interface only).
 
 In complement, the route must also be an instance method.
 
