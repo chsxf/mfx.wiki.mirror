@@ -1,6 +1,8 @@
-MFX provides fundational tools to implement user management.
+MFX provides fundational building blocks to implement user management.
 
-However, as different websites and APIs have different needs, these tools are voluntarily designed to be as flexible as possible and let you control how your users sign up and log in.
+However, as different websites and APIs have different needs, these building blocks are voluntarily designed to be as flexible as possible and let you control how your users sign up and log in.
+
+User authentication is handled by the Authentication Service, which implements the `IAuthenticationService` interface.
 
 ## User Storage
 
@@ -10,17 +12,23 @@ However, this parameter and others can be overriden thanks to specific [configur
 
 The `mfx_users` table has no requirement about its structure, except it must contain a `user_id` field that serves as the unique user identifier or key. Besides this field, you can add to the table any amount of additional data you like.
 
-## User Sign Up
+## User Sign Up/Sign In
 
-It is your responsability to handle the sign up procedure for your users. That includes providing a form to gather sign up information (email, name, phone number, whatever you need), handling the sign up request through a specific route, then creating the record in the database for the user.
+It is your responsability to handle the sign up/sign in procedure for your users. That includes providing a form to gather sign up information (email, name, phone number, whatever you need) and handling the sign up/sign in request through a specific route.
 
-Once a user is signed up, you must notify MFX to make them the current user. The following paragraph explains how to initiate a session.
+In the case of a user signing up, you also have to create a record for the new user.
+
+Once a user is signed up/signed in, you must notify MFX to make them the current user. The following paragraph explains how to initiate a session.
 
 ## Initiating a User Session
 
-In order to initiate a session for a user, either after sign up or log in, you need to call the `User::validateWithFields` method with the adequate parameters depending on your setup.
+In order to initiate a session for a user, either after sign up or log in, you need to call the following method with the adequate parameters depending on your setup:
 
-For the sake or our example, we will settle that:
+```php
+function validateWithFields(array $fields): bool;
+```
+
+For the sake or our example, we will define that:
 
 - Our users log in with an email and a password
 - The email is stored in the `user_email` field
@@ -30,18 +38,20 @@ Our example also uses the [[Data Validator]] to validate the input data.
 
 ```php
 #[Route, AnonymousRoute]
-public static function signIn() {
+public function signIn() {
     $validator = new DataValidator();
     $validator->createField('email', FieldType::EMAIL);
     $validator->createField('password', FieldType::TEXT);
 
     // Checking POST input
     if ($validator->validate($_POST)) {
+        $authService = $this->serviceProvider->getAuthenticationService();
+
         $fields = [
             [ 'name' => 'user_email', 'value' => $validator['email'] ],
             [ 'name' => 'user_password', 'value' => $validator['password'], 'function' => 'SHA1' ]
         ];
-        if (!User::validateWithFields($fields)) {
+        if (!$authService->validateWithFields($fields)) {
             trigger_error(_('Invalid user name and/or password.'));
         }
     }
@@ -50,11 +60,15 @@ public static function signIn() {
 }
 ```
 
-If the `User::validateWithFields` method returns `true`, the session is then valid for this user. Any subsequent call to a MFX route will have this user logged in until either the session is lost, or the user actively logs out.
+If the `validateWithFields` method returns `true`, the session is then valid for this user. Any subsequent call to a MFX route will have this user logged in until either the session is lost, or the user actively logs out.
 
 ## Ending a Session
 
-You can very easily end a session for the current user by calling the `User::invalidate()` method.
+You can very easily end a session for the current user by calling the following method:
+
+```php
+function invalidate(): void;
+```
 
 ## Accessing User Data
 
@@ -63,7 +77,9 @@ When an active session exists, you can retrieve any additional user data that is
 Let's say you have a user's address stored in a `user_address` field in the `mfx_users` table. You can get this information back like this:
 
 ```php
-$address = User::currentUser()->user_address;
+// -- From a route
+$authService = $this->serviceProvider->getAuthenticationService();
+$address = $authService->getCurrentAuthenticatedUser()->user_address;
 ```
 
 However, if you need to access custom data outside of the `mfx_users` table or apply some transformation to this data, you may need to subclass the `User` class as described below.
@@ -107,4 +123,4 @@ class CustomUser extends User {
 }
 ```
 
-You can them access the purchased items list by calling `User::currentUser()->items`.
+You can them access the purchased items list by calling `$authService->getCurrentAuthenticatedUser()->items`.
