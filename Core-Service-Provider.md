@@ -6,7 +6,7 @@ When a route provider extends from `BaseRouteProvider`, you can access the Core 
 
 ```php
 #[Route, AnonmousRoute]
-public function myRoute(array $params): void {
+public function myRoute(array $params): RequestResult {
     $sp = $this->serviceProvider;
     // ...
 }
