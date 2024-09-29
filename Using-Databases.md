@@ -57,23 +57,26 @@ Now, we are all set up, we will be able to use the database and the table we cre
 
 In this example, we will pick a random user from the database and display its username with the template we wrote in the previous step.
 
+But we also need to make changes the `TestRoute` class itself to be able to access the Database Service. The class now has to inherit from the `BaseRouteProvider` class and the route's method can't be static anymore.
+
 Open the `routes/TestRoute.php` file replace the whole content with what follows:
 
 ```php
 <?php
 use chsxf\MFX\Attributes\AnonymousRoute;
 use chsxf\MFX\Attributes\Route;
-use chsxf\MFX\Routers\IRouteProvider;
+use chsxf\MFX\Routers\BaseRouteProvider;
 use chsxf\MFX\RequestResult;
 
-class TestRoute implements IRouteProvider
+class TestRoute extends BaseRouteProvider
 {
     #[Route, AnonymousRoute]
-    public static function hello(): RequestResult {
-        $dbm = DatabaseManager::open();
+    public function hello(): RequestResult {
+        $dbService = $this->serviceProvider->getDatabaseService();
+        $dbInstance = $dbService->open();
 
         $sql = "SELECT * FROM `users` ORDER BY RAND() LIMIT 1";
-        $row = $dbm->getRow($sql, \PDO::FETCH_ASSOC);
+        $row = $dbInstance->getRow($sql, \PDO::FETCH_ASSOC);
 
         $templateVars = $row;
         return new RequestResult(data: $templateVars);
@@ -83,8 +86,8 @@ class TestRoute implements IRouteProvider
 
 ### Details
 
-- First, we open a connection to the database server with the `DatabaseManager::open()` function. It uses the `__default` server configuration options as no server name is provided,
-- Then, we execute our query with the `getRow()` method and ask the result to be provided as an associative array (the `getRow()` method is an extension method provided by the [pdo-database-manager](https://packagist.org/packages/chsxf/pdo-database-manager) package),
+- First, we open a connection to the database server with the `open()` function. It uses the `__default` server configuration options as no server name is provided,
+- Then, we execute our query with the `getRow()` method and ask the result to be provided as an associative array (the `getRow()` method is an extension method provided by the [pdo-database-manager](https://github.com/chsxf/pdo-database-manager) package),
 - Finally, we pass the result as the template variables to display the selected user's name.
 
 If everything works fine, you should get this kind of result on screen:
