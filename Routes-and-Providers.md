@@ -28,7 +28,7 @@ class TestRouteProvider extends BaseRouteProvider
 
 A route is designed as an endpoint for a request.
 
-Inside a provider, you define a routes as public methods annotated with a `Route` attribute and that return a `RequestResult` object.
+Inside a provider, you define routes as public methods annotated with a `Route` attribute and that return a `RequestResult` object.
 
 Routes can be either static or instance methods. However, to be able to access MFX services, routes must be instance methods of a class deriving from `BaseRouteProvider`.
 
@@ -82,9 +82,9 @@ These parameters are extracted from the route path info, are optional, and diffe
 
 ## Naming
 
-The names of your provider and your route are important in regards of your codebase obviously, but also of the router you will use. Depending of the router you are using, the names may need to match what will exist in the various URLs used in your application.
+The names of your provider and your route are important in regard of your codebase obviously, but also of the router you will use. Depending of the router you are using, the names may need to match what will exist in the various URLs used in your application.
 
-For example, with the [`PathRouter`](API-Routers-PathRouter), a valid route path is simply the concatenation of both names of the provider and the route, with a forward slash in the middle. In our case here, that would end up being `TestRouteProvider/testRoute`. However, other routers may provide other strategies with different naming schemes.
+For example, with the [`PathRouter`](API-Routers-PathRouter), a valid route path is simply the concatenation of both the name of the provider and the name of the route, separated by a forward slash. In our case here, that would end up being `TestRouteProvider/testRoute`. However, other routers may provide other strategies with different naming schemes.
 
 ## Matching Routes With Requests
 
