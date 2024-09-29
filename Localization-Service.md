@@ -28,7 +28,7 @@ However, MFX makes also use of Twig template files that are not recognized by `x
 
 Multiple `.po` files may exist inside a single MFX app (within a specific "domain"). If you have multiple localization domains, you must generate one `.po` file (and therefore one `.mo` file) per domain and per locale.
 
-To configured multiple text domains, please refer to the corresponding [configuration directives](Configuration-Directives.md#localization-l10n).
+To configured multiple text domains, please refer to the corresponding [configuration directives](Configuration-Directives#localization-l10n).
 
 ### Translating
 

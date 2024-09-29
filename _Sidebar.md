@@ -20,16 +20,16 @@
 - [[Configuration Directives]]
 - [[Services]]
   - [[Core Service Provider]]
-  - [Authentication](Authentication-Service.md)
-  - [Configuration](Configuration-Service.md)
-  - [Database](Database-Service.md)
-  - [Localization](Localization-Service.md)
-  - [Profiling](Profiling-Service.md)
-  - [Request](Request-Service.md)
-  - [Script](Script-Service.md)
-  - [Session](Session-Service.md)
-  - [Stylesheet](Stylesheet-Service.md)
-  - [Template](Template-Service.md)
+  - [Authentication](Authentication-Service)
+  - [Configuration](Configuration-Service)
+  - [Database](Database-Service)
+  - [Localization](Localization-Service)
+  - [Profiling](Profiling-Service)
+  - [Request](Request-Service)
+  - [Script](Script-Service)
+  - [Session](Session-Service)
+  - [Stylesheet](Stylesheet-Service)
+  - [Template](Template-Service)
 - Modules
   - [[Command-Line Manager]]
   - [[Data Validator]]
