@@ -1,9 +1,9 @@
 # ScriptException Class
 
-[`chsxf\MFX`](API-Namespace-chsxf_MFX)
+[`chsxf\MFX\Exceptions`](API-Namespace-Exceptions)
 
 ```php
-class ScriptException extends Exception
+class ScriptException extends MFXException
 ```
 
 ## Summary

@@ -3,7 +3,7 @@
 [`chsxf\MFX`](API-Namespace-chsxf_MFX)
 
 ```php
-class ErrorManager
+final class ErrorManager
 ```
 
 ## Summary
@@ -12,27 +12,42 @@ Integrated error management class
 
 Since `1.0`
 
-## Properties
+## Methods
 
-### $previousHandler
+### __construct
 
 ```php
-public static $previousHandler = null;
+public function __construct(Services\IConfigService $configService, Services\ISessionService $sessionService)
 ```
 
----
+Constructor
 
-## Methods
+Since `2.0`
+
+#### Parameters
+
+| Name              | Type              | Description              |
+| ----------------- | ----------------- | ------------------------ |
+| `$configService`  | `IConfigService`  | Config service instance  |
+| `$sessionService` | `ISessionService` | Session service instance |
+
+#### Throws
+
+| Exception      | Reason |
+| -------------- | ------ |
+| `MFXException` |        |
+
+---
 
 ### flush
 
 ```php
-public static function flush(?Twig\Environment $twig = null): string
+public function flush(?Twig\Environment $twig = null): string
 ```
 
 Flushes error and notification messages for template display
 
-Since `1.0`
+Since `2.0`
 
 #### Parameters
 
@@ -46,33 +61,15 @@ Since `1.0`
 
 ---
 
-### flushToArray
-
-```php
-public static function flushToArray(array &$arr)
-```
-
-Flushes error and notification messages to an array
-
-Since `1.0`
-
-#### Parameters
-
-| Name   | Type    | Description |
-| ------ | ------- | ----------- |
-| `$arr` | `array` |             |
-
----
-
 ### flushToArrayOrObject
 
 ```php
-public static function flushToArrayOrObject(object|array &$arrOrObject)
+public function flushToArrayOrObject(object|array &$arrOrObject)
 ```
 
 Flushes error and notification messages to an array or an object
 
-Since `1.0`
+Since `2.0`
 
 #### Parameters
 
@@ -82,33 +79,15 @@ Since `1.0`
 
 ---
 
-### flushToObject
-
-```php
-public static function flushToObject(object $object)
-```
-
-Flushes error and notification messages to an object
-
-Since `1.0`
-
-#### Parameters
-
-| Name      | Type     | Description |
-| --------- | -------- | ----------- |
-| `$object` | `object` |             |
-
----
-
 ### freeze
 
 ```php
-public static function freeze(bool $flush = false)
+public function freeze(bool $flush = false)
 ```
 
 Freezes the error manager state into session data
 
-Since `1.0`
+Since `2.0`
 
 #### Parameters
 
@@ -121,12 +100,12 @@ Since `1.0`
 ### hasError
 
 ```php
-public static function hasError(): bool
+public function hasError(): bool
 ```
 
 Tells if the manager holds at least one error.
 
-Since `1.0`
+Since `2.0`
 
 #### Returns
 
@@ -137,28 +116,16 @@ Since `1.0`
 ### hasNotif
 
 ```php
-public static function hasNotif(): bool
+public function hasNotif(): bool
 ```
 
 Tells if the manager holds at least one notification.
 
-Since `1.0`
+Since `2.0`
 
 #### Returns
 
 `boolean` 
-
----
-
-### unfreeze
-
-```php
-public static function unfreeze()
-```
-
-Unfreezes the error manager state from session data if applying
-
-Since `1.0`
 
 ---
 

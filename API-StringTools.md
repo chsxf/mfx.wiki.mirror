@@ -8,7 +8,7 @@ class StringTools
 
 ## Summary
 
-String management helper class
+String management helpers
 
 Since `1.0`
 
@@ -199,7 +199,7 @@ Since `1.0`
 ### removeAccents
 
 ```php
-public static function removeAccents(string $string): string
+public static function removeAccents(string $string, ?string $locale = null): string
 ```
 
 Removes accents from accented characters
@@ -221,7 +221,7 @@ Since `1.0`
 ### sanitize
 
 ```php
-public static function sanitize(string $string, string $placeholder = '-'): string
+public static function sanitize(string $string, string $placeholder = '-', ?string $locale = null): string
 ```
 
 Sanitizes a string by removing accents, then transforming to lower case,

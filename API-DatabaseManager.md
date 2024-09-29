@@ -3,71 +3,62 @@
 [`chsxf\MFX`](API-Namespace-chsxf_MFX)
 
 ```php
-final class DatabaseManager extends chsxf\PDO\DatabaseManager
+final class DatabaseManager implements Services\IDatabaseService
 ```
 
 ## Summary
 
-Database manager class
+Database manager class, acting as the default database service implementation
 
 Since `1.0`
-
-## Constants
-
-```php
-public const DEFAULT_CONNECTION = '__default';
-```
 
 ## Methods
 
 ### __construct
 
 ```php
-public function __construct(string $dsn, string $username, string $password, string $server = 'self::DEFAULT_CONNECTION')
+public function __construct(Services\IConfigService $configService)
 ```
 
 Constructor
 
-See `\PDO::__construct()`
-
-Since `1.0`
+Since `2.0`
 
 #### Parameters
 
-| Name        | Type     | Description                                            |
-| ----------- | -------- | ------------------------------------------------------ |
-| `$dsn`      | `string` | Data Source Name (ie mysql:host=localhost;dbname=mydb) |
-| `$username` | `string` | Username                                               |
-| `$password` | `string` | Password                                               |
-| `$server`   | `string` | Server configuration key                               |
+| Name             | Type             | Description |
+| ---------------- | ---------------- | ----------- |
+| `$configService` | `IConfigService` |             |
 
 ---
 
 ### close
 
 ```php
-public static function close(DatabaseManager &$_manager)
+public function close(DatabaseConnectionInstance &$connectionInstance)
 ```
 
-Since `1.0`
+Closes a database server connection
+
+Since `2.0`
 
 #### Parameters
 
-| Name        | Type              | Description |
-| ----------- | ----------------- | ----------- |
-| `$_manager` | `DatabaseManager` |             |
+| Name                  | Type                         | Description                                 |
+| --------------------- | ---------------------------- | ------------------------------------------- |
+| `$connectionInstance` | `DatabaseConnectionInstance` | Reference to a database connection instance |
 
 ---
 
 ### open
 
 ```php
-public static function open(string $server = 'self::DEFAULT_CONNECTION', bool $forceNew = false): DatabaseManager
+public function open(string $server = 'self::DEFAULT_CONNECTION', bool $forceNew = false): DatabaseConnectionInstance
 ```
 
-Opens a connection to a database server, or returns the currently active connection to this server
+Opens a connection to a database server, or returns the currently active instance to this server
 
-Since `1.0`
+Since `2.0`
 
 #### Parameters
 
@@ -78,7 +69,7 @@ Since `1.0`
 
 #### Returns
 
-`DatabaseManager` 
+`DatabaseConnectionInstance` 
 
 #### Throws
 

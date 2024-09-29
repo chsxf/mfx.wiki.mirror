@@ -8,9 +8,11 @@
  - [`CommandLine`](API-CommandLine)
  - [`Config`](API-Config)
  - [`ConfigConstants`](API-ConfigConstants)
+ - [`ConfigManager`](API-ConfigManager)
  - [`CoreManager`](API-CoreManager)
  - [`CoreProfiler`](API-CoreProfiler)
  - [`DataValidator`](API-DataValidator)
+ - [`DatabaseConnectionInstance`](API-DatabaseConnectionInstance)
  - [`DatabaseManager`](API-DatabaseManager)
  - [`DatabaseUpdater`](API-DatabaseUpdater)
  - [`ErrorManager`](API-ErrorManager)
@@ -21,18 +23,17 @@
  - [`NetworkTools`](API-NetworkTools)
  - [`PaginationManager`](API-PaginationManager)
  - [`RequestResult`](API-RequestResult)
- - [`ScriptException`](API-ScriptException)
  - [`Scripts`](API-Scripts)
  - [`SessionManager`](API-SessionManager)
- - [`Status`](API-Status)
  - [`StringTools`](API-StringTools)
- - [`StyleSheetException`](API-StyleSheetException)
  - [`StyleSheets`](API-StyleSheets)
  - [`User`](API-User)
+ - [`UserManager`](API-UserManager)
  - [`XMLTools`](API-XMLTools)
 
 ### Enums
 
+ - [`HttpStatusCodes`](API-HttpStatusCodes)
  - [`RequestMethod`](API-RequestMethod)
  - [`RequestResultType`](API-RequestResultType)
 
@@ -57,7 +58,6 @@
  - [`RequiredContentType`](API-Attributes-RequiredContentType)
  - [`RequiredRequestMethod`](API-Attributes-RequiredRequestMethod)
  - [`Route`](API-Attributes-Route)
- - [`RouteAttributesParser`](API-Attributes-RouteAttributesParser)
  - [`Template`](API-Attributes-Template)
 
 
@@ -126,6 +126,16 @@
  - [`Extension`](API-DataValidator\Twig-Extension)
 
 
+## [`chsxf\MFX\Exceptions`](API-Namespace-Exceptions)
+
+### Classes
+
+ - [`ConfigException`](API-Exceptions-ConfigException)
+ - [`MFXException`](API-Exceptions-MFXException)
+ - [`ScriptException`](API-Exceptions-ScriptException)
+ - [`StyleSheetException`](API-Exceptions-StyleSheetException)
+
+
 ## [`chsxf\MFX\L10n`](API-Namespace-L10n)
 
 ### Classes
@@ -139,8 +149,8 @@
 
 ### Classes
 
- - [`MainSubRouter`](API-Routers-MainSubRouter)
- - [`PathRouter`](API-Routers-PathRouter)
+ - [`BaseRouteProvider`](API-Routers-BaseRouteProvider)
+ - [`RouteAttributesParser`](API-Routers-RouteAttributesParser)
  - [`RouterData`](API-Routers-RouterData)
  - [`RouterHelpers`](API-Routers-RouterHelpers)
 
@@ -148,5 +158,22 @@
 
  - [`IRouteProvider`](API-Routers-IRouteProvider)
  - [`IRouter`](API-Routers-IRouter)
+
+
+## [`chsxf\MFX\Services`](API-Namespace-Services)
+
+### Interfaces
+
+ - [`IAuthenticationService`](API-Services-IAuthenticationService)
+ - [`IConfigService`](API-Services-IConfigService)
+ - [`ICoreServiceProvider`](API-Services-ICoreServiceProvider)
+ - [`IDatabaseService`](API-Services-IDatabaseService)
+ - [`ILocalizationService`](API-Services-ILocalizationService)
+ - [`IProfilingService`](API-Services-IProfilingService)
+ - [`IRequestService`](API-Services-IRequestService)
+ - [`IScriptService`](API-Services-IScriptService)
+ - [`ISessionService`](API-Services-ISessionService)
+ - [`IStyleSheetService`](API-Services-IStyleSheetService)
+ - [`ITemplateService`](API-Services-ITemplateService)
 
 

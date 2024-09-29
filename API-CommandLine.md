@@ -3,7 +3,7 @@
 [`chsxf\MFX`](API-Namespace-chsxf_MFX)
 
 ```php
-class CommandLine
+final class CommandLine
 ```
 
 ## Summary

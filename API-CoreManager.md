@@ -3,28 +3,60 @@
 [`chsxf\MFX`](API-Namespace-chsxf_MFX)
 
 ```php
-final class CoreManager
+final class CoreManager implements Services\IRequestService, Services\ITemplateService
 ```
 
 ## Summary
 
-Core manager singleton class
+Core manager class
 
-Handles all requests and responses.
+Handles requests and responses.
+
+Since `1.0`
+
+## Constants
+
+```php
+public const HTML_CONTENT_TYPE = 'text/html';
+```
 
 Since `1.0`
 
 ## Methods
 
+### __construct
+
+```php
+public function __construct(ErrorManager $errorManager, Services\IConfigService $configService, Services\ILocalizationService $localizationService, Services\IProfilingService $profilingService, Services\IAuthenticationService $authenticationService, Services\IDatabaseService $databaseService, Services\ISessionService $sessionService)
+```
+
+Constructor
+
+Since `2.0`
+
+#### Parameters
+
+| Name                     | Type                     | Description                     |
+| ------------------------ | ------------------------ | ------------------------------- |
+| `$errorManager`          | `ErrorManager`           | Error manager instance          |
+| `$configService`         | `IConfigService`         | Config service instance         |
+| `$localizationService`   | `ILocalizationService`   | Localization service instance   |
+| `$profilingService`      | `IProfilingService`      | Profiling service instance      |
+| `$authenticationService` | `IAuthenticationService` | Authentication service instance |
+| `$databaseService`       | `IDatabaseService`       | Database service instance       |
+| `$sessionService`        | `ISessionService`        | Session service instance        |
+
+---
+
 ### convertFakeProtocols
 
 ```php
-public static function convertFakeProtocols(string $str): string
+public function convertFakeProtocols(string $str): string
 ```
 
 Converts the fake protocols in the input strings
 
-Since `1.0`
+Since `2.0`
 
 #### Parameters
 
@@ -38,46 +70,15 @@ Since `1.0`
 
 ---
 
-### dieWithStatusCode
-
-```php
-public static function dieWithStatusCode(int $code = 400, ?string $message = null)
-```
-
-Terminates the script and emits a HTTP status code
-
-Since `1.0`
-
-#### Parameters
-
-| Name       | Type      | Description                                            |
-| ---------- | --------- | ------------------------------------------------------ |
-| `$code`    | `int`     | HTTP status code to emit (Defaults to 400 Bad Request) |
-| `$message` | `?string` | Custom message to output with status code              |
-
----
-
-### flushAllOutputBuffers
-
-```php
-public static function flushAllOutputBuffers()
-```
-
-Flushes all output buffers
-
-Since `1.0`
-
----
-
 ### getRootURL
 
 ```php
-public static function getRootURL(): string
+public function getRootURL(): string
 ```
 
 Builds the root URL from server information (protocol, host and PHP_SELF)
 
-Since `1.0`
+Since `2.0`
 
 #### Returns
 
@@ -88,12 +89,12 @@ Since `1.0`
 ### getTwig
 
 ```php
-public static function getTwig(): ?Twig\Environment
+public function getTwig(): ?Twig\Environment
 ```
 
 Gets the Twig environment for the current request
 
-Since `1.0`
+Since `2.0`
 
 #### Returns
 
@@ -101,33 +102,15 @@ Since `1.0`
 
 ---
 
-### redirect
-
-```php
-public static function redirect(?string $redirectURL = null)
-```
-
-Redirects the user the specified URL, the HTTP referer if defined and same host or the website root
-
-Since `1.0`
-
-#### Parameters
-
-| Name           | Type     | Description                               |
-| -------------- | -------- | ----------------------------------------- |
-| `$redirectURL` | `string` | Target redirection URL (Defaults to NULL) |
-
----
-
 ### setAttachmentHeaders
 
 ```php
-public static function setAttachmentHeaders(string $filename, string $mimeType, string $charset = 'UTF-8', bool $addContentType = true)
+public function setAttachmentHeaders(string $filename, string $mimeType, string $charset = 'UTF-8', bool $addContentType = true): void
 ```
 
 Sets attachment headers for file downloads
 
-Since `1.0`
+Since `2.0`
 
 #### Parameters
 

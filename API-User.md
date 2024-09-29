@@ -17,107 +17,35 @@ Since `1.0`
 ### __construct
 
 ```php
-public function __construct(?string $key = null)
+public function __construct(Services\IAuthenticationService $authenticationService, Services\IDatabaseService $databaseService)
 ```
 
 Constructor
 
-Since `1.0`
+Since `2.0`
 
 #### Parameters
 
-| Name   | Type     | Description |
-| ------ | -------- | ----------- |
-| `$key` | `string` | User key    |
+| Name                     | Type                     | Description                     |
+| ------------------------ | ------------------------ | ------------------------------- |
+| `$authenticationService` | `IAuthenticationService` | Authentication service instance |
+| `$databaseService`       | `IDatabaseService`       | Database service instance       |
 
 ---
 
-### currentUser
+### getId
 
 ```php
-public static function currentUser(): ?User
+public function getId(): string
 ```
 
-Gets the current user reference
+Gets the current user identifier
 
-Since `1.0`
-
-#### Returns
-
-`User` 
-
----
-
-### getKey
-
-```php
-public function getKey(): string
-```
-
-Gets the current user key
-
-Since `1.0`
+Since `2.0`
 
 #### Returns
 
 `string` The function returns NULL if no valid user is currently registered
-
----
-
-### getKeyField
-
-```php
-public static function getKeyField(): string
-```
-
-Retrieves users management key field name
-
-Since `1.0`
-
-#### Returns
-
-`string` 
-
-#### Throws
-
-| Exception                   | Reason                                                                                                                           |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `\InvalidArgumentException` | If the provided value is not a string or contains invalid characters (only underscores and alphanumeric characters are accepted) |
-
----
-
-### getTableName
-
-```php
-public static function getTableName(): string
-```
-
-Retrieves users management table name
-
-Since `1.0`
-
-#### Returns
-
-`string` 
-
-#### Throws
-
-| Exception                   | Reason                                                                                                                           |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `\InvalidArgumentException` | If the provided value is not a string or contains invalid characters (only underscores and alphanumeric characters are accepted) |
-
----
-
-### invalidate
-
-```php
-public static function invalidate()
-```
-
-Invalidates user session.
-Logs out the current valid user if existing
-
-Since `1.0`
 
 ---
 
@@ -137,37 +65,15 @@ Since `1.0`
 
 ---
 
-### registerFromKey
+### validateWithFields
 
 ```php
-public function registerFromKey( $key): bool
+public function validateWithFields(array $fields): bool
 ```
 
-Register a user from its key
+Validates a user from database fields
 
-Since `1.0`
-
-#### Parameters
-
-| Name   | Type     | Description |
-| ------ | -------- | ----------- |
-| `$key` | `string` | User key    |
-
-#### Returns
-
-`boolean` true is the key is valid, false either
-
----
-
-### registerWithFields
-
-```php
-public function registerWithFields(array $fields): bool
-```
-
-Register a user from database fields
-
-Since `1.0`
+Since `2.0`
 
 #### Parameters
 
@@ -181,37 +87,25 @@ Since `1.0`
 
 ---
 
-### validate
+### validateWithId
 
 ```php
-public static function validate()
+public function validateWithId(string $id): bool
 ```
 
-Validates user session
+Validates the user from its identifier
 
-Since `1.0`
-
----
-
-### validateWithFields
-
-```php
-public static function validateWithFields(array $fields): bool
-```
-
-Validates a user session using database fields
-
-Since `1.0`
+Since `2.0`
 
 #### Parameters
 
-| Name      | Type    | Description                             |
-| --------- | ------- | --------------------------------------- |
-| `$fields` | `array` | Key-value pairs for database validation |
+| Name  | Type     | Description                 |
+| ----- | -------- | --------------------------- |
+| `$id` | `string` | User identifier to validate |
 
 #### Returns
 
-`boolean` true if the session has been validated, false either
+`boolean` true if the user identifier is valid, false either
 
 ---
 

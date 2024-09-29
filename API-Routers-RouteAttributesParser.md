@@ -1,6 +1,6 @@
 # RouteAttributesParser Class
 
-[`chsxf\MFX\Attributes`](API-Namespace-Attributes)
+[`chsxf\MFX\Routers`](API-Namespace-Routers)
 
 ```php
 class RouteAttributesParser
@@ -49,9 +49,9 @@ Since `1.0`
 
 #### Throws
 
-| Exception        | Reason |
-| ---------------- | ------ |
-| `ErrorException` |        |
+| Exception                | Reason |
+| ------------------------ | ------ |
+| `DataValidatorException` |        |
 
 ---
 

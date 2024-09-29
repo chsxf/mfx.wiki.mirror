@@ -8,7 +8,7 @@ class FileTools
 
 ## Summary
 
-File management helper class
+File management helpers
 
 Since `1.0`
 

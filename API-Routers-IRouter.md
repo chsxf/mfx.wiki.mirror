@@ -8,6 +8,8 @@ interface IRouter
 
 ## Summary
 
+Interface routers must implement
+
 Since `1.0`
 
 ## Methods
@@ -15,17 +17,20 @@ Since `1.0`
 ### parseRoute
 
 ```php
-public abstract function parseRoute(string $filteredPathInfo, string $defaultRoute): RouterData
+public abstract function parseRoute(Services\ICoreServiceProvider $coreServiceProvider, string $filteredPathInfo, string $defaultRoute): RouterData
 ```
 
-Since `1.0`
+Parses route data from the provided information
+
+Since `Z.0`
 
 #### Parameters
 
-| Name                | Type     | Description |
-| ------------------- | -------- | ----------- |
-| `$filteredPathInfo` | `string` |             |
-| `$defaultRoute`     | `string` |             |
+| Name                   | Type                   | Description                           |
+| ---------------------- | ---------------------- | ------------------------------------- |
+| `$coreServiceProvider` | `ICoreServiceProvider` | Core service provider instance        |
+| `$filteredPathInfo`    | `string`               | Path info for the request             |
+| `$defaultRoute`        | `string`               | Default route to use if none provided |
 
 #### Returns
 

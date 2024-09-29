@@ -12,13 +12,13 @@ Class containing ISO 639-1 alpha-2 language codes
 
 Since `1.0`
 
-## Properties
-
-### $MAP
+## Constants
 
 ```php
-public static array $MAP = array();
+public const MAP = array();
 ```
 
----
+Language codes container
+
+Since `2.0`
 

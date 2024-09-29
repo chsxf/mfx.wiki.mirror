@@ -8,7 +8,7 @@ final class MathTools
 
 ## Summary
 
-Math helper class
+Math helpers
 
 Since `1.0`
 

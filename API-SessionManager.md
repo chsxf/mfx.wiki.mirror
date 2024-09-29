@@ -3,42 +3,74 @@
 [`chsxf\MFX`](API-Namespace-chsxf_MFX)
 
 ```php
-class SessionManager
+final class SessionManager implements Services\ISessionService, ArrayAccess
 ```
 
 ## Summary
 
 Session management class
 
-Since `1.0`
+Since `2.0`
 
 ## Methods
 
-### getDefaultCookiePath
+### __construct
 
 ```php
-public static function getDefaultCookiePath(): string
+public function __construct(Services\IConfigService $configService)
 ```
 
-Retrieves the default cookie path based on current script and framework location
+Constructor
 
-Since `1.0`
+Since `2.0`
 
-#### Returns
+#### Parameters
 
-`string` 
+| Name             | Type             | Description             |
+| ---------------- | ---------------- | ----------------------- |
+| `$configService` | `IConfigService` | Config service instance |
+
+#### Throws
+
+| Exception      | Reason |
+| -------------- | ------ |
+| `MFXException` |        |
 
 ---
 
-### start
+### setInSession
 
 ```php
-public static function start()
+public function setInSession(array $values): void
 ```
 
-Starts and sets up the PHP session
+Set multiple values in session at once
 
-Since `1.0`
+Since `2.0`
+
+#### Parameters
+
+| Name      | Type    | Description                    |
+| --------- | ------- | ------------------------------ |
+| `$values` | `array` | Values as an associative array |
+
+---
+
+### unsetInSession
+
+```php
+public function unsetInSession(string ...$keys): void
+```
+
+Unsets multiple values in session at once
+
+Since `2.0`
+
+#### Parameters
+
+| Name    | Type    | Description                             |
+| ------- | ------- | --------------------------------------- |
+| `$keys` | `array` | List of session variable names to unset |
 
 ---
 

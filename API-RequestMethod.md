@@ -8,6 +8,8 @@ enum RequestMethod
 
 ## Summary
 
+Enumeration of request methods
+
 Since `1.0`
 
 ## Cases

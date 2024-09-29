@@ -1,9 +1,9 @@
 # StyleSheetException Class
 
-[`chsxf\MFX`](API-Namespace-chsxf_MFX)
+[`chsxf\MFX\Exceptions`](API-Namespace-Exceptions)
 
 ```php
-class StyleSheetException extends Exception
+class StyleSheetException extends MFXException
 ```
 
 ## Summary

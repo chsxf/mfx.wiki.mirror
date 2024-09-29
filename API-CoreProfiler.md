@@ -3,7 +3,7 @@
 [`chsxf\MFX`](API-Namespace-chsxf_MFX)
 
 ```php
-final class CoreProfiler
+final class CoreProfiler implements Services\IProfilingService
 ```
 
 ## Summary
@@ -14,15 +14,27 @@ Since `1.0`
 
 ## Methods
 
+### __construct
+
+```php
+public function __construct(bool $active)
+```
+
+Constructor
+
+Since `2.0`
+
+---
+
 ### getProfilingDuration
 
 ```php
-public static function getProfilingDuration(): float|false
+public function getProfilingDuration(): float|false
 ```
 
 Evaluates how long was the profiling
 
-Since `1.0`
+Since `2.0`
 
 #### Returns
 
@@ -30,47 +42,37 @@ Since `1.0`
 
 ---
 
-### init
+### isActive
 
 ```php
-public static function init()
+public function isActive(): bool
 ```
 
-Initiliases profiling
+Tells if the profiler is active or not
 
-This function enables output buffering.
+Since `2.0`
 
-Since `1.0`
+#### Returns
+
+`bool` 
 
 ---
 
 ### pushEvent
 
 ```php
-public static function pushEvent(string $event)
+public function pushEvent(string $event): void
 ```
 
 Push a custom event into profiling data
 
-Since `1.0`
+Since `2.0`
 
 #### Parameters
 
 | Name     | Type     | Description      |
 | -------- | -------- | ---------------- |
 | `$event` | `string` | Name of the even |
-
----
-
-### stop
-
-```php
-public static function stop()
-```
-
-Terminates profiling and output buffering and echoes the result
-
-Since `1.0`
 
 ---
 

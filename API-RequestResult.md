@@ -17,7 +17,7 @@ Since `1.0`
 ### __construct
 
 ```php
-public function __construct(?RequestResultType $type = null, mixed $data = null, ?string $template = null, ?string $redirectURL = null, int $statusCode = 200, bool $preformatted = false)
+public function __construct(?RequestResultType $type = null, mixed $data = null, ?string $template = null, ?string $redirectURL = null, HttpStatusCodes $statusCode = 'chsxf\MFX\HttpStatusCodes::ok', bool $preformatted = false)
 ```
 
 Constructor
@@ -27,7 +27,7 @@ but can be overridden through this constructor if needed.
 
 See `RequestResultType`
 
-Since `1.0`
+Since `2.0`
 
 #### Parameters
 
@@ -37,7 +37,7 @@ Since `1.0`
 | `$data`         | `mixed`             | Response data. If a view, $data must be an array. (Defaults to NULL)                                                      |
 | `$template`     | `string`            | Template to use as the response renderer. Don't add the .twig extension. Should be NULL if not a view. (Defaults to NULL) |
 | `$redirectURL`  | `string`            | Target URL to which redirect the user (Defaults to NULL)                                                                  |
-| `$statusCode`   | `int`               | HTTP status code of the response (Defaults to 200 - OK).                                                                  |
+| `$statusCode`   | `HttpStatusCodes`   | HTTP status code of the response (Defaults to 200 - OK).                                                                  |
 | `$preformatted` | `boolean`           | If set, this flag indicates that $data is preformatted for XML and JSON responses. (Defaults to false)                    |
 
 ---
@@ -64,20 +64,20 @@ Since `1.0`
 ### buildJSONRequestResult
 
 ```php
-public static function buildJSONRequestResult(mixed $data, bool $preformatted = false, int $statusCode = 200): RequestResult
+public static function buildJSONRequestResult(mixed $data, bool $preformatted = false, HttpStatusCodes $statusCode = 'chsxf\MFX\HttpStatusCodes::ok'): RequestResult
 ```
 
 Helper function to build RequestResult instances for JSON responses
 
-Since `1.0`
+Since `2.0`
 
 #### Parameters
 
-| Name            | Type    | Description                                   |
-| --------------- | ------- | --------------------------------------------- |
-| `$data`         | `mixed` | JSON data                                     |
-| `$preformatted` | `bool`  | If set, $data contains preformatted JSON data |
-| `$statusCode`   | `int`   | HTTP status code of the response              |
+| Name            | Type              | Description                                   |
+| --------------- | ----------------- | --------------------------------------------- |
+| `$data`         | `mixed`           | JSON data                                     |
+| `$preformatted` | `bool`            | If set, $data contains preformatted JSON data |
+| `$statusCode`   | `HttpStatusCodes` | HTTP status code of the response              |
 
 #### Returns
 
@@ -110,19 +110,19 @@ Since `1.0`
 ### buildStatusRequestResult
 
 ```php
-public static function buildStatusRequestResult(int $statusCode = 400, ?string $message = null): RequestResult
+public static function buildStatusRequestResult(HttpStatusCodes $statusCode = 'chsxf\MFX\HttpStatusCodes::badRequest', ?string $message = null): RequestResult
 ```
 
 Helper function to build RequestResult instances for erroneous responses, providing the HTTP status code
 
-Since `1.0`
+Since `2.0`
 
 #### Parameters
 
-| Name          | Type      | Description                      |
-| ------------- | --------- | -------------------------------- |
-| `$statusCode` | `int`     | HTTP status code of the response |
-| `$message`    | `?string` | Message                          |
+| Name          | Type              | Description                      |
+| ------------- | ----------------- | -------------------------------- |
+| `$statusCode` | `HttpStatusCodes` | HTTP status code of the response |
+| `$message`    | `?string`         | Message                          |
 
 #### Returns
 
@@ -133,20 +133,20 @@ Since `1.0`
 ### buildXMLRequestResult
 
 ```php
-public static function buildXMLRequestResult(mixed $data, bool $preformatted = false, int $statusCode = 200): RequestResult
+public static function buildXMLRequestResult(mixed $data, bool $preformatted = false, HttpStatusCodes $statusCode = 'chsxf\MFX\HttpStatusCodes::ok'): RequestResult
 ```
 
 Helper function to build RequestResult instances for XML responses
 
-Since `1.0`
+Since `2.0`
 
 #### Parameters
 
-| Name            | Type    | Description                                  |
-| --------------- | ------- | -------------------------------------------- |
-| `$data`         | `mixed` | XML data                                     |
-| `$preformatted` | `bool`  | If set, $data contains preformatted XML data |
-| `$statusCode`   | `int`   | HTTP status code of the response             |
+| Name            | Type              | Description                                  |
+| --------------- | ----------------- | -------------------------------------------- |
+| `$data`         | `mixed`           | XML data                                     |
+| `$preformatted` | `bool`            | If set, $data contains preformatted XML data |
+| `$statusCode`   | `HttpStatusCodes` | HTTP status code of the response             |
 
 #### Returns
 
@@ -239,16 +239,16 @@ Since `1.0`
 ### statusCode
 
 ```php
-public function statusCode(): int
+public function statusCode(): HttpStatusCodes
 ```
 
 Gets the HTTP status code of the response
 
-Since `1.0`
+Since `2.0`
 
 #### Returns
 
-`int` 
+`HttpStatusCodes` 
 
 ---
 

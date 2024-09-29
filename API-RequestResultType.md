@@ -8,7 +8,7 @@ enum RequestResultType: int
 
 ## Summary
 
-Enum used to identify the type of request results
+Enumeration of the various request result types
 
 Since `1.0`
 

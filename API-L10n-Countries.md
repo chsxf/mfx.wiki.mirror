@@ -12,13 +12,13 @@ Class containing ISO 3166-1 alpha-2 country codes
 
 Since `1.0`
 
-## Properties
-
-### $MAP
+## Constants
 
 ```php
-public static array $MAP = array();
+public const MAP = array();
 ```
 
----
+Country codes container
+
+Since `2.0`
 

@@ -17,7 +17,7 @@ Since `1.0`
 ### __construct
 
 ```php
-public function __construct(string $table, string $field, ?string $message = null, DatabaseManager|string $connection = 'chsxf\MFX\DatabaseManager::DEFAULT_CONNECTION')
+public function __construct(string $table, string $field, ?string $message, DatabaseConnectionInstance $connection)
 ```
 
 Constructor
@@ -26,12 +26,12 @@ Since `1.0`
 
 #### Parameters
 
-| Name          | Type                     | Description                                                                           |
-| ------------- | ------------------------ | ------------------------------------------------------------------------------------- |
-| `$table`      | `string`                 | Database table name                                                                   |
-| `$field`      | `string`                 | Database field name                                                                   |
-| `$message`    | `string`                 | Error message (Defaults to NULL)                                                      |
-| `$connection` | `string|DatabaseManager` | Database connection name or instance (Default to DatabaseManager::DEFAULT_CONNECTION) |
+| Name          | Type                         | Description                      |
+| ------------- | ---------------------------- | -------------------------------- |
+| `$table`      | `string`                     | Database table name              |
+| `$field`      | `string`                     | Database field name              |
+| `$message`    | `string`                     | Error message (Defaults to NULL) |
+| `$connection` | `DatabaseConnectionInstance` | Database connection instance     |
 
 ---
 

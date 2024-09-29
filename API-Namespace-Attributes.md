@@ -12,6 +12,5 @@
  - [`RequiredContentType`](API-Attributes-RequiredContentType)
  - [`RequiredRequestMethod`](API-Attributes-RequiredRequestMethod)
  - [`Route`](API-Attributes-Route)
- - [`RouteAttributesParser`](API-Attributes-RouteAttributesParser)
  - [`Template`](API-Attributes-Template)
 

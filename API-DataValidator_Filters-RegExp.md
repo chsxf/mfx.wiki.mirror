@@ -18,37 +18,55 @@ Since `1.0`
 public const REGEX_WORD = '/^[a-z0-9_]+$/i';
 ```
 
+Since `1.0`
+
 ```php
 public const REGEX_LCWORD = '/^[a-z0-9_]+$/';
 ```
+
+Since `1.0`
 
 ```php
 public const REGEX_UCWORD = '/^[A-Z0-9_]+$/';
 ```
 
+Since `1.0`
+
 ```php
 public const REGEX_LCALPHANUMERIC = '/^[a-z0-9]+$/';
 ```
+
+Since `1.0`
 
 ```php
 public const REGEX_UCALPHANUMERIC = '/^[A-Z0-9]+$/';
 ```
 
+Since `1.0`
+
 ```php
 public const REGEX_LCHEXADECIMAL = '/^[a-f0-9]+$/';
 ```
+
+Since `1.0`
 
 ```php
 public const REGEX_UCHEXADECIMAL = '/^[A-F0-9]+$/';
 ```
 
+Since `1.0`
+
 ```php
 public const REGEX_ICHEXADECIMAL = '/^[a-f0-9]+$/i';
 ```
 
+Since `1.0`
+
 ```php
 public const REGEX_SQL_DATETIME = '/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/';
 ```
+
+Since `1.0`
 
 ## Methods
 

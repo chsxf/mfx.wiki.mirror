@@ -8,7 +8,7 @@ final class NetworkTools
 
 ## Summary
 
-Network management helper class
+Network management helpers
 
 Since `1.0`
 

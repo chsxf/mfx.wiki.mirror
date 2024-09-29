@@ -31,15 +31,7 @@ public readonly string $route ;
 ### $routeAttributes
 
 ```php
-public readonly Attributes\RouteAttributesParser $routeAttributes ;
-```
-
----
-
-### $routeMethod
-
-```php
-public readonly ReflectionMethod $routeMethod ;
+public readonly RouteAttributesParser $routeAttributes ;
 ```
 
 ---
@@ -55,31 +47,53 @@ public readonly array $routeParams ;
 ### $routeProviderAttributes
 
 ```php
-public readonly Attributes\RouteAttributesParser $routeProviderAttributes ;
+public readonly RouteAttributesParser $routeProviderAttributes ;
 ```
 
 ---
 
 ## Methods
 
-### __construct
+### create
 
 ```php
-public function __construct(string $route, Attributes\RouteAttributesParser $routeProviderAttributes, Attributes\RouteAttributesParser $routeAttributes, array $routeParams, ReflectionMethod $routeMethod, string $defaultTemplate)
+public static function create(Services\ICoreServiceProvider $coreServiceProvider, string $route, array $routeParams, string $providerClassName, string $routeMethodName): RouterData
 ```
 
-Since `1.0`
+Create a new RouterData instance
+
+Since `2.0`
 
 #### Parameters
 
-| Name                       | Type                    | Description |
-| -------------------------- | ----------------------- | ----------- |
-| `$route`                   | `string`                |             |
-| `$routeProviderAttributes` | `RouteAttributesParser` |             |
-| `$routeAttributes`         | `RouteAttributesParser` |             |
-| `$routeParams`             | `array`                 |             |
-| `$routeMethod`             | `ReflectionMethod`      |             |
-| `$defaultTemplate`         | `string`                |             |
+| Name                   | Type                   | Description                    |
+| ---------------------- | ---------------------- | ------------------------------ |
+| `$coreServiceProvider` | `ICoreServiceProvider` | Core service provider instance |
+| `$route`               | `string`               | Parsed route name              |
+| `$routeParams`         | `array`                | Route parameters               |
+| `$providerClassName`   | `string`               | Route provider class name      |
+| `$routeMethodName`     | `string`               | Route method to invoke         |
+
+#### Returns
+
+`RouterData` 
+
+#### Throws
+
+| Exception             | Reason |
+| --------------------- | ------ |
+| `MFXException`        |        |
+| `ReflectionException` |        |
+
+---
+
+### getResult
+
+```php
+public function getResult(): RequestResult
+```
+
+Since `1.0`
 
 ---
 

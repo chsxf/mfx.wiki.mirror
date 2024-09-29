@@ -22,9 +22,9 @@ Since `1.0`
 
 #### Parameters
 
-| Name              | Type     | Description |
-| ----------------- | -------- | ----------- |
-| `$configFilePath` | `string` |             |
+| Name              | Type     | Description                     |
+| ----------------- | -------- | ------------------------------- |
+| `$configFilePath` | `string` | Path of the config file to load |
 
 ---
 

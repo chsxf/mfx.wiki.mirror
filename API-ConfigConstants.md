@@ -11,8 +11,6 @@ final class ConfigConstants
 Repository of constants referencing built-in
 [configuration directives](Configuration-Directives)
 
-See [`chsxf\MFX\Config`](API-Config)
-
 Since `1.0`
 
 ## Constants
@@ -162,12 +160,6 @@ public const SESSION_PATH = 'session.path';
 Since `1.0`
 
 ```php
-public const SESSION_USE_COOKIES = 'session.use_cookies';
-```
-
-Since `1.0`
-
-```php
 public const TWIG = 'twig';
 ```
 
@@ -198,13 +190,19 @@ public const USER_MANAGEMENT = 'user_management';
 Since `1.0`
 
 ```php
+public const USER_MANAGEMENT_ENABLED = 'user_management.enabled';
+```
+
+Since `1.0`
+
+```php
 public const USER_MANAGEMENT_CLASS = 'user_management.class';
 ```
 
 Since `1.0`
 
 ```php
-public const USER_MANAGEMENT_KEY_FIELD = 'user_management.key_field';
+public const USER_MANAGEMENT_ID_FIELD = 'user_management.id_field';
 ```
 
 Since `1.0`

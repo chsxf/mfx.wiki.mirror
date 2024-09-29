@@ -33,9 +33,9 @@ Since `1.0`
 
 #### Throws
 
-| Exception                   | Reason |
-| --------------------------- | ------ |
-| `\InvalidArgumentException` |        |
+| Exception                | Reason |
+| ------------------------ | ------ |
+| `DataValidatorException` |        |
 
 ---
 

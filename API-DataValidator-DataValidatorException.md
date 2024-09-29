@@ -3,7 +3,7 @@
 [`chsxf\MFX\DataValidator`](API-Namespace-DataValidator)
 
 ```php
-class DataValidatorException extends Exception
+class DataValidatorException extends chsxf\MFX\Exceptions\MFXException
 ```
 
 ## Summary

@@ -3,12 +3,12 @@
 [`chsxf\MFX`](API-Namespace-chsxf_MFX)
 
 ```php
-class ArrayTools
+final class ArrayTools
 ```
 
 ## Summary
 
-Array management helper class
+Array helpers
 
 Since `1.0`
 

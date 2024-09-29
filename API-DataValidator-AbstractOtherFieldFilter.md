@@ -8,7 +8,7 @@ abstract class AbstractOtherFieldFilter extends AbstractFilter
 
 ## Summary
 
-Description of a filter validating when the field's matched another field's one
+Description of a filter validating if the field matches another one
 
 Since `1.0`
 

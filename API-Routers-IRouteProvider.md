@@ -8,7 +8,7 @@ interface IRouteProvider
 
 ## Summary
 
-Interface that route provider class must implement
+Interface that route providers must implement
 
 Since `1.0`
 
