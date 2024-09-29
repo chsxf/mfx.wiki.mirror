@@ -12,13 +12,13 @@ However, this parameter and others can be overriden thanks to specific [configur
 
 The `mfx_users` table has no requirement about its structure, except it must contain a `user_id` field that serves as the unique user identifier or key. Besides this field, you can add to the table any amount of additional data you like.
 
-## User Sign Up/Sign In
+## User Sign Up/Log In
 
-It is your responsability to handle the sign up/sign in procedure for your users. That includes providing a form to gather sign up information (email, name, phone number, whatever you need) and handling the sign up/sign in request through a specific route.
+It is your responsability to handle the sign up/log in procedure for your users. That includes providing a form to gather sign up information (email, name, phone number, whatever you need) and handling the sign up/log in request through a specific route.
 
 In the case of a user signing up, you also have to create a record for the new user.
 
-Once a user is signed up/signed in, you must notify MFX to make them the current user. The following paragraph explains how to initiate a session.
+Once a user is signed up/logged in, you must notify MFX to make them the current user. The following paragraph explains how to initiate a session.
 
 ## Initiating a User Session
 
