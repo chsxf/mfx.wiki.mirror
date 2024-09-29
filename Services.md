@@ -17,7 +17,7 @@ For your route to gain access to services, its provider must derive from the `Ba
 
 In complement, the route must also be an instance method.
 
-Then, inside your route you can access the core service provider to reach any available services you may need.
+Then, inside your route you can access the [[Core Service Provider]] to reach any available services you may need.
 
 ### Example
 
