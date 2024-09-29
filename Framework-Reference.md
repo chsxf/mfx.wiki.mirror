@@ -1,5 +1,4 @@
 - [[Auto-loading]]
-- [[Core Manager]]
 - Request Management
   - [[Routes and Providers]]
   - [[Lifecycle of a Request]]
