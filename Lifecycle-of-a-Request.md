@@ -4,7 +4,7 @@ A request is usually a call to your web server. A remote device issues a request
 
 ## Request Lifecycle
 
-Requests in MFX goes through several stages before a response is provided. These steps are mostly handled by the [[Core Manager]].
+Requests in MFX goes through several stages before a response is provided.
 
 1. Route path info extraction from the request URL
 1. Route path info parsing and validation
@@ -25,7 +25,7 @@ If route path info is empty, the default route is used instead. In case the defa
 
 Once the route path info has been extracted from the request URL, it is now time to parse and validate it.
 
-Depending on the router you are using, the form of your route path info may differ. For example, with the [`MainSubRouter`](API-Routers-MainSubRouter), a valid route path info must conform to the regular expression: `/^[[:alnum:]_]+\.[[:alnum:]_]+?$/` and match existing class and method. But with the [`PathRouter`](API-Routers-PathRouter), a valid route path info must conform to the regular expression: `#^[[:alnum:]_]+/[[:alnum:]_]+?$#`.
+Depending on the router you are using, the form of your route path info may differ. For example, with the `MainSubRouter`, a valid route path info must conform to the regular expression: `/^[[:alnum:]_]+\.[[:alnum:]_]+?$/` and match existing class and method. But with the `PathRouter`, a valid route path info must conform to the regular expression: `#^[[:alnum:]_]+/[[:alnum:]_]+?$#`.
 
 If the route path info is invalid and is not a potential match for an actual existing file, an exception is thrown.
 
@@ -33,7 +33,7 @@ If the route path info is invalid and is not a potential match for an actual exi
 
 Depending on the router your are using, the route path info may contain additional parameters that you can pass to the route, in complement of regular global arrays like `$_GET` or `$_POST`.
 
-For example, with the [`MainSubRouter`](API-Routers-MainSubRouter) and the URL `https://my.web.server/MyRouteClass.routeMethod/param1/param2`, route arguments will be `['param1', 'param2']`.
+For example, with the `MainSubRouter`) and the URL `https://my.web.server/MyRouteClass.routeMethod/param1/param2`, route arguments will be `['param1', 'param2']`.
 
 ## 3. Calling Pre-processing Callbacks
 
@@ -42,7 +42,7 @@ Before executing routes, three pre-route callbacks can be called: one global, on
 As states its name, the global pre-route callback can be defined globally in the config file and is called for every route.
 
 ```php
-Config::load([
+new Config([
     // ...
     'request' => [
         // ...
@@ -69,10 +69,15 @@ By default, no global or local callback is defined.
 Pre-route callback methods must conform to this signature:
 
 ```php
-function myPreRouteCallbackMethod(RouterData $_routerData): void { /* ... */ }
+function myPreRouteCallbackMethod(
+            ICoreServiceProvider $coreServiceProvider,
+            RouterData $routerData
+    ): ?RequestResult {
+    /* ... */
+}
 ```
 
-Look at the `RouterData` class documentation for more information.
+Look at the `ICoreServiceProvider` interface and the `RouterData` class documentation for more information.
 
 ## 4. Pre-Conditions Validation
 
@@ -110,7 +115,12 @@ After having executed the route, post-route callbacks, similar to the pre-route 
 As the pre-route callbacks, the post-route callback method must conform to this signature:
 
 ```php
-function myPostRouteCallbackMethod(RouterData $_routerData): void { /* ... */ }
+function myPostRouteCallbackMethod(
+            ICoreServiceProvider $coreServiceProvider,
+            RouterData $routerData
+    ): ?RequestResult {
+    /* ... */
+}
 ```
 
-Look at the `RouterData` class documentation for more information.
+Look at the `ICoreServiceProvider` interface and the `RouterData` class documentation for more information.
