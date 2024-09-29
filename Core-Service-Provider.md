@@ -2,7 +2,7 @@ MFX services can be accessed through the Core Service Provider, which implements
 
 ## Access From a Route
 
-When a route provider extends from `BaseRouteProvider`, you can access the Core Service Provider from any route implement as an instance method.
+When a route provider extends from `BaseRouteProvider`, you can access the Core Service Provider from any route implemented as an instance method.
 
 ```php
 #[Route, AnonmousRoute]
