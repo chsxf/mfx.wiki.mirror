@@ -1,6 +1,6 @@
 ## Create a New Project
 
-You can get started right away and easily create a new MFX project by using this command:
+You can get started right away and create a new MFX project by using this command:
 
 ```
 composer create-project chsxf/mfx-project-template target_directory_name
