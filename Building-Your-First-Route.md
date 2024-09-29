@@ -91,7 +91,7 @@ This code includes three mandatory steps:
 3. But all public functions are not suitable for routing. You have to **opt-in functions as routes through the `#[Route]` attribute**.
 4. The route is also marked with the `#[AnonymousRoute]` attribute to indicate it can be reached even if no user is currently signed in.
 
-> ![NOTE]
+> [!NOTE]
 > It is possible to disable user authentication completely if all routes can be reached anonymously. However, as it most likely won't be the case for many websites or APIs you will write, we recommend using the `#[AnonymousRoute]` attribute instead.
 
 ## Final Test
