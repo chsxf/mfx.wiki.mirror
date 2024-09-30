@@ -116,7 +116,7 @@ For more information, see the [[Database Updater]] documentation.
 
 | Directive | Description                                                       |            |
 | --------- | ----------------------------------------------------------------- | ---------- |
-| `domain`  | Domain for the updater (defaults to `NULL`)                       | _Optional_ |
+| `domain`  | Domain for the updater (defaults to `application`)                | _Optional_ |
 | `classes` | An array of classes to load as updaters (defaults to empty array) | _Optional_ |
 
 ### Example
