@@ -91,7 +91,7 @@ RewriteRule . /entrypoint.php [L]
 </IfModule>
 
 DirectoryIndex entrypoint.php
-Options -Indexes
+Options +FollowSymLinks -Indexes
 ```
 
 This file will also prevent potential acccess to resources like your Composer files, your Twig files, or your potential README file for the website, all of which could potentially be used as important information by attackers.
