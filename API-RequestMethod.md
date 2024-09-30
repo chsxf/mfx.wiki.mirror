@@ -3,7 +3,7 @@
 [`chsxf\MFX`](API-Namespace-chsxf_MFX)
 
 ```php
-enum RequestMethod
+enum RequestMethod: string
 ```
 
 ## Summary
@@ -15,55 +15,55 @@ Since `1.0`
 ## Cases
 
 ```php
-case GET;
+case GET = 'GET';
 ```
 
 Since `1.0`
 
 ```php
-case HEAD;
+case HEAD = 'HEAD';
 ```
 
 Since `1.0`
 
 ```php
-case POST;
+case POST = 'POST';
 ```
 
 Since `1.0`
 
 ```php
-case PUT;
+case PUT = 'PUT';
 ```
 
 Since `1.0`
 
 ```php
-case DELETE;
+case DELETE = 'DELETE';
 ```
 
 Since `1.0`
 
 ```php
-case CONNECT;
+case CONNECT = 'CONNECT';
 ```
 
 Since `1.0`
 
 ```php
-case OPTIONS;
+case OPTIONS = 'OPTIONS';
 ```
 
 Since `1.0`
 
 ```php
-case TRACE;
+case TRACE = 'TRACE';
 ```
 
 Since `1.0`
 
 ```php
-case PATCH;
+case PATCH = 'PATCH';
 ```
 
 Since `1.0`

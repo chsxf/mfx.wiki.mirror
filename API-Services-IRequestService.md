@@ -14,6 +14,23 @@ Since `2.0`
 
 ## Methods
 
+### getRequestMethod
+
+```php
+public abstract function getRequestMethod(): RequestMethod
+```
+
+Get the method used by the request
+(ex: GET, POST...)
+
+Since `2.0`
+
+#### Returns
+
+`RequestMethod` 
+
+---
+
 ### getRootURL
 
 ```php

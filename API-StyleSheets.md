@@ -12,6 +12,20 @@ Helper class for managing style sheets
 
 Since `1.0`
 
+## Constants
+
+```php
+public const DEFAULT_MEDIA = 'screen';
+```
+
+Since `2.0`
+
+```php
+public const DEFAULT_TYPE = 'text/css';
+```
+
+Since `2.0`
+
 ## Methods
 
 ### __construct
@@ -27,7 +41,7 @@ Since `1.0`
 ### add
 
 ```php
-public function add(string $url, string $media = 'screen', bool $inline = false, bool $prepend = false, string $type = 'text/css'): void
+public function add(string $url, string $media = 'self::DEFAULT_MEDIA', bool $inline = false, bool $prepend = false, string $type = 'self::DEFAULT_TYPE', array $extras = array()): void
 ```
 
 Adds a style sheets to the document
@@ -43,6 +57,7 @@ Since `1.0`
 | `$inline`  | `bool`   | If set, the style sheet is included inline in the response (Defaults to false). |
 | `$prepend` | `bool`   | If set, the style sheet is added before any other (Defaults to false).          |
 | `$type`    | `string` | Style sheet type (Defaults to text/css).                                        |
+| `$extras`  | `array`  | Extra arguments                                                                 |
 
 #### Throws
 

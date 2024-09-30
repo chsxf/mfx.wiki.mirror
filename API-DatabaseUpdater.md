@@ -10,6 +10,14 @@ final class DatabaseUpdater extends chsxf\MFX\Routers\BaseRouteProvider implemen
 
 Since `1.0`
 
+## Constants
+
+```php
+public const DEFAULT_DOMAIN = 'application';
+```
+
+Since `2.0`
+
 ## Methods
 
 ### update

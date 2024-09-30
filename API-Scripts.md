@@ -12,6 +12,14 @@ Helper class for managing scripts
 
 Since `1.0`
 
+## Constants
+
+```php
+public const DEFAULT_TYPE = 'text/javascript';
+```
+
+Since `2.0`
+
 ## Methods
 
 ### __construct
@@ -27,7 +35,7 @@ Since `1.0`
 ### add
 
 ```php
-public function add(string $url, bool $inline = false, bool $prepend = false, string $type = 'text/javascript'): void
+public function add(string $url, bool $inline = false, bool $prepend = false, string $type = 'self::DEFAULT_TYPE', array $extras = array()): void
 ```
 
 Adds a script to the document
@@ -42,6 +50,7 @@ Since `1.0`
 | `$inline`  | `string` | If set, the script is included inline in the response (Defaults to false). |
 | `$prepend` | `string` | If set, the script is added before any other (Defaults to false).          |
 | `$type`    | `string` | Script type (Defaults to text/javascript).                                 |
+| `$extras`  | `array`  | Extra arguments to add to the script tag                                   |
 
 #### Throws
 
