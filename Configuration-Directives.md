@@ -133,7 +133,7 @@ For more information, see the [[Database Updater]] documentation.
     ],
     'updaters' => [
         'domain' => 'main',
-        'class' => [
+        'classes' => [
             'MyDatabaseUpdaterClass'
         ]
     ]
