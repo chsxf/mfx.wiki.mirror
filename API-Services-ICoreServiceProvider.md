@@ -26,7 +26,7 @@ Since `2.0`
 
 #### Returns
 
-`IConfigService` 
+`IAuthenticationService` 
 
 ---
 
@@ -58,7 +58,7 @@ Since `2.0`
 
 #### Returns
 
-`IConfigService` 
+`IDatabaseService` 
 
 ---
 
@@ -74,7 +74,7 @@ Since `2.0`
 
 #### Returns
 
-`IConfigService` 
+`ILocalizationService` 
 
 ---
 
@@ -90,7 +90,7 @@ Since `2.0`
 
 #### Returns
 
-`IConfigService` 
+`IProfilingService` 
 
 ---
 
@@ -106,7 +106,7 @@ Since `2.0`
 
 #### Returns
 
-`IConfigService` 
+`IRequestService` 
 
 ---
 
@@ -122,7 +122,7 @@ Since `2.0`
 
 #### Returns
 
-`IConfigService` 
+`IScriptService` 
 
 ---
 
@@ -138,7 +138,7 @@ Since `2.0`
 
 #### Returns
 
-`IConfigService` 
+`ISessionService` 
 
 ---
 
@@ -154,7 +154,7 @@ Since `2.0`
 
 #### Returns
 
-`IConfigService` 
+`IStyleSheetService` 
 
 ---
 
@@ -170,7 +170,7 @@ Since `2.0`
 
 #### Returns
 
-`IConfigService` 
+`ITemplateService` 
 
 ---
 

@@ -75,3 +75,24 @@ Since `1.0`
 
 ---
 
+### hasAttributeWithValue
+
+```php
+public function hasAttributeWithValue(string $class, string $value): bool
+```
+
+Since `1.0`
+
+#### Parameters
+
+| Name     | Type     | Description |
+| -------- | -------- | ----------- |
+| `$class` | `string` |             |
+| `$value` | `string` |             |
+
+#### Returns
+
+`bool` 
+
+---
+

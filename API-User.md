@@ -36,7 +36,7 @@ Since `2.0`
 ### getId
 
 ```php
-public function getId(): string
+public function getId(): string|int|null
 ```
 
 Gets the current user identifier
@@ -45,7 +45,7 @@ Since `2.0`
 
 #### Returns
 
-`string` The function returns NULL if no valid user is currently registered
+`string|int|null` The function returns NULL if no valid user is currently registered
 
 ---
 
@@ -90,7 +90,7 @@ Since `2.0`
 ### validateWithId
 
 ```php
-public function validateWithId(string $id): bool
+public function validateWithId(string|int|null $id): bool
 ```
 
 Validates the user from its identifier
@@ -99,9 +99,9 @@ Since `2.0`
 
 #### Parameters
 
-| Name  | Type     | Description                 |
-| ----- | -------- | --------------------------- |
-| `$id` | `string` | User identifier to validate |
+| Name  | Type              | Description                 |
+| ----- | ----------------- | --------------------------- |
+| `$id` | `string|int|null` | User identifier to validate |
 
 #### Returns
 

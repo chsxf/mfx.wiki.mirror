@@ -12,3 +12,15 @@ Data validator exception class
 
 Since `1.0`
 
+## Methods
+
+### __construct
+
+```php
+public function __construct(string $message = '', ?Throwable $previous = null)
+```
+
+Since `1.0`
+
+---
+

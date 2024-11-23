@@ -14,6 +14,23 @@ Since `2.0`
 
 ## Methods
 
+### getRequestContentType
+
+```php
+public abstract function getRequestContentType(): ?string
+```
+
+Get the content-type used by the request
+(ex: application/json)
+
+Since `2.0.1`
+
+#### Returns
+
+`null|string` 
+
+---
+
 ### getRequestMethod
 
 ```php
